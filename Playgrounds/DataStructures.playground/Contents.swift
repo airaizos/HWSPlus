@@ -181,7 +181,7 @@ var experimentalCurrentNode = listEnum.start
  DDQX
  **/
 
-
+spacer.line("Queues and deques")
 struct Queue<Element> {
     private var array = [Element]()
     
@@ -200,6 +200,7 @@ struct Queue<Element> {
 
 
 struct Deque<Element> {
+    private var array = [Element]()
     var first: Element? { array.first }
     var last: Element? { array.last }
     
@@ -221,4 +222,65 @@ struct Deque<Element> {
         return array.removeLast()
     }
     
+}
+
+extension Deque where Element: Equatable {
+    func firstIndex(of element: Element) -> Int? {
+        for (i, current) in array.enumerated() {
+            if current == element {
+                return i
+            }
+        }
+        return nil
+    }
+}
+
+protocol Prioritized {
+    var priority: Int { get }
+}
+
+struct Work: Prioritized {
+    let name: String
+    let priority: Int
+}
+
+
+let l = Work(name: "Low", priority: 1)
+let ml = Work(name: "Medium Low", priority: 2)
+let m = Work(name: "Medium", priority: 3)
+let mh = Work(name: "Medium High", priority: 4)
+let h = Work(name: "High", priority: 5)
+
+var work = Queue<Work>()
+
+work.append(l)
+work.append(h)
+work.append(ml)
+work.append(m)
+work.append(mh)
+print(work.dequeue()!)
+print(work.dequeue()!)
+print(work.dequeue()!)
+print(work.dequeue()!)
+print(work.dequeue()!)
+
+
+extension Queue where Element: Prioritized {
+    
+    ///Encontrar la prioridad más alta que queremos dequeue (sacar de la cola)
+    mutating func dequeue() -> Element? {
+        guard array.count > 0 else { return nil }
+        
+        var choice = array[0]
+        var choiceIndex = 0
+        
+        for (index, item) in array.enumerated() {
+            // Si el item tiene una prioridad más alta que el item elegido, ese será el item a sacar de la cola
+            if item.priority > choice.priority {
+                choice = item
+                choiceIndex = index
+            }
+        }
+        return array.remove(at: choiceIndex)
+    }
 }
