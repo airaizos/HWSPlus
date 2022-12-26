@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A04815529547A9300E97D4A /* DataStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DataStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A132C8A294BCF1400D19D75 /* HWSPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSPlusApp.swift; sourceTree = "<group>"; };
 		3A132C8F294BCF1400D19D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				3A132CB8294BCF5600D19D75 /* FuctionalProgramming */,
+				3A04815529547A9300E97D4A /* DataStructures.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
