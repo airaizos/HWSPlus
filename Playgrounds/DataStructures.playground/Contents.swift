@@ -284,3 +284,154 @@ extension Queue where Element: Prioritized {
         return array.remove(at: choiceIndex)
     }
 }
+
+
+/**
+ **26.Dic.2022**
+##Data Structures##
+[Trees](https://www.hackingwithswift.com/plus/data-structures/trees)
+**/
+
+spacer.line("Trees")
+
+final class Node<Value> {
+    var value: Value
+    
+    //  private externaly pero modificable internamente
+    private(set) var children: [Node]
+    
+    // 2 Cuantificables
+    
+    var count: Int {
+        //Este opción es la recursiva
+        1 + children.reduce(0) { $0 + $1.count }
+        
+        //Esta opción contaría solo los hijos directos del nodo.
+        //1 + children.reduce(0 { $0 + $1.children.count }
+    }
+    
+    init(_ value: Value) {
+        self.value = value
+        children = []
+    }
+    
+    init(_ value: Value, children: [Node]) {
+        self.value = value
+        self.children = children
+    }
+    // 4
+    init(_ value: Value, @NodeBuilder builder: () -> [Node]) {
+        self.value = value
+        self.children = builder()
+    }
+    
+    func add(child: Node) {
+        children.append(child)
+    }
+}
+
+var jerry = Node("Jerry")
+let seven = Node("Seven")
+jerry.add(child: seven)
+
+var adrian = Node("Adrian")
+var kelly = Node("Kelly")
+adrian.add(child: kelly)
+
+var root = Node("Gina")
+root.add(child: jerry)
+root.add(child: adrian)
+print(root)
+print(adrian)
+
+
+// 1 Equiparables
+extension Node: Equatable where Value: Equatable {
+    static func ==(lhs: Node, rhs: Node) -> Bool {
+        lhs.value == rhs.value && lhs.children == rhs.children
+    }
+}
+
+print("Adrian es igual a Jerry \(adrian == jerry)")
+
+extension Node: Hashable where Value: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(value)
+        hasher.combine(children)
+    }
+}
+
+extension Node: Codable where Value: Codable { }
+
+
+//2 Cuantificables
+
+print(root.count)
+print(adrian.count)
+
+//Identificables
+
+extension Node where Value: Equatable {
+    //recursiva
+    func find(_ value: Value) -> Node? {
+        if self.value == value {
+            return self
+        }
+        for child in children {
+            if let match = child.find(value) {
+                return match
+            }
+        }
+        return nil
+    }
+}
+
+
+//3 Identificables
+if let adrian = root.find("Adrian") {
+    print("Encontrado: \(adrian.count)")
+}
+
+// si se añaden más nodos a los ya existentes. No cambia la cuenta, si es un struct
+
+var patxi = Node("Patxi")
+kelly.add(child: patxi)
+
+print(adrian.count)
+
+
+// Fuction Builders: 4 añadir Nodos de una manera más sencilla
+@resultBuilder
+struct NodeBuilder {
+    static func buildBlock<Value>(_ children: Node<Value>...) -> [Node<Value>] {
+        children
+    }
+}
+
+let luz = Node("Luz") {
+    Node("Gina") {
+        Node("Jerry") {
+            Node("Seven")
+        }
+        Node("Adrian") {
+            Node("Kelly") {
+                Node("Patxi")
+            }
+        }
+    }
+    Node("Adela") {
+        Node("Mónica")
+        Node("Gustavo")
+    }
+}
+
+print(luz.count)
+
+
+/**
+ **28.Dic.2022**
+##Data Structures##
+[Binary trees](https://www.hackingwithswift.com/plus/data-structures/binary-trees)
+**/
+
+
