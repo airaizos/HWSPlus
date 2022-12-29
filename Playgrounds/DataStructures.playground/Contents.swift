@@ -186,7 +186,7 @@ struct Queue<Element> {
     private var array = [Element]()
     
     var first: Element? { array.first }
-    var last: Element? { array.last }
+    var last: Element? { array.last }
     
     mutating func append(_ element: Element) {
         array.append(element)
@@ -433,5 +433,47 @@ print(luz.count)
 ##Data Structures##
 [Binary trees](https://www.hackingwithswift.com/plus/data-structures/binary-trees)
 **/
+spacer.line("Binary Trees")
+final class Nodo<Value> {
+    var value: Value
+    var left: Nodo?
+    var right: Nodo?
+    
+    init(_ value: Value) {
+        self.value = value
+    }
+}
 
+let raiz = Nodo("Morse")
+raiz.left = Nodo("_")
+raiz.right = Nodo(".")
+raiz.left?.left = Nodo("__")
+raiz.right?.right = Nodo("..")
+raiz.left?.right = Nodo("_.")
+raiz.right?.left = Nodo("._")
 
+print(raiz)
+
+extension Array {
+    init<T>(_ nodo: Nodo<T>) where Element == Nodo<T> {
+        self = [Nodo<T>]()
+        
+        if let left = nodo.left {
+            self += Array(left)
+        }
+        self += [nodo]
+        if let right = nodo.right {
+            self += Array(right)
+        }
+    }
+}
+
+for nodo in Array(raiz){
+    print(nodo.value)
+}
+
+ 
+/*
+ 3
+5 7
+*/
