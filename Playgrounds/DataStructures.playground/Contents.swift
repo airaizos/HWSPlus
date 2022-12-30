@@ -202,7 +202,7 @@ struct Queue<Element> {
 struct Deque<Element> {
     private var array = [Element]()
     var first: Element? { array.first }
-    var last: Element? { array.last }
+    var last: Element? {array.last }
     
     mutating func prepend(_ element: Element) {
         array.insert(element, at: 0)
@@ -434,15 +434,64 @@ print(luz.count)
 [Binary trees](https://www.hackingwithswift.com/plus/data-structures/binary-trees)
 **/
 spacer.line("Binary Trees")
-final class Nodo<Value> {
+final class Nodo<Value>: Sequence {
     var value: Value
     var left: Nodo?
     var right: Nodo?
+    //search tree
+    
+    
     
     init(_ value: Value) {
         self.value = value
     }
+    /*
+    // MARK: Sequence. Permite pasar de for nodo in Array(raiz) a for nodo in raiz
+    func makeIterator() -> Array<Nodo<Value>>.Iterator {
+      Array(self).makeIterator()
+ }
+     */
+    /*
+    MARK: Sequence 2: para no depender de arrays podria usarse esto:
+    func makeIterator() -> AnyIterator<Nodo<Value>> {
+        AnyIterator(Array(self).makeIterator())
+    }
+    */
+    //Sequence 3. Crear nuestro propio iterator
+    func makeIterator() -> NodoIterator<Value> {
+        NodoIterator(items: Array(self))
+    }
 }
+
+
+//MARK: Sequence 3 crear nuestro propio iterator
+struct NodoIterator<Value>: IteratorProtocol {
+    var items: [Nodo<Value>]
+    var position = 0
+    
+    mutating func next() -> Nodo<Value>? {
+        if position < items.count {
+            defer { position += 1 }
+            return items[position]
+        } else {
+            return nil
+        }
+    }
+}
+
+// Find extension
+extension Nodo where Value: Equatable {
+    func find(_ search: Value) -> Nodo? {
+        for nodo in self {
+            if nodo.value == search {
+                return nodo
+            }
+        }
+        return nil
+    }
+   
+}
+
 
 let raiz = Nodo("Morse")
 raiz.left = Nodo("_")
@@ -455,6 +504,7 @@ raiz.right?.left = Nodo("._")
 print(raiz)
 
 extension Array {
+    //permite pasar a Array(raiz)
     init<T>(_ nodo: Nodo<T>) where Element == Nodo<T> {
         self = [Nodo<T>]()
         
@@ -468,12 +518,15 @@ extension Array {
     }
 }
 
-for nodo in Array(raiz){
+for nodo in raiz {
     print(nodo.value)
 }
 
- 
-/*
- 3
-5 7
-*/
+spacer.line("Find extension")
+
+if let found = raiz.find("..."){
+    print("Encontrado: \(found.value)")
+}
+
+
+spacer.line("Binary Search Tree")
