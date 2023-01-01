@@ -9,32 +9,32 @@ let spacer = Spacer()
 
 /**
  **22.Dic.2022**
-##Data Structures##
-[Linked List](https://www.hackingwithswift.com/plus/data-structures/linked-lists)
-**/
+ ##Data Structures##
+ [Linked List](https://www.hackingwithswift.com/plus/data-structures/linked-lists)
+ **/
 
 //var items = [1,2,3]
 //items.remove(at: 1)
 /*
-var start = CFAbsoluteTimeGetCurrent()
-var items = Array(1...200_000)
-
-while items.isEmpty ==  false {
-    items.remove(at: 0)
-}
-var end = CFAbsoluteTimeGetCurrent()
-print("Took \(end - start) secons to get to 0 remove first element")
-
-start = CFAbsoluteTimeGetCurrent()
-items = Array(1...200_000)
-
-while items.isEmpty == false {
-    items.removeLast()
-}
-
-end = CFAbsoluteTimeGetCurrent()
-print("Took \(end - start) seconds remove last element to geo to 0")
-*/
+ var start = CFAbsoluteTimeGetCurrent()
+ var items = Array(1...200_000)
+ 
+ while items.isEmpty ==  false {
+ items.remove(at: 0)
+ }
+ var end = CFAbsoluteTimeGetCurrent()
+ print("Took \(end - start) secons to get to 0 remove first element")
+ 
+ start = CFAbsoluteTimeGetCurrent()
+ items = Array(1...200_000)
+ 
+ while items.isEmpty == false {
+ items.removeLast()
+ }
+ 
+ end = CFAbsoluteTimeGetCurrent()
+ print("Took \(end - start) seconds remove last element to geo to 0")
+ */
 
 spacer.line("Linked List")
 
@@ -65,12 +65,12 @@ final class LinkedList<Element>: ExpressibleByArrayLiteral, Sequence {
     
     /**
      *Inicializarlo desde un array*
-    init(array: Array<Element>) {
-        for element in array.reversed() {
-            start = LinkedListNode(value: element, next: start)
-        }
-    }
-    **/
+     init(array: Array<Element>) {
+     for element in array.reversed() {
+     start = LinkedListNode(value: element, next: start)
+     }
+     }
+     **/
     init(array: [Element]) {
         for element in array.reversed() {
             start = LinkedListNode(value: element, next: start)
@@ -93,10 +93,10 @@ struct LinkedListIterator<Element>: IteratorProtocol {
 }
 
 /*
-final class LinkedList<Element> {
-    var start: LinkedListNode<Element>?
-}
-*/
+ final class LinkedList<Element> {
+ var start: LinkedListNode<Element>?
+ }
+ */
 
 spacer.line("Initializing From Elements")
 let third = LinkedListNode(value: 5)
@@ -139,14 +139,14 @@ for node in listAnyArray {
 }
 
 /*
-let list2 = LinkedList(array: Array(1...200_00))
-var start = CFAbsoluteTimeGetCurrent()
-while let start = list2.start {
-    list2.start = start.next
-}
-var end = CFAbsoluteTimeGetCurrent()
-print("Took \(end - start) seconds to get to 0")
-*/
+ let list2 = LinkedList(array: Array(1...200_00))
+ var start = CFAbsoluteTimeGetCurrent()
+ while let start = list2.start {
+ list2.start = start.next
+ }
+ var end = CFAbsoluteTimeGetCurrent()
+ print("Took \(end - start) seconds to get to 0")
+ */
 
 spacer.line("Experimental LinkedList con Enums")
 
@@ -173,9 +173,9 @@ var experimentalCurrentNode = listEnum.start
 
 /**
  **26.Dic.2022**
-##Data Structures##
-[Queues and deques](https://www.hackingwithswift.com/plus/data-structures/queues-and-deques)
-**/
+ ##Data Structures##
+ [Queues and deques](https://www.hackingwithswift.com/plus/data-structures/queues-and-deques)
+ **/
 /**
  *Queues FIFO <> Stack LIFO
  DDQX
@@ -192,7 +192,7 @@ struct Queue<Element> {
         array.append(element)
     }
     
-   mutating func dequeue() -> Element? {
+    mutating func dequeue() -> Element? {
         guard array.count > 0 else { return nil }
         return array.remove(at: 0)
     }
@@ -288,9 +288,9 @@ extension Queue where Element: Prioritized {
 
 /**
  **26.Dic.2022**
-##Data Structures##
-[Trees](https://www.hackingwithswift.com/plus/data-structures/trees)
-**/
+ ##Data Structures##
+ [Trees](https://www.hackingwithswift.com/plus/data-structures/trees)
+ **/
 
 spacer.line("Trees")
 
@@ -430,42 +430,75 @@ print(luz.count)
 
 /**
  **28.Dic.2022**
-##Data Structures##
-[Binary trees](https://www.hackingwithswift.com/plus/data-structures/binary-trees)
-**/
+ ##Data Structures##
+ [Binary trees](https://www.hackingwithswift.com/plus/data-structures/binary-trees)
+ **/
 spacer.line("Binary Trees")
-final class Nodo<Value>: Sequence {
+final class Nodo<Value: Comparable>: Sequence {
     var value: Value
-    var left: Nodo?
-    var right: Nodo?
-    //search tree
-    
-    
+    //  var left: Nodo?
+    // var right: Nodo?
+    //search tree. No se pueden añadir valores a mano, tiene que ser a través de insert.
+    var count = 1
+    private(set) var left: Nodo?
+    private(set) var right: Nodo?
     
     init(_ value: Value) {
         self.value = value
     }
     /*
-    // MARK: Sequence. Permite pasar de for nodo in Array(raiz) a for nodo in raiz
-    func makeIterator() -> Array<Nodo<Value>>.Iterator {
-      Array(self).makeIterator()
- }
+     // MARK: Sequence. Permite pasar de for nodo in Array(raiz) a for nodo in raiz
+     func makeIterator() -> Array<Nodo<Value>>.Iterator {
+     Array(self).makeIterator()
+     }
      */
     /*
-    MARK: Sequence 2: para no depender de arrays podria usarse esto:
-    func makeIterator() -> AnyIterator<Nodo<Value>> {
-        AnyIterator(Array(self).makeIterator())
-    }
-    */
+     MARK: Sequence 2: para no depender de arrays podria usarse esto:
+     func makeIterator() -> AnyIterator<Nodo<Value>> {
+     AnyIterator(Array(self).makeIterator())
+     }
+     */
     //Sequence 3. Crear nuestro propio iterator
     func makeIterator() -> NodoIterator<Value> {
         NodoIterator(items: Array(self))
+    }
+    
+    //Search
+    func insert(_ newValue: Value) {
+        if newValue < value {
+            if left == nil {
+                left = Nodo(newValue)
+            } else {
+                left?.insert(newValue)
+            }
+        } else if newValue > value {
+            if right == nil {
+                right = Nodo(newValue)
+            } else {
+                right?.insert(newValue)
+            }
+        } else {
+            count += 1
+            
+        }
+    }
+    
+    func fastFind(_ search: Value) -> Nodo? {
+        if value == search {
+            return self
+        }
+        
+        if search < value {
+            return left?.fastFind(search)
+        } else {
+            return right?.fastFind(search)
+        }
     }
 }
 
 
 //MARK: Sequence 3 crear nuestro propio iterator
-struct NodoIterator<Value>: IteratorProtocol {
+struct NodoIterator<Value: Comparable>: IteratorProtocol {
     var items: [Nodo<Value>]
     var position = 0
     
@@ -489,20 +522,21 @@ extension Nodo where Value: Equatable {
         }
         return nil
     }
-   
+    
 }
 
 
 let raiz = Nodo("Morse")
-raiz.left = Nodo("_")
-raiz.right = Nodo(".")
-raiz.left?.left = Nodo("__")
-raiz.right?.right = Nodo("..")
-raiz.left?.right = Nodo("_.")
-raiz.right?.left = Nodo("._")
-
-print(raiz)
-
+/*
+ raiz.left = Nodo("_")
+ raiz.right = Nodo(".")
+ raiz.left?.left = Nodo("__")
+ raiz.right?.right = Nodo("..")
+ raiz.left?.right = Nodo("_.")
+ raiz.right?.left = Nodo("._")
+ 
+ print(raiz)
+ */
 extension Array {
     //permite pasar a Array(raiz)
     init<T>(_ nodo: Nodo<T>) where Element == Nodo<T> {
@@ -530,3 +564,184 @@ if let found = raiz.find("..."){
 
 
 spacer.line("Binary Search Tree")
+
+let testRoot = Nodo(500)
+
+for _ in 1...50  {
+    testRoot.insert(Int.random(in: 1...50))
+}
+
+var start = CFAbsoluteTimeGetCurrent()
+let result1 = testRoot.find(1)
+var end = CFAbsoluteTimeGetCurrent()
+print("Ha tomado \(String(format: "%f", end - start)) seconds to find \(result1?.value ?? -1)")
+
+start = CFAbsoluteTimeGetCurrent()
+let result2 = testRoot.fastFind(1)
+end = CFAbsoluteTimeGetCurrent()
+print("Ha toamdo \(String(format: "%f", end - start)) seconds to find \(result2?.value ?? -1)")
+
+
+/**
+ **30.Dic.2022**
+ ##Data Structures##
+ [Ordered Sets](https://www.hackingwithswift.com/plus/data-structures/ordered-sets)
+ **/
+spacer.line("Ordered Sets")
+
+//Tiene que ser hashables por el set
+struct OrderedSet<Element: Hashable>: Equatable {
+    //Elementos ordenados. Private(set) para que no se añadan valores sin control
+    public private(set) var array = [Element]()
+    
+    // Contains y remover duplicados
+    private var set = Set<Element>()
+    
+    var count: Int { array.count }
+    var isEmpty: Bool { array.isEmpty }
+    
+    
+    
+    init() { }
+    
+    init(_ array: [Element]) {
+        for element in array {
+            append(element)
+        }
+    }
+    
+    func contains(_ member: Element) -> Bool {
+        set.contains(member)
+    }
+    
+    @discardableResult //ignorar los warnings si se añade o no
+    mutating func append(_ newElement: Element) -> Bool {
+        if set.insert(newElement).inserted {
+            array.append(newElement)
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    //Si no lo añadimos al ser conformado por Equatable. compararía tanto el array como el set. En este caso los dos son iguales.
+    static func ==(lhs: OrderedSet, rhs: OrderedSet) -> Bool {
+        lhs.array == rhs.array
+    }
+    
+    
+    
+    
+}
+
+let mySet = OrderedSet([5,10,15,20,25,20,15,10,5])
+
+print(mySet.array)
+
+//Al conformarlo con RandomAccessCollection indicamos: donde inicia, donde termina, como encontrar valores. Obtendremos todas las funcionalidedes
+
+extension OrderedSet: RandomAccessCollection {
+    var startIndex: Int { array.startIndex }
+    var endIndex: Int { array.endIndex }
+    subscript(index: Int) -> Element {
+        array[index]
+    }
+}
+
+
+for item in mySet {
+    print(item)
+}
+
+print(mySet[3])
+let strings = mySet.map { "Number \($0)" }
+print(strings)
+let doubles = mySet.compactMap {Double(exactly: $0) }
+print(doubles)
+
+
+/**
+ **01.01.2023**
+ ##Data Structures##
+ [Ordered Arrays](https://www.hackingwithswift.com/plus/data-structures/sorted-arrays)
+ **/
+spacer.line("Sorted Arrays")
+
+
+
+struct SortedArray<Element>: CustomStringConvertible, RandomAccessCollection {
+    private var items = [Element]()
+    //var que ordena los elementos
+    var sortBefore: (Element, Element) -> Bool
+    
+    //inilizador que acepta esa variable como un closure que escapa
+    init(comparator: @escaping (Element, Element) -> Bool) {
+        sortBefore = comparator
+    }
+    
+    var count: Int { items.count }
+    var description: String { items.description }
+    var startIndex: Int { items.startIndex }
+    var endIndex: Int { items.endIndex }
+    
+    subscript(index: Int) -> Element {
+        items[index]
+    }
+    
+    mutating func insert(_ element: Element) {
+        //localizar el index correcto e insertarlo ahí
+        for (i,item) in items.enumerated() {
+            
+            // ordenación personalizada
+            if sortBefore(element, item) {
+                // solo para where Comparables
+                // if item >= element {
+                
+                items.insert(element, at: i)
+                return
+            }
+        }
+        // si el array no tiene ningun elemento hayq ue hacer esto:
+        
+        items.append(element)
+        
+        //items.append(element)
+        //items.sort()
+    }
+    
+    mutating func remove(at index: Int) {
+        items.remove(at: index)
+    }
+    
+    // un min y max más eficientes que los que vienen por defecto en el array comparables
+    
+    @warn_unqualified_access func min() -> Element? {
+        items.first
+    }
+    @warn_unqualified_access func max() -> Element? {
+        items.last
+    }
+    
+    func minAndMax() -> (min: Element?, max: Element?) {
+        (self.min(), self.max())
+    }
+}
+
+extension SortedArray where Element: Comparable {
+    
+    //inicializador que tiene el menor que por defecto. de menor a mayor, para los elementos que son comparables
+    init() {
+        self.init(comparator: <)
+    }
+}
+
+
+var items = SortedArray<Int>()
+items.insert(5)
+items.insert(3)
+items.insert(8)
+items.insert(3)
+print(items)
+
+items.min()
+items.max()
