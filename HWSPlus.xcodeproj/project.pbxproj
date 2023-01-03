@@ -15,6 +15,7 @@
 		3A132CA9294BCF1600D19D75 /* HWSPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CA8294BCF1600D19D75 /* HWSPlusUITests.swift */; };
 		3A132CAB294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CAA294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift */; };
 		3A216932295B3C5B007011CB /* ds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A216931295B3C5B007011CB /* ds.swift */; };
+		3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74BD2964CF8F00C1188E /* Monograms.swift */; };
 		3A336F212951D73900B4333A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A336F202951D73900B4333A /* Main.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,10 @@
 		3A132CB9294BCF8300D19D75 /* BuildingPureFunctions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BuildingPureFunctions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1749B2296357AE004AEFBF /* ConvertingMeasurementsSafely.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConvertingMeasurementsSafely.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A216931295B3C5B007011CB /* ds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ds.swift; sourceTree = "<group>"; };
+		3A2F74BA2964968500C1188E /* StoringPreferencesEfficiently.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StoringPreferencesEfficiently.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSPlus.entitlements; sourceTree = "<group>"; };
+		3A2F74BC2964C8F900C1188E /* Handlingnamescorrectly.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Handlingnamescorrectly.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A2F74BD2964CF8F00C1188E /* Monograms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monograms.swift; sourceTree = "<group>"; };
 		3A336F202951D73900B4333A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +98,8 @@
 			children = (
 				3A11DEFC2961FDCD00B6B569 /* UsingDatesSafeEffectively.playground */,
 				3A1749B2296357AE004AEFBF /* ConvertingMeasurementsSafely.playground */,
+				3A2F74BA2964968500C1188E /* StoringPreferencesEfficiently.playground */,
+				3A2F74BC2964C8F900C1188E /* Handlingnamescorrectly.playground */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -121,12 +128,14 @@
 		3A132C8C294BCF1400D19D75 /* HWSPlus */ = {
 			isa = PBXGroup;
 			children = (
+				3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */,
 				3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */,
 				3A132C8F294BCF1400D19D75 /* ContentView.swift */,
 				3A336F202951D73900B4333A /* Main.swift */,
 				3A132C91294BCF1500D19D75 /* Assets.xcassets */,
 				3A132C93294BCF1500D19D75 /* Preview Content */,
 				3A216931295B3C5B007011CB /* ds.swift */,
+				3A2F74BD2964CF8F00C1188E /* Monograms.swift */,
 			);
 			path = HWSPlus;
 			sourceTree = "<group>";
@@ -309,6 +318,7 @@
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
+				3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HWSPlus/HWSPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HWSPlus/Preview Content\"";
@@ -493,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HWSPlus/HWSPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HWSPlus/Preview Content\"";
