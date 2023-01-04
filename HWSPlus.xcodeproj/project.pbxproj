@@ -57,6 +57,7 @@
 		3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSPlus.entitlements; sourceTree = "<group>"; };
 		3A2F74BC2964C8F900C1188E /* Handlingnamescorrectly.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Handlingnamescorrectly.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2F74BD2964CF8F00C1188E /* Monograms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monograms.swift; sourceTree = "<group>"; };
+		3A2F74C02964D4D200C1188E /* ParsingXML.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingXML.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A336F202951D73900B4333A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +169,7 @@
 		3A132CB7294BCF4E00D19D75 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				3A2F74BF2964D4C300C1188E /* Parsing */,
 				3A11DEFB2961FDA400B6B569 /* Foundation */,
 				3A11DEFA2961FD8F00B6B569 /* DataStructures */,
 				3A132CB8294BCF5600D19D75 /* FuctionalProgramming */,
@@ -182,6 +184,14 @@
 				3A132CB9294BCF8300D19D75 /* BuildingPureFunctions.playground */,
 			);
 			path = FuctionalProgramming;
+			sourceTree = "<group>";
+		};
+		3A2F74BF2964D4C300C1188E /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				3A2F74C02964D4D200C1188E /* ParsingXML.playground */,
+			);
+			path = Parsing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
