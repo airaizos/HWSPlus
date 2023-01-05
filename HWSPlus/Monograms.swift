@@ -77,7 +77,7 @@ struct Monograms_Previews: PreviewProvider {
 
 extension String {
     var givenName: String {
-        let formatter = PersonNameComponentsFormatter()
+   //     let formatter = PersonNameComponentsFormatter()
         
         var components = PersonNameComponents()
         components.givenName = self
