@@ -17,8 +17,15 @@ final class Grid: ObservableObject {
     var startSquare: Square
     var endSquare: Square
     
+    //Squares tenemos que chequear
+    var queuedSquares = [Square]()
+    //Squares que ya chequeamos
+    var checkedSquares = [Square]()
+    //Squares que hacen el camino correcto
+    var path = [Square]()
     
-    
+    //pausar cada movimiento en 3 sitios
+    var stepper: Cancellable?
     
     //MARK: Inicializadores
     init() {
@@ -41,6 +48,9 @@ final class Grid: ObservableObject {
     //MARK: Functions
     
     func reset() {
+        //1
+        stepper?.cancel()
+        
         objectWillChange.send()
         
         for row in squares {
@@ -52,6 +62,7 @@ final class Grid: ObservableObject {
     
     func clear() {
         objectWillChange.send()
+        resetSquares()
     }
     
     func randomize() {
@@ -145,15 +156,110 @@ final class Grid: ObservableObject {
             return .green
         } else if square.isWall {
             return .black
+        } else if path.contains(square){
+            return .white
+        } else if queuedSquares.contains(square) {
+            return .orange
+        } else if checkedSquares.contains(square) {
+            return Color.orange.opacity(0.5)
         } else {
             return .gray
         }
-        
-        
     }
     
     func route() {
+        //Empezamos por métodos más simples
+        resetSquares()
+       
+        /*
+        while queuedSquares.isEmpty == false {
+            stepRoute()
+        }
+         */
         
+        stepper = DispatchQueue.main.schedule(after: .init(.now()), interval: 0.01, stepRoute)
     }
     
+    
+    func floodFill(from square: Square) {
+        //Encuentra todos los squares vecinos
+        
+        let checkSquares = neighbors(for: square)
+        
+        for checkSquare in checkSquares {
+            //omite el square si es Wall
+            guard checkSquare.isWall == false else { continue }
+            
+            //Evalua el costo de moverse a través de ese square
+            if checkSquare.moveCost == -1 || square.moveCost + 1 < checkSquare.moveCost {
+                checkSquare.moveCost = square.moveCost + 1
+                
+                queuedSquares.append(checkSquare)
+            }
+        }
+    }
+    
+    func stepRoute() {
+        objectWillChange.send()
+        
+        let square = queuedSquares.removeFirst()
+        
+        checkedSquares.append(square)
+        
+        if square == endSquare {
+            //Ruta encontrada
+            selectRoute()
+            return
+        }
+        
+        floodFill(from: square)
+        
+        if queuedSquares.isEmpty {
+            // Hemos terminado de verificar todos los squares
+            selectRoute()
+        }
+    }
+    
+    func selectRoute() {
+        //2
+        stepper?.cancel()
+        
+        guard endSquare.moveCost != -1 else {
+            print("No route possible")
+            return
+        }
+        
+        path.append(endSquare)
+        var current = endSquare
+        
+        while current != startSquare {
+            for neighbor in neighbors(for: current) {
+                guard neighbor.moveCost != -1 else { continue }
+                
+                if neighbor.moveCost < current.moveCost {
+                    path.append(neighbor)
+                    current = neighbor
+                    break
+                }
+            }
+        }
+    }
+    
+    func resetSquares() {
+        //3
+        stepper?.cancel()
+        
+        checkedSquares.removeAll()
+        queuedSquares.removeAll()
+        path.removeAll()
+        
+        for row in squares {
+            for col in row {
+                col.moveCost = -1
+            }
+        }
+        queuedSquares.append(startSquare)
+        startSquare.moveCost = 0
+    }
 }
+

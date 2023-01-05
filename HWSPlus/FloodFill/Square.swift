@@ -12,7 +12,7 @@ class Square: Equatable {
     var row: Int
     var col: Int
     var isWall = false
-    var moveCost = -1
+    var moveCost = -1 //Indica que tan dificil es llegar a  ese destino
     
     init(row: Int, col: Int) {
         self.row = row
