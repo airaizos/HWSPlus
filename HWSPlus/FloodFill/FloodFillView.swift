@@ -21,10 +21,13 @@ struct FloodFillView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
+                
                 Button("Find Route",action: grid.route)
+                Button("Find A* Route", action: grid.aPath)
                 Button("Clear Route", action: grid.clear)
                 Button("Clear Walls", action: grid.reset)
                 Button("Randomize", action: grid.randomize)
+                
             }
             .padding()
             
@@ -81,8 +84,6 @@ struct FloodFillView: View {
                             }
                         
                         let square = grid.squares[row][col]
-                        
-                      print(" Y: \(row) & X: \(col)")
                         if drawingMode == .none {
                             if square.isWall {
                                 drawingMode = .removing

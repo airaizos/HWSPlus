@@ -13,8 +13,8 @@ final class Grid: ObservableObject {
     
     static let size = 20
     
- //   let squares: Set<Set<Square>>
-   let squares: [[Square]]
+    //   let squares: Set<Set<Square>>
+    let squares: [[Square]]
     var startSquare: Square
     var endSquare: Square
     
@@ -84,12 +84,12 @@ final class Grid: ObservableObject {
         }
         
         route()
-       
+        
     }
     
     func neighbors(for square: Square) -> [Square] {
         var result = [Square]()
-       
+        
         
         if (square.col > 0) {
             //check square to the ⬅️
@@ -172,11 +172,11 @@ final class Grid: ObservableObject {
     func route() {
         //Empezamos por métodos más simples
         resetSquares()
-       
+        
         /*
-        while queuedSquares.isEmpty == false {
-            stepRoute()
-        }
+         while queuedSquares.isEmpty == false {
+         stepRoute()
+         }
          */
         
         stepper = DispatchQueue.main.schedule(after: .init(.now()), interval: 0.01, stepRoute)
@@ -222,46 +222,110 @@ final class Grid: ObservableObject {
         }
     }
     
-    func selectRoute() {
-        //2
-        stepper?.cancel()
+    //MARK: A* path Find
+    func estimatedDistance(from: Square, to: Square) -> Int {
+        //   0 = No lo sé
+        let xDistance = abs(from.col - to.col)
+        let yDistance = abs(from.row - to.row)
         
-        guard endSquare.moveCost != -1 else {
-            print("No route possible")
+        //  return xDistance - yDistance
+        //Manhattan Distance
+        
+        return max(xDistance,yDistance) * 2
+        // ChebyshevDistance
+    }
+    
+    func aPathStepRoute() {
+        objectWillChange.send()
+        
+        let square = queuedSquares.min { firstSquare, secondSquare in
+            let firstHeuristic = estimatedDistance(from: firstSquare, to: endSquare)
+            //añadimos
+            let firstDistance = firstSquare.moveCost
+            let firstCost = firstHeuristic + firstDistance
+            
+            
+            let secondHeuristic = estimatedDistance(from: secondSquare, to: endSquare)
+            let secondDistance = secondSquare.moveCost
+            let secondCost = secondHeuristic + secondDistance
+            
+            return firstCost < secondCost
+        }!
+        
+        
+        queuedSquares.remove(at: queuedSquares.firstIndex(of: square)!)
+        
+        checkedSquares.append(square)
+        
+        if square == endSquare {
+            //Ruta encontrada
+            selectRoute()
             return
         }
         
-        path.append(endSquare)
-        var current = endSquare
+        floodFill(from: square)
         
-        while current != startSquare {
-            for neighbor in neighbors(for: current) {
-                guard neighbor.moveCost != -1 else { continue }
-                
-                if neighbor.moveCost < current.moveCost {
-                    path.append(neighbor)
-                    current = neighbor
-                    break
-                }
-            }
+        if queuedSquares.isEmpty {
+            // Hemos terminado de verificar todos los squares
+            selectRoute()
         }
+    }
+
+
+func aPath() {
+    //A* path finding
+    //Empezamos por métodos más simples
+    resetSquares()
+    
+    /*
+     while queuedSquares.isEmpty == false {
+     stepRoute()
+     }
+     */
+    
+    stepper = DispatchQueue.main.schedule(after: .init(.now()), interval: 0.01, aPathStepRoute)
+}
+
+func selectRoute() {
+    //2
+    stepper?.cancel()
+    
+    guard endSquare.moveCost != -1 else {
+        print("No route possible")
+        return
     }
     
-    func resetSquares() {
-        //3
-        stepper?.cancel()
-        
-        checkedSquares.removeAll()
-        queuedSquares.removeAll()
-        path.removeAll()
-        
-        for row in squares {
-            for col in row {
-                col.moveCost = -1
+    path.append(endSquare)
+    var current = endSquare
+    
+    while current != startSquare {
+        for neighbor in neighbors(for: current) {
+            guard neighbor.moveCost != -1 else { continue }
+            
+            if neighbor.moveCost < current.moveCost {
+                path.append(neighbor)
+                current = neighbor
+                break
             }
         }
-        queuedSquares.append(startSquare)
-        startSquare.moveCost = 0
     }
+}
+
+func resetSquares() {
+    //3
+    stepper?.cancel()
+    
+    checkedSquares.removeAll()
+    queuedSquares.removeAll()
+    path.removeAll()
+    
+    for row in squares {
+        for col in row {
+            col.moveCost = -1
+        }
+    }
+    queuedSquares.append(startSquare)
+    startSquare.moveCost = 0
+}
 }
 
