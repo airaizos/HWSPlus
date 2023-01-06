@@ -13,7 +13,8 @@ final class Grid: ObservableObject {
     
     static let size = 20
     
-    let squares: [[Square]]
+ //   let squares: Set<Set<Square>>
+   let squares: [[Square]]
     var startSquare: Square
     var endSquare: Square
     
@@ -83,6 +84,7 @@ final class Grid: ObservableObject {
         }
         
         route()
+       
     }
     
     func neighbors(for square: Square) -> [Square] {
