@@ -27,7 +27,6 @@ struct FloodFillView: View {
                 Button("Clear Route", action: grid.clear)
                 Button("Clear Walls", action: grid.reset)
                 Button("Randomize", action: grid.randomize)
-                
             }
             .padding()
             

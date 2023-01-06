@@ -10,6 +10,8 @@
 		3A0CC5E329673B2600DCCD00 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CC5E229673B2600DCCD00 /* Grid.swift */; };
 		3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CC5E429673B5100DCCD00 /* Square.swift */; };
 		3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CC5E6296749E700DCCD00 /* FloodFillView.swift */; };
+		3A0D578F2968BF9B00A397BE /* CGPoint-Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D578E2968BF9B00A397BE /* CGPoint-Helpers.swift */; };
+		3A0D57912968C52800A397BE /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D57902968C52800A397BE /* Triangle.swift */; };
 		3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */; };
 		3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8F294BCF1400D19D75 /* ContentView.swift */; };
 		3A132C92294BCF1500D19D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A132C91294BCF1500D19D75 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		3A0CC5E229673B2600DCCD00 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		3A0CC5E429673B5100DCCD00 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		3A0CC5E6296749E700DCCD00 /* FloodFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodFillView.swift; sourceTree = "<group>"; };
+		3A0D578E2968BF9B00A397BE /* CGPoint-Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint-Helpers.swift"; sourceTree = "<group>"; };
+		3A0D57902968C52800A397BE /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		3A11DEFC2961FDCD00B6B569 /* UsingDatesSafeEffectively.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UsingDatesSafeEffectively.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A132C8A294BCF1400D19D75 /* HWSPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSPlusApp.swift; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 			path = FloodFill;
 			sourceTree = "<group>";
 		};
+		3A0D578D2968BF7E00A397BE /* BoidsExample */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D578E2968BF9B00A397BE /* CGPoint-Helpers.swift */,
+				3A0D57902968C52800A397BE /* Triangle.swift */,
+			);
+			path = BoidsExample;
+			sourceTree = "<group>";
+		};
 		3A11DEFA2961FD8F00B6B569 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,7 @@
 		3A132C8C294BCF1400D19D75 /* HWSPlus */ = {
 			isa = PBXGroup;
 			children = (
+				3A0D578D2968BF7E00A397BE /* BoidsExample */,
 				3A0CC5E129673AEC00DCCD00 /* FloodFill */,
 				3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */,
 				3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */,
@@ -346,9 +360,11 @@
 				3A336F212951D73900B4333A /* Main.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
+				3A0D578F2968BF9B00A397BE /* CGPoint-Helpers.swift in Sources */,
 				3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
+				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
 				3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */,
 				3A0CC5E329673B2600DCCD00 /* Grid.swift in Sources */,
 			);
