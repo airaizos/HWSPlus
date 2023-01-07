@@ -21,6 +21,13 @@ class Boid: Identifiable {
         let angle = Double.random(in: 0...(.pi * 2))
         velocity = CGPoint(x: cos(angle), y: sin(angle))
     }
+    
+    func run(in flock: Flock) {
+        velocity += calculateAcceleration(with: flock)
+        velocity.limit(to: maximumSpeed)
+        position += velocity
+        wrap(in: flock)
+    }
     private func calculateAcceleration(with flock: Flock) -> CGPoint {
         .zero
     }
@@ -32,6 +39,23 @@ class Boid: Identifiable {
     }
     private func cohere(from flock: Flock) -> CGPoint {
         .zero
+    }
+    
+    private func wrap(in flock: Flock) {
+        //atrapar a los boids en el frame
+        let boidSize : CGFloat = 5
+        if position.x < -boidSize {
+            position.x = flock.width + boidSize
+        } else if position.x > flock.width + boidSize {
+            position.x = -boidSize
+        }
+        
+        if position.y < -boidSize {
+            position.y = flock.height + boidSize
+        } else if position.y > flock.height + boidSize {
+            position.y = -boidSize
+        }
+        
     }
 }
 
@@ -61,7 +85,9 @@ class Flock: ObservableObject {
     //displayLink
     @objc func update() {
         objectWillChange.send()
-        // more code to come
+        for boid in boids {
+            boid.run(in: self)
+        }
     }
 }
 //MARK: BoidsView
@@ -75,7 +101,7 @@ struct BoidsView: View {
                     .rotation(.radians(boid.velocity.heading + (.pi / 2)))
                     .fill(Color.red)
                     .frame(width: 6, height: 12)
-                    .position(boid.position)
+                    .position(x:boid.position.x, y: boid.position.y)
             }
         }
         .background(Color(white: 0.2, opacity: 1))
