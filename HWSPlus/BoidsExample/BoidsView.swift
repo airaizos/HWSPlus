@@ -10,6 +10,7 @@ import SwiftUI
 //MARK: Boid
 class Boid: Identifiable {
     let id = UUID()
+    let color: Color = [.green, .white, .red,.yellow, .orange, .blue, .purple].randomElement()!
     
     var position: CGPoint
     var velocity: CGPoint
@@ -29,11 +30,12 @@ class Boid: Identifiable {
         wrap(in: flock)
     }
     private func calculateAcceleration(with flock: Flock) -> CGPoint {
-        var aceleration = separate(from: flock) * 1.5
-        aceleration += align(from: flock)
-        aceleration += cohere(from: flock)
+        var acceleration = separate(from: flock) * 1.5
+        acceleration += align(from: flock)
+        acceleration += cohere(from: flock)
+        acceleration += avoid(flock.obstacle) * 10
         
-        return aceleration
+        return acceleration
     }
     private func separate(from flock: Flock) -> CGPoint {
         //encuentra a otros que estén al menos a 30² puntos de mi
@@ -105,6 +107,11 @@ class Boid: Identifiable {
     private func neighbors(in flock: Flock, distanceCutOff: CGFloat) -> [(boid: Boid, distance: CGFloat )] {
         
         flock.boids.compactMap { other in
+            
+            // si está activo el teamMode y mi color es diferente del otro, no es mi vecino.
+            if flock.teamMode == true && self.color != other.color { return nil }
+            
+            
             let distance = position.distanceSquare(from: other.position)
             
             if distance > 0 && distance < distanceCutOff {
@@ -125,6 +132,23 @@ class Boid: Identifiable {
         acceleration.limit(to: maximumSteer)
         return acceleration
     }
+    
+    private func avoid(_ obstacle: CGPoint) -> CGPoint {
+        // cuanta distancia hay entre el obstáculo y el boid
+        let distance = position.distanceSquare(from: obstacle)
+        let distanceCutOff: CGFloat = 750
+        
+        //si esta lejos, al boid no le afecta
+        guard distance < distanceCutOff else { return .zero }
+        
+        //entre más cerca esté, más nos preocuparemos
+        var acceleration = position - obstacle
+        acceleration /= distance
+        
+        //acelera en otra dirección
+        return steer(acceleration)
+    }
+    
 }
 
 //MARK: Flock
@@ -136,11 +160,15 @@ class Flock: ObservableObject {
     let height: CGFloat
     
     var boids = [Boid]()
+    var teamMode = false
+    
+    var obstacle: CGPoint
     
     init(width: CGFloat, height: CGFloat) {
         self.width = width
         self.height = height
         
+        obstacle = CGPoint(x: width / 2, y: height / 2)
         for _ in 1...100 {
             let newBoid = Boid(x: CGFloat.random(in: 0..<width), y: CGFloat.random(in: 0..<height))
             boids.append(newBoid)
@@ -160,21 +188,37 @@ class Flock: ObservableObject {
 }
 //MARK: BoidsView
 struct BoidsView: View {
-    @StateObject var flock = Flock(width: 400, height: 400)
+    @StateObject var flock = Flock(width: 800, height: 800)
     
     var body: some View {
         ZStack {
             ForEach(flock.boids) { boid in
                 Triangle()
                     .rotation(.radians(boid.velocity.heading + (.pi / 2)))
-                    .fill(Color.red)
+                    .fill(flock.teamMode ? boid.color : .pink)
                     .frame(width: 6, height: 12)
                     .position(x:boid.position.x, y: boid.position.y)
             }
+            
+            Circle()
+                .fill(Color.cyan)
+                .frame(width: 25, height: 25)
+                .position(flock.obstacle)
         }
         .background(Color(white: 0.2, opacity: 1))
         .frame(width: flock.width, height: flock.height)
         .ignoresSafeArea()
+        .gesture(
+            DragGesture(minimumDistance: 10)
+                .onChanged {value  in
+                    flock.obstacle = value.location
+                }
+            
+        )
+        
+        .onTapGesture {
+            flock.teamMode.toggle()
+        }
     }
 }
 
