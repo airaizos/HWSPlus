@@ -29,14 +29,38 @@ class Boid: Identifiable {
         wrap(in: flock)
     }
     private func calculateAcceleration(with flock: Flock) -> CGPoint {
-        .zero
+        var aceleration = separate(from: flock) * 1.5
+        
+        return aceleration
     }
     private func separate(from flock: Flock) -> CGPoint {
-        .zero
+        //encuentra a otros que estén al menos a 30² puntos de mi
+        let nerby = neighbors(in: flock, distanceCutOff: 900)
+        
+        //si no hay ninguno, no se ajusta la separación
+        guard nerby.count > 0 else { return .zero }
+        
+        //calcula un solo valor, empeiza por 0
+        var acceleration = nerby.reduce(CGPoint.zero) {
+            //encuentra la diferencia de X/Y entre yo y otro boid
+            var difference = position - $1.boid.position
+            //difive la diferencia entre la distancia, entre más lejos, menos importancia
+            difference /= $1.distance
+            //suma esa diferencia
+            return $0 + difference
+        }
+        // obtén un promedio de la aceleración y la cantidad de vecinos
+        acceleration /= CGFloat(nerby.count)
+        
+        // eso esa nuestro direccionamiento
+        return steer(acceleration)
     }
+    
     private func align(from flock: Flock) -> CGPoint {
+    
         .zero
     }
+    
     private func cohere(from flock: Flock) -> CGPoint {
         .zero
     }
@@ -55,7 +79,30 @@ class Boid: Identifiable {
         } else if position.y > flock.height + boidSize {
             position.y = -boidSize
         }
+    }
+    
+    private func neighbors(in flock: Flock, distanceCutOff: CGFloat) -> [(boid: Boid, distance: CGFloat )] {
         
+        flock.boids.compactMap { other in
+            let distance = position.distanceSquare(from: other.position)
+            
+            if distance > 0 && distance < distanceCutOff {
+                return (other, distance)
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    private func steer(_ acceleration: CGPoint) -> CGPoint {
+        var acceleration = acceleration
+        acceleration.normalize()
+        acceleration *= maximumSpeed
+        acceleration -= velocity
+        
+        let maximumSteer: CGFloat = 0.04
+        acceleration.limit(to: maximumSteer)
+        return acceleration
     }
 }
 
