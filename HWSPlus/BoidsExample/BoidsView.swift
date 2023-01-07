@@ -30,6 +30,8 @@ class Boid: Identifiable {
     }
     private func calculateAcceleration(with flock: Flock) -> CGPoint {
         var aceleration = separate(from: flock) * 1.5
+        aceleration += align(from: flock)
+        aceleration += cohere(from: flock)
         
         return aceleration
     }
@@ -57,12 +59,31 @@ class Boid: Identifiable {
     }
     
     private func align(from flock: Flock) -> CGPoint {
-    
-        .zero
+        let nearby = neighbors(in: flock, distanceCutOff: 2500)
+        guard nearby.count > 0 else { return .zero }
+        
+        var acceleration = nearby.reduce(CGPoint.zero) {
+            $0 + $1.boid.velocity
+        }
+        acceleration /= CGFloat(nearby.count)
+        return steer(acceleration)
     }
     
     private func cohere(from flock: Flock) -> CGPoint {
-        .zero
+        
+        let nearby = neighbors(in: flock, distanceCutOff: 2500)
+        
+        guard nearby.count > 0 else { return .zero }
+        
+        var acceleration = nearby.reduce(CGPoint.zero) {
+            $0 + $1.boid.position
+        }
+        
+        acceleration /= CGFloat(nearby.count)
+        acceleration -= position
+        
+        return steer(acceleration)
+        
     }
     
     private func wrap(in flock: Flock) {
