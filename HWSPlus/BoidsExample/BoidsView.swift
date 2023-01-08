@@ -29,11 +29,13 @@ class Boid: Identifiable {
         position += velocity
         wrap(in: flock)
     }
+    
     private func calculateAcceleration(with flock: Flock) -> CGPoint {
-        var acceleration = separate(from: flock) * 1.5
-        acceleration += align(from: flock)
-        acceleration += cohere(from: flock)
-        acceleration += avoid(flock.obstacle) * 10
+        var acceleration: CGPoint = .zero
+        if flock.separate { acceleration += separate(from: flock) * 1.5 }
+        if flock.align { acceleration += align(from: flock) }
+        if flock.cohere { acceleration += cohere(from: flock) }
+        if flock.avoid { acceleration += avoid(flock.obstacle) * 10 }
         
         return acceleration
     }
@@ -164,6 +166,24 @@ class Flock: ObservableObject {
     
     var obstacle: CGPoint
     
+    var separate = true
+    var align = true
+    var cohere = true
+    var avoid = true
+    
+    func changeSeparate() {
+        separate.toggle()
+    }
+    func changeAlign() {
+        align.toggle()
+    }
+    func changeCohere() {
+        cohere.toggle()
+    }
+    func changeAvoid() {
+        avoid.toggle()
+    }
+    
     init(width: CGFloat, height: CGFloat) {
         self.width = width
         self.height = height
@@ -191,33 +211,45 @@ struct BoidsView: View {
     @StateObject var flock = Flock(width: 800, height: 800)
     
     var body: some View {
-        ZStack {
-            ForEach(flock.boids) { boid in
-                Triangle()
-                    .rotation(.radians(boid.velocity.heading + (.pi / 2)))
-                    .fill(flock.teamMode ? boid.color : .pink)
-                    .frame(width: 6, height: 12)
-                    .position(x:boid.position.x, y: boid.position.y)
+        VStack {
+            HStack {
+                Button("Align", action: flock.changeAlign)
+                    .foregroundColor(flock.align ? .blue : .red)
+                Button("Separate", action: flock.changeSeparate)
+                    .foregroundColor(flock.separate ? .blue : .red)
+                Button("Cohere", action: flock.changeCohere)
+                    .foregroundColor(flock.cohere ? .blue : .red)
+                Button("Avoid", action: flock.changeAvoid)
+                    .foregroundColor(flock.avoid ? .blue : .red)
             }
-            
-            Circle()
-                .fill(Color.cyan)
-                .frame(width: 25, height: 25)
-                .position(flock.obstacle)
-        }
-        .background(Color(white: 0.2, opacity: 1))
-        .frame(width: flock.width, height: flock.height)
-        .ignoresSafeArea()
-        .gesture(
-            DragGesture(minimumDistance: 10)
-                .onChanged {value  in
-                    flock.obstacle = value.location
+            ZStack {
+                ForEach(flock.boids) { boid in
+                    Triangle()
+                        .rotation(.radians(boid.velocity.heading + (.pi / 2)))
+                        .fill(flock.teamMode ? boid.color : .pink)
+                        .frame(width: 6, height: 12)
+                        .position(x:boid.position.x, y: boid.position.y)
                 }
+                
+                Circle()
+                    .fill(Color.cyan)
+                    .frame(width: 25, height: 25)
+                    .position(flock.obstacle)
+            }
+            .background(Color(white: 0.2, opacity: 1))
+            .frame(width: flock.width, height: flock.height)
+            .ignoresSafeArea()
+            .gesture(
+                DragGesture(minimumDistance: 10)
+                    .onChanged {value  in
+                        flock.obstacle = value.location
+                    }
+                
+            )
             
-        )
-        
-        .onTapGesture {
-            flock.teamMode.toggle()
+            .onTapGesture {
+                flock.teamMode.toggle()
+            }
         }
     }
 }
