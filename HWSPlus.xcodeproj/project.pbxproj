@@ -16,6 +16,7 @@
 		3A12E827296B29D000E17C1E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A12E826296B29D000E17C1E /* users.json */; };
 		3A12E829296B29F200E17C1E /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E828296B29F200E17C1E /* Bundle-Decodable.swift */; };
 		3A12E82B296B2BF900E17C1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E82A296B2BF900E17C1E /* User.swift */; };
+		3A12E82D296B2D3F00E17C1E /* FilteringListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E82C296B2D3F00E17C1E /* FilteringListView.swift */; };
 		3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */; };
 		3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8F294BCF1400D19D75 /* ContentView.swift */; };
 		3A132C92294BCF1500D19D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A132C91294BCF1500D19D75 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		3A12E826296B29D000E17C1E /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		3A12E828296B29F200E17C1E /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		3A12E82A296B2BF900E17C1E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3A12E82C296B2D3F00E17C1E /* FilteringListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringListView.swift; sourceTree = "<group>"; };
 		3A132C8A294BCF1400D19D75 /* HWSPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSPlusApp.swift; sourceTree = "<group>"; };
 		3A132C8F294BCF1400D19D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				3A12E826296B29D000E17C1E /* users.json */,
 				3A12E828296B29F200E17C1E /* Bundle-Decodable.swift */,
 				3A12E82A296B2BF900E17C1E /* User.swift */,
+				3A12E82C296B2D3F00E17C1E /* FilteringListView.swift */,
 			);
 			path = FilteringList;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				3A0D57932968C75800A397BE /* BoidsView.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
+				3A12E82D296B2D3F00E17C1E /* FilteringListView.swift in Sources */,
 				3A0D578F2968BF9B00A397BE /* CGPoint-Helpers.swift in Sources */,
 				3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,

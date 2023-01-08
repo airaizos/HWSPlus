@@ -17,7 +17,7 @@ extension Bundle {
         }
         
         let decoder = JSONDecoder()
-        decoder.dataDecodingStrategy = dateDecodingStrategy
+        decoder.dateDecodingStrategy = dateDecodingStrategy
         decoder.keyDecodingStrategy = keyDecodingStrategy
         
         do {
