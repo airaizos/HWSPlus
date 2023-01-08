@@ -3,13 +3,32 @@
 //  HWSPlus
 //
 //  Created by Adrian Iraizos Mendoza on 8/1/23.
-//
+/// **DidSet no funciona en SwiftUI**
+
 
 import SwiftUI
 
 struct FilteringListView: View {
+    let users = Bundle.main.decode([User].self, from: "users.json")
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            FilteringList(users, filterKeys: \.name, \.address, \.phone, \.company, \.email) { user in
+                VStack(alignment: .leading) {
+                    Text(user.name)
+                        .font(.headline)
+                    Text(user.company)
+                        .font(.callout)
+                    Text(user.address)
+                        .foregroundColor(.secondary)
+                    Text(user.phone)
+                        .foregroundColor(.secondary)
+                    Text(user.email)
+                        .foregroundColor(.secondary)
+                }
+            }
+        }
+        .navigationTitle("Address Book")
     }
 }
 
