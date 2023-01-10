@@ -31,6 +31,10 @@
 		3A132CAB294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CAA294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift */; };
 		3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */; };
 		3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */; };
+		3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B21296D6B70004F7CA6 /* FlipCardView.swift */; };
+		3A215B24296D6FE4004F7CA6 /* FlipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B23296D6FE4004F7CA6 /* FlipCard.swift */; };
+		3A215B27296D78C3004F7CA6 /* AccessibleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B26296D78C3004F7CA6 /* AccessibleStackView.swift */; };
+		3A215B29296D78D1004F7CA6 /* AccesibleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B28296D78D1004F7CA6 /* AccesibleStack.swift */; };
 		3A216932295B3C5B007011CB /* ds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A216931295B3C5B007011CB /* ds.swift */; };
 		3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74BD2964CF8F00C1188E /* Monograms.swift */; };
 		3A336F212951D73900B4333A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A336F202951D73900B4333A /* Main.swift */; };
@@ -88,6 +92,10 @@
 		3A1846902965EAAC00F21A22 /* ParsingJson.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingJson.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButtonView.swift; sourceTree = "<group>"; };
 		3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButton.swift; sourceTree = "<group>"; };
+		3A215B21296D6B70004F7CA6 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
+		3A215B23296D6FE4004F7CA6 /* FlipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCard.swift; sourceTree = "<group>"; };
+		3A215B26296D78C3004F7CA6 /* AccessibleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleStackView.swift; sourceTree = "<group>"; };
+		3A215B28296D78D1004F7CA6 /* AccesibleStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccesibleStack.swift; sourceTree = "<group>"; };
 		3A216931295B3C5B007011CB /* ds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ds.swift; sourceTree = "<group>"; };
 		3A2F74BA2964968500C1188E /* StoringPreferencesEfficiently.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StoringPreferencesEfficiently.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSPlus.entitlements; sourceTree = "<group>"; };
@@ -188,6 +196,8 @@
 		3A12E835296B42C700E17C1E /* SwiftUIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				3A215B25296D78A2004F7CA6 /* AccessibleStackForDynamicType */,
+				3A215B20296D6B59004F7CA6 /* FlipCard */,
 				3A215B1B296D5A80004F7CA6 /* LongPressButton */,
 				3A12E836296B42CF00E17C1E /* ShapeViewToBezierPaths */,
 				3A12E825296B29B600E17C1E /* FilteringList */,
@@ -295,6 +305,24 @@
 				3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */,
 			);
 			path = LongPressButton;
+			sourceTree = "<group>";
+		};
+		3A215B20296D6B59004F7CA6 /* FlipCard */ = {
+			isa = PBXGroup;
+			children = (
+				3A215B21296D6B70004F7CA6 /* FlipCardView.swift */,
+				3A215B23296D6FE4004F7CA6 /* FlipCard.swift */,
+			);
+			path = FlipCard;
+			sourceTree = "<group>";
+		};
+		3A215B25296D78A2004F7CA6 /* AccessibleStackForDynamicType */ = {
+			isa = PBXGroup;
+			children = (
+				3A215B26296D78C3004F7CA6 /* AccessibleStackView.swift */,
+				3A215B28296D78D1004F7CA6 /* AccesibleStack.swift */,
+			);
+			path = AccessibleStackForDynamicType;
 			sourceTree = "<group>";
 		};
 		3A2F74BF2964D4C300C1188E /* Parsing */ = {
@@ -439,6 +467,8 @@
 			files = (
 				3A12E82B296B2BF900E17C1E /* User.swift in Sources */,
 				3A336F212951D73900B4333A /* Main.swift in Sources */,
+				3A215B29296D78D1004F7CA6 /* AccesibleStack.swift in Sources */,
+				3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */,
 				3A0D57932968C75800A397BE /* BoidsView.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
 				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
@@ -455,9 +485,11 @@
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
 				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
+				3A215B27296D78C3004F7CA6 /* AccessibleStackView.swift in Sources */,
 				3A51CEE1296C01AF00ACC2A4 /* Wave.swift in Sources */,
 				3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */,
 				3A0CC5E329673B2600DCCD00 /* Grid.swift in Sources */,
+				3A215B24296D6FE4004F7CA6 /* FlipCard.swift in Sources */,
 				3A12E829296B29F200E17C1E /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

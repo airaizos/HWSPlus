@@ -46,3 +46,6 @@ struct LongPressButton: View {
             .animation(.linear,value: pressed ? 1 : 0)
     }
 }
+
+
+

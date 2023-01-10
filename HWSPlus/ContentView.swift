@@ -11,11 +11,16 @@ struct ContentView: View {
   
     
     var body: some View {
-      // FloodFillView()
-        //BoidsView()
-      //  FilteringListView()
-     //   ShapeBezierView()
-        LongPressButtonView()
+        
+        ///#Algoritmos#
+            /// FloodFillView()
+            ///BoidsView()
+            ///FilteringListView()
+        ///#Swift Components
+            ///ShapeBezierView()
+            /// LongPressButtonView()
+            /// FlipCardView()
+        AccessibleStackView()
     }
 }
 
