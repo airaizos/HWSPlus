@@ -11,7 +11,8 @@ struct AccessibleStack<Content: View>: View {
     @Environment(\.sizeCategory) var size
     
     ///Hay que proporcionar las mismas propiedades que a un HStack y VStack, a los que hay que dar valores por defecto
-    var spacing: Optional<CGFloat>
+    var horizontalSpacing: Optional<CGFloat>
+    var verticalSpacing: Optional<CGFloat>
     var horizontalAlignment: HorizontalAlignment
     var verticalAlignment: VerticalAlignment
     
@@ -21,8 +22,9 @@ struct AccessibleStack<Content: View>: View {
     let content: () -> Content
     
     /// Inicializador personalizado para que el Content sea un viewBuilder, que nos permite pasar varias vistas al mismo tiempo en un solo closure
-    init(horizontalAlignment: HorizontalAlignment = .center, verticalAlignment: VerticalAlignment = .center, spacing: CGFloat? = nil,  verticalStartSize: ContentSizeCategory = .accessibilityMedium, @ViewBuilder content: @escaping () -> Content) {
-        self.spacing = spacing
+    init(horizontalAlignment: HorizontalAlignment = .center, verticalAlignment: VerticalAlignment = .center, horizontalSpacing: CGFloat? = nil, verticalSpacing: CGFloat? = nil,  verticalStartSize: ContentSizeCategory = .accessibilityMedium, @ViewBuilder content: @escaping () -> Content) {
+        self.horizontalSpacing = horizontalSpacing
+        self.verticalSpacing = verticalSpacing
         self.horizontalAlignment = horizontalAlignment
         self.verticalAlignment = verticalAlignment
         self.verticalStartSize = verticalStartSize
@@ -30,9 +32,9 @@ struct AccessibleStack<Content: View>: View {
     }
     @ViewBuilder var body: some View {
         if size >= verticalStartSize {
-            VStack(alignment: horizontalAlignment, spacing: spacing, content: content)
+            VStack(alignment: horizontalAlignment, spacing: verticalSpacing, content: content)
         } else {
-            HStack(alignment: verticalAlignment, spacing: spacing, content: content)
+            HStack(alignment: verticalAlignment, spacing: horizontalSpacing, content: content)
         }
     }
 }

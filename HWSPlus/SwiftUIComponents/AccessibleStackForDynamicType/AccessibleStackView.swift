@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccessibleStackView: View {
     var body: some View {
-        AccessibleStack(spacing: 20) {
+        AccessibleStack( horizontalSpacing: 50, verticalSpacing: 50) {
             
             Text("Etiqueta Número 1")
             Text("Etiqueta Número 2")
