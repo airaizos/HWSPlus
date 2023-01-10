@@ -14,10 +14,11 @@ struct FilteringList<T: Identifiable, Content: View> : View {
     let listItems: [T]
     let filterKeyPaths: [KeyPath<T, String>]
     let content: (T) -> Content
+    var title: String
     
     var body: some View {
         VStack {
-            TextField("Type to filter", text: $filterString.onChange(applyFilter))
+            TextField(title, text: $filterString.onChange(applyFilter))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
             List(filteredItems, rowContent: content)
@@ -27,10 +28,11 @@ struct FilteringList<T: Identifiable, Content: View> : View {
         .onAppear(perform: applyFilter)
     }
     
-    init(_ data: [T], filterKeys: KeyPath<T, String>..., @ViewBuilder rowContent: @escaping (T) -> Content) {
+    init(_ data: [T], placeholder: String, filterKeys: KeyPath<T, String>..., @ViewBuilder rowContent: @escaping (T) -> Content) {
         listItems = data
         filterKeyPaths = filterKeys
         content = rowContent
+        title = placeholder
     }
     
     func applyFilter() {

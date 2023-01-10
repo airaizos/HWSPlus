@@ -13,7 +13,7 @@ struct FilteringListView: View {
     
     var body: some View {
         NavigationView {
-            FilteringList(users, filterKeys: \.name, \.address, \.phone, \.company, \.email) { user in
+            FilteringList(users, placeholder: "Busca aquí", filterKeys: \.name, \.address, \.phone, \.company, \.email) { user in
                 VStack(alignment: .leading) {
                     Text(user.name)
                         .font(.headline)

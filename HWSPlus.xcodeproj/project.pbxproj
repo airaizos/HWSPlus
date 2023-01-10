@@ -20,6 +20,8 @@
 		3A12E82F296B2DDE00E17C1E /* FilteringListGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E82E296B2DDE00E17C1E /* FilteringListGeneric.swift */; };
 		3A12E831296B304200E17C1E /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E830296B304200E17C1E /* BindingExtension.swift */; };
 		3A12E833296B35A300E17C1E /* FilteringListUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E832296B35A300E17C1E /* FilteringListUsersView.swift */; };
+		3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E837296B430E00E17C1E /* UIBezierPath_Extension.swift */; };
+		3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E839296B43DC00E17C1E /* ShapeBezierView.swift */; };
 		3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */; };
 		3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8F294BCF1400D19D75 /* ContentView.swift */; };
 		3A132C92294BCF1500D19D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A132C91294BCF1500D19D75 /* Assets.xcassets */; };
@@ -27,9 +29,11 @@
 		3A132C9F294BCF1600D19D75 /* HWSPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C9E294BCF1600D19D75 /* HWSPlusTests.swift */; };
 		3A132CA9294BCF1600D19D75 /* HWSPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CA8294BCF1600D19D75 /* HWSPlusUITests.swift */; };
 		3A132CAB294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CAA294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift */; };
+		3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */; };
 		3A216932295B3C5B007011CB /* ds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A216931295B3C5B007011CB /* ds.swift */; };
 		3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74BD2964CF8F00C1188E /* Monograms.swift */; };
 		3A336F212951D73900B4333A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A336F202951D73900B4333A /* Main.swift */; };
+		3A51CEE1296C01AF00ACC2A4 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A51CEE0296C01AF00ACC2A4 /* Wave.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,8 @@
 		3A12E82E296B2DDE00E17C1E /* FilteringListGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringListGeneric.swift; sourceTree = "<group>"; };
 		3A12E830296B304200E17C1E /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
 		3A12E832296B35A300E17C1E /* FilteringListUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringListUsersView.swift; sourceTree = "<group>"; };
+		3A12E837296B430E00E17C1E /* UIBezierPath_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPath_Extension.swift; sourceTree = "<group>"; };
+		3A12E839296B43DC00E17C1E /* ShapeBezierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeBezierView.swift; sourceTree = "<group>"; };
 		3A132C8A294BCF1400D19D75 /* HWSPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSPlusApp.swift; sourceTree = "<group>"; };
 		3A132C8F294BCF1400D19D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		3A132CB9294BCF8300D19D75 /* BuildingPureFunctions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BuildingPureFunctions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1749B2296357AE004AEFBF /* ConvertingMeasurementsSafely.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConvertingMeasurementsSafely.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1846902965EAAC00F21A22 /* ParsingJson.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingJson.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButtonView.swift; sourceTree = "<group>"; };
 		3A216931295B3C5B007011CB /* ds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ds.swift; sourceTree = "<group>"; };
 		3A2F74BA2964968500C1188E /* StoringPreferencesEfficiently.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StoringPreferencesEfficiently.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSPlus.entitlements; sourceTree = "<group>"; };
@@ -86,6 +93,7 @@
 		3A2F74BD2964CF8F00C1188E /* Monograms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monograms.swift; sourceTree = "<group>"; };
 		3A2F74C02964D4D200C1188E /* ParsingXML.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingXML.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A336F202951D73900B4333A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		3A51CEE0296C01AF00ACC2A4 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,35 @@
 			path = FilteringList;
 			sourceTree = "<group>";
 		};
+		3A12E834296B42BD00E17C1E /* Algoritms */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D578D2968BF7E00A397BE /* BoidsExample */,
+				3A0CC5E129673AEC00DCCD00 /* FloodFill */,
+			);
+			path = Algoritms;
+			sourceTree = "<group>";
+		};
+		3A12E835296B42C700E17C1E /* SwiftUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3A215B1B296D5A80004F7CA6 /* LongPressButton */,
+				3A12E836296B42CF00E17C1E /* ShapeViewToBezierPaths */,
+				3A12E825296B29B600E17C1E /* FilteringList */,
+			);
+			path = SwiftUIComponents;
+			sourceTree = "<group>";
+		};
+		3A12E836296B42CF00E17C1E /* ShapeViewToBezierPaths */ = {
+			isa = PBXGroup;
+			children = (
+				3A12E837296B430E00E17C1E /* UIBezierPath_Extension.swift */,
+				3A12E839296B43DC00E17C1E /* ShapeBezierView.swift */,
+				3A51CEE0296C01AF00ACC2A4 /* Wave.swift */,
+			);
+			path = ShapeViewToBezierPaths;
+			sourceTree = "<group>";
+		};
 		3A132C81294BCF1400D19D75 = {
 			isa = PBXGroup;
 			children = (
@@ -190,9 +227,8 @@
 		3A132C8C294BCF1400D19D75 /* HWSPlus */ = {
 			isa = PBXGroup;
 			children = (
-				3A12E825296B29B600E17C1E /* FilteringList */,
-				3A0D578D2968BF7E00A397BE /* BoidsExample */,
-				3A0CC5E129673AEC00DCCD00 /* FloodFill */,
+				3A12E835296B42C700E17C1E /* SwiftUIComponents */,
+				3A12E834296B42BD00E17C1E /* Algoritms */,
 				3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */,
 				3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */,
 				3A132C8F294BCF1400D19D75 /* ContentView.swift */,
@@ -248,6 +284,14 @@
 				3A132CB9294BCF8300D19D75 /* BuildingPureFunctions.playground */,
 			);
 			path = FuctionalProgramming;
+			sourceTree = "<group>";
+		};
+		3A215B1B296D5A80004F7CA6 /* LongPressButton */ = {
+			isa = PBXGroup;
+			children = (
+				3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */,
+			);
+			path = LongPressButton;
 			sourceTree = "<group>";
 		};
 		3A2F74BF2964D4C300C1188E /* Parsing */ = {
@@ -393,6 +437,8 @@
 				3A12E82B296B2BF900E17C1E /* User.swift in Sources */,
 				3A336F212951D73900B4333A /* Main.swift in Sources */,
 				3A0D57932968C75800A397BE /* BoidsView.swift in Sources */,
+				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
+				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
 				3A12E82F296B2DDE00E17C1E /* FilteringListGeneric.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
@@ -403,7 +449,9 @@
 				3A12E831296B304200E17C1E /* BindingExtension.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
+				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
 				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
+				3A51CEE1296C01AF00ACC2A4 /* Wave.swift in Sources */,
 				3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */,
 				3A0CC5E329673B2600DCCD00 /* Grid.swift in Sources */,
 				3A12E829296B29F200E17C1E /* Bundle-Decodable.swift in Sources */,
