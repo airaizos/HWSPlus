@@ -14,7 +14,8 @@ struct ContentView: View {
       // FloodFillView()
         //BoidsView()
       //  FilteringListView()
-        ShapeBezierView()
+     //   ShapeBezierView()
+        LongPressButtonView()
     }
 }
 

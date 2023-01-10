@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct LongPressButtonView: View {
+    @State private var activated = false
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(activated ? "Activado" : "Desactivado")
+                .font(.largeTitle)
+                .foregroundColor(activated ? .red : .gray.opacity(0.5))
+            LongPressButton(image: activated ?  Image(systemName: "bolt") : Image(systemName: "bolt.fill"),foregroundColor: activated ? .yellow : .gray)  {
+                activated.toggle()
+            }
+          
+        }
     }
 }
 
