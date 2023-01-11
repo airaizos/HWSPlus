@@ -18,10 +18,23 @@ extension UIBezierPath {
         path.addCurve(to: CGPoint(x: 0.0397, y: 0.5431), controlPoint1: CGPoint(x: 0.7118, y: 0.5248), controlPoint2: CGPoint(x: 0.3329, y: 0.7442))
         path.addCurve(to: CGPoint(x: 0.6211, y: 0.0279), controlPoint1: CGPoint(x: 0.508, y: 1.1956), controlPoint2: CGPoint(x: 1.3042, y: 0.5345))
         path.addCurve(to: CGPoint(x: 0.6904, y: 0.3615), controlPoint1: CGPoint(x: 0.7282, y: 0.2481), controlPoint2: CGPoint(x: 0.6904, y: 0.3615))
-      
+        
         
         return path
     }
     
-    
+    static var ppsLogo: UIBezierPath {
+        
+        let path = UIBezierPath()
+        
+        path.move(to: CGPoint(x: 0.2944, y: 0.1583))
+        path.addCurve(to: CGPoint(x: 0.3982, y: 0.1633), controlPoint1: CGPoint(x: 0.3233, y: 0.111), controlPoint2: CGPoint(x: 0.3729, y: 0.1052))
+        path.addCurve(to: CGPoint(x: 0.4157, y: 0.1731), controlPoint1: CGPoint(x: 0.3539, y: 0.1690), controlPoint2: CGPoint(x: 0.3941, y: 0.1437))
+        path.addCurve(to: CGPoint(x: 0.3442, y: 0.2190), controlPoint1: CGPoint(x: 0.3342, y: 0.2190), controlPoint2: CGPoint(x: 0.3559, y: 0.3315))
+        
+        return path
+    }
+
 }
+
+

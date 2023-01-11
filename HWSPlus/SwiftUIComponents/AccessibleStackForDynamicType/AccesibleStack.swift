@@ -31,10 +31,22 @@ struct AccessibleStack<Content: View>: View {
         self.content = content
     }
     @ViewBuilder var body: some View {
-        if size >= verticalStartSize {
+        /*    if size >= verticalStartSize {
+         VStack(alignment: horizontalAlignment, spacing: verticalSpacing, content: content)
+         } else {
+         HStack(alignment: verticalAlignment, spacing: horizontalSpacing, content: content)
+         }
+         */
+        switch size {
+        case .extraLarge, .extraExtraLarge, .extraExtraExtraLarge:
             VStack(alignment: horizontalAlignment, spacing: verticalSpacing, content: content)
-        } else {
-            HStack(alignment: verticalAlignment, spacing: horizontalSpacing, content: content)
+        case .small, .medium, .large: HStack(alignment: verticalAlignment, spacing: horizontalSpacing, content: content)
+        default:
+            if size >= verticalStartSize {
+                VStack(alignment: horizontalAlignment, spacing: verticalSpacing, content: content)
+            } else {
+                HStack(alignment: verticalAlignment, spacing: horizontalSpacing, content: content)
+            }
         }
     }
 }

@@ -25,7 +25,13 @@ struct ShapeBezierView: View {
     
     var body: some View {
         VStack {
-           ShapeView(bezier: UIBezierPath.unwrapLogo)
+            
+            ShapeView(bezier: UIBezierPath.ppsLogo)
+                .trim(from: 0, to: 1)
+                .stroke(Color.blue, lineWidth: 4)
+                .frame(width: 400, height: 400)
+            
+            ShapeView(bezier: UIBezierPath.unwrapLogo)
                 .trim(from: 0, to: endAmount)
                 .stroke(Color.blue, lineWidth: 4)
                 .frame(width: 200, height: 200)
