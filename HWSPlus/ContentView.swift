@@ -21,7 +21,8 @@ struct ContentView: View {
             /// LongPressButtonView()
             /// FlipCardView()
             ///AccessibleStackView()
-        StretchingHeaderView()
+       /// StretchingHeaderView()
+        StretchingMarginView()
     }
 }
 

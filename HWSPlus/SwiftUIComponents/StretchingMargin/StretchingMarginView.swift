@@ -9,8 +9,17 @@ import SwiftUI
 
 struct StretchingMarginView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            StretchingMargin {
+                Image("marginImage")
+                    .resizable()
+                    .scaledToFill()
+            }
+            .frame(width: 60)
+        }
+        .edgesIgnoringSafeArea(.all)
     }
+        
 }
 
 struct StretchingMarginView_Previews: PreviewProvider {
