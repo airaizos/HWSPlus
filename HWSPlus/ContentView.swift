@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-  
+    
     
     var body: some View {
         
         ///#Algoritmos#
-            /// FloodFillView()
-            ///BoidsView()
-            ///FilteringListView()
+        /// FloodFillView()
+        ///BoidsView()
+        ///FilteringListView()
         ///#Swift Components
-            ///ShapeBezierView()
-            /// LongPressButtonView()
-            /// FlipCardView()
-            ///AccessibleStackView()
-       /// StretchingHeaderView()
-        StretchingMarginView()
+        ///ShapeBezierView()
+        /// LongPressButtonView()
+        /// FlipCardView()
+        ///AccessibleStackView()
+        /// StretchingHeaderView()
+        ///  StretchingMarginView()
+        RadialMenuView()
     }
 }
 
