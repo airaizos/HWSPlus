@@ -9,7 +9,9 @@ import SwiftUI
 
 struct RadialMenu: View {
     @State private var isExpanded = false
+    @State private var isShowingSheet = false
     
+    //MARK: Variables
     var title: String
     let closedImage: Image
     let openImage: Image
@@ -18,8 +20,52 @@ struct RadialMenu: View {
     var range = Angle(degrees: 90)
     var distance = 100.0
     var animation = Animation.default
-   
     
+    //MARK: View
+    
+    var body: some View {
+        ZStack {
+            Button {
+                if UIAccessibility.isVoiceOverRunning {
+                    isShowingSheet.toggle()
+                }
+                isExpanded.toggle()
+            } label: {
+                isExpanded ? openImage : closedImage
+            }
+            .buttonStyle(CustomButtonStyle())
+            .accessibility(label: Text(title))
+            
+            // Radial buttons
+            
+            ForEach(0..<buttons.count, id: \.self) {  i in
+                Button {
+                    buttons[i].action()
+                    isExpanded.toggle()
+                } label: {
+                    buttons[i].image
+                }
+                .accessibility(hidden: isExpanded == false)
+                .accessibility(label: Text(buttons[i].label))
+                .offset(offset(for: i))
+                .animation(animation.delay(Double(i) / 10), value: isExpanded == false)
+            }
+            .buttonStyle(CustomButtonStyle())
+            .opacity(isExpanded ? 1 : 0)
+           
+            
+        }
+    //TODO: Deprecated .confirmationDialog("", isPresented: $isShowingSheet) {
+        .actionSheet(isPresented: $isShowingSheet) {
+            ActionSheet(title: Text(title), buttons:
+                            buttons.map { btn in
+                ActionSheet.Button.default(Text(btn.label), action: btn.action) } + [.cancel()]
+            )
+        }
+    }
+    
+    
+    //MARK: Functions
     func offset(for index: Int) -> CGSize {
         guard isExpanded else { return .zero }
         
@@ -38,4 +84,6 @@ struct RadialMenu: View {
         
         return CGSize(width: finalX, height: finalY)
     }
+    
+    
 }

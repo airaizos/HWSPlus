@@ -34,6 +34,7 @@
 		3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4A29700052008019D2 /* RadialMenu.swift */; };
 		3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4C2970005A008019D2 /* RadialButton.swift */; };
 		3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4E29700069008019D2 /* RadialMenuView.swift */; };
+		3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F5029700931008019D2 /* CustomButtonStyle.swift */; };
 		3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */; };
 		3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */; };
 		3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B21296D6B70004F7CA6 /* FlipCardView.swift */; };
@@ -102,6 +103,7 @@
 		3A1F5F4A29700052008019D2 /* RadialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenu.swift; sourceTree = "<group>"; };
 		3A1F5F4C2970005A008019D2 /* RadialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialButton.swift; sourceTree = "<group>"; };
 		3A1F5F4E29700069008019D2 /* RadialMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuView.swift; sourceTree = "<group>"; };
+		3A1F5F5029700931008019D2 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButtonView.swift; sourceTree = "<group>"; };
 		3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButton.swift; sourceTree = "<group>"; };
 		3A215B21296D6B70004F7CA6 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		3A1F5F492970003C008019D2 /* RadialMenu */ = {
 			isa = PBXGroup;
 			children = (
+				3A1F5F5029700931008019D2 /* CustomButtonStyle.swift */,
 				3A1F5F4C2970005A008019D2 /* RadialButton.swift */,
 				3A1F5F4A29700052008019D2 /* RadialMenu.swift */,
 				3A1F5F4E29700069008019D2 /* RadialMenuView.swift */,
@@ -530,6 +533,7 @@
 				3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */,
 				3A12E833296B35A300E17C1E /* FilteringListUsersView.swift in Sources */,
 				3A215B2C296D877A004F7CA6 /* StretchingHeaderView.swift in Sources */,
+				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
 				3A12E831296B304200E17C1E /* BindingExtension.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
