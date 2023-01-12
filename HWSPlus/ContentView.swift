@@ -23,7 +23,8 @@ struct ContentView: View {
         ///AccessibleStackView()
         /// StretchingHeaderView()
         ///  StretchingMarginView()
-        RadialMenuView()
+       /// RadialMenuView()
+        RemoteImageView()
     }
 }
 

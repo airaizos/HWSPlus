@@ -35,6 +35,8 @@
 		3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4C2970005A008019D2 /* RadialButton.swift */; };
 		3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4E29700069008019D2 /* RadialMenuView.swift */; };
 		3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F5029700931008019D2 /* CustomButtonStyle.swift */; };
+		3A1F5F5429701405008019D2 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F5329701405008019D2 /* RemoteImageView.swift */; };
+		3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F5529701410008019D2 /* RemoteImage.swift */; };
 		3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */; };
 		3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */; };
 		3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B21296D6B70004F7CA6 /* FlipCardView.swift */; };
@@ -104,6 +106,8 @@
 		3A1F5F4C2970005A008019D2 /* RadialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialButton.swift; sourceTree = "<group>"; };
 		3A1F5F4E29700069008019D2 /* RadialMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuView.swift; sourceTree = "<group>"; };
 		3A1F5F5029700931008019D2 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		3A1F5F5329701405008019D2 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
+		3A1F5F5529701410008019D2 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButtonView.swift; sourceTree = "<group>"; };
 		3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButton.swift; sourceTree = "<group>"; };
 		3A215B21296D6B70004F7CA6 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 		3A12E835296B42C700E17C1E /* SwiftUIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				3A1F5F52297013F8008019D2 /* RemoteImage */,
 				3A1F5F492970003C008019D2 /* RadialMenu */,
 				3A132CF2296ED2E600E28CB8 /* StretchingMargin */,
 				3A215B2A296D8741004F7CA6 /* StretchingHeader */,
@@ -335,6 +340,15 @@
 				3A1F5F4E29700069008019D2 /* RadialMenuView.swift */,
 			);
 			path = RadialMenu;
+			sourceTree = "<group>";
+		};
+		3A1F5F52297013F8008019D2 /* RemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F5F5529701410008019D2 /* RemoteImage.swift */,
+				3A1F5F5329701405008019D2 /* RemoteImageView.swift */,
+			);
+			path = RemoteImage;
 			sourceTree = "<group>";
 		};
 		3A215B1B296D5A80004F7CA6 /* LongPressButton */ = {
@@ -526,6 +540,7 @@
 				3A12E82F296B2DDE00E17C1E /* FilteringListGeneric.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */,
+				3A1F5F5429701405008019D2 /* RemoteImageView.swift in Sources */,
 				3A12E82D296B2D3F00E17C1E /* FilteringListView.swift in Sources */,
 				3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */,
 				3A132CF4296ED2FE00E28CB8 /* StretchingMarginView.swift in Sources */,
@@ -539,6 +554,7 @@
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
 				3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */,
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
+				3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */,
 				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
 				3A215B2E296D8788004F7CA6 /* StretchingHeader.swift in Sources */,
 				3A215B27296D78C3004F7CA6 /* AccessibleStackView.swift in Sources */,
