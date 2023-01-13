@@ -31,6 +31,7 @@
 		3A132CAB294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CAA294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift */; };
 		3A132CF4296ED2FE00E28CB8 /* StretchingMarginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CF3296ED2FE00E28CB8 /* StretchingMarginView.swift */; };
 		3A132CF6296ED30A00E28CB8 /* StretchingMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CF5296ED30A00E28CB8 /* StretchingMargin.swift */; };
+		3A18AD7D29716B600049390A /* wer3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18AD7C29716B600049390A /* wer3.swift */; };
 		3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4A29700052008019D2 /* RadialMenu.swift */; };
 		3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4C2970005A008019D2 /* RadialButton.swift */; };
 		3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4E29700069008019D2 /* RadialMenuView.swift */; };
@@ -102,6 +103,8 @@
 		3A132CF5296ED30A00E28CB8 /* StretchingMargin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingMargin.swift; sourceTree = "<group>"; };
 		3A1749B2296357AE004AEFBF /* ConvertingMeasurementsSafely.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConvertingMeasurementsSafely.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1846902965EAAC00F21A22 /* ParsingJson.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingJson.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A18AD7C29716B600049390A /* wer3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wer3.swift; sourceTree = "<group>"; };
+		3A18AD7E29716D620049390A /* SpaceshipOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SpaceshipOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1F5F4A29700052008019D2 /* RadialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenu.swift; sourceTree = "<group>"; };
 		3A1F5F4C2970005A008019D2 /* RadialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialButton.swift; sourceTree = "<group>"; };
 		3A1F5F4E29700069008019D2 /* RadialMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuView.swift; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 		3A132C8C294BCF1400D19D75 /* HWSPlus */ = {
 			isa = PBXGroup;
 			children = (
+				3A18AD7B29716B3F0049390A /* IntermediateSwift */,
 				3A12E835296B42C700E17C1E /* SwiftUIComponents */,
 				3A12E834296B42BD00E17C1E /* Algoritms */,
 				3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */,
@@ -329,6 +333,15 @@
 				3A132CF5296ED30A00E28CB8 /* StretchingMargin.swift */,
 			);
 			path = StretchingMargin;
+			sourceTree = "<group>";
+		};
+		3A18AD7B29716B3F0049390A /* IntermediateSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3A18AD7C29716B600049390A /* wer3.swift */,
+				3A18AD7E29716D620049390A /* SpaceshipOperator.playground */,
+			);
+			path = IntermediateSwift;
 			sourceTree = "<group>";
 		};
 		3A1F5F492970003C008019D2 /* RadialMenu */ = {
@@ -556,6 +569,7 @@
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
 				3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */,
 				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
+				3A18AD7D29716B600049390A /* wer3.swift in Sources */,
 				3A215B2E296D8788004F7CA6 /* StretchingHeader.swift in Sources */,
 				3A215B27296D78C3004F7CA6 /* AccessibleStackView.swift in Sources */,
 				3A51CEE1296C01AF00ACC2A4 /* Wave.swift in Sources */,
