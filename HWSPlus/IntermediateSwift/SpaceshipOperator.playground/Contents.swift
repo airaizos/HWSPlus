@@ -20,7 +20,8 @@ print(result) // - 1
 /// #Swiftly approach#
 
 func <=><T: Comparable>(lhs: T, rhs: T) -> ComparisonResult {
-    if lhs < rhs { return .orderedAscending }
+    
+    if lhs < rhs  { return .orderedAscending }
     if lhs > rhs { return .orderedDescending }
     return .orderedSame
 }
@@ -32,3 +33,19 @@ func compare(a: Int, b: Int) -> Int {
 print("1 <=> 9 : \(compare(a: 1, b: 9)) .ordenAscendente")
 print("18 <=> 9 : \(compare(a: 18, b: 9)) .ordenDescendente")
 print("9 <=> 9 : \(compare(a: 9, b: 9)) .mismoOrden")
+
+
+/// ToDo: #Challenges:#
+///
+/// Write a version of the spaceship operator that works across all numeric types, e.g. 2.0 (the Double) <=> 5 (the integer) will return -1.
+/// For a harder challenge, can you write some code to make our operator work on arrays? It should compare each item in the arrays by index until it finds one that is before, equal to, or after the other.
+
+
+func <=><T: Numeric>(lhs: T, rhs: T) -> ComparisonResult {
+   
+    let left: Double = Double(.init(lhs)
+    
+    if lhs < rhs  { return .orderedAscending }
+    if lhs > rhs { return .orderedDescending }
+    return .orderedSame
+}
