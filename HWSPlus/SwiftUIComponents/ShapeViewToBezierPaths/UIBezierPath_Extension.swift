@@ -42,9 +42,9 @@ extension UIBezierPath {
                       controlPoint2: CGPoint(x: 0.3667547083 , y:0.2814527916))
           
         
-        // cabeza
         path.move(to: CGPoint(x:0.489581916 , y:0.270603))
-        path.addCurve(to: CGPoint(x: 0.66563916 , y:0.275), controlPoint1: CGPoint(x: 0.541306375 , y:0.18612116), controlPoint2: CGPoint(x: 0.6157165416 , y:0.1840739583))
+           path.addCurve(to: CGPoint(x: 0.66563916 , y:0.275), controlPoint1: CGPoint(x: 0.541306375 , y:0.18612116), controlPoint2: CGPoint(x: 0.6157165416 , y:0.1840739583))
+
         
         // pico pecho
         path.move(to: CGPoint(x:0.6973816 , y:0.28267775))
