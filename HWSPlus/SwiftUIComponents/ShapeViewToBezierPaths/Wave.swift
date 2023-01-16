@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Wave: Shape {
 
+    
     // que tan altas son
     var strength: Double
     
