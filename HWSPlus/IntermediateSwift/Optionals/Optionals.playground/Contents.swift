@@ -202,3 +202,35 @@ struct ProductoView: View {
         Text("hola tu!").padding()
     }
 }
+
+
+/// #Challenges
+///If you’d like to take this tutorial further, here are some suggestions:
+
+///Write a compact() method for Sequence that converts the optional integer array [1, nil, 2, nil, 3] into the non-optional integer array [1, 2, 3].
+/// ✅ Write an initializer for UIColor that loads a color name from the asset catalog or uses UIColor.black if it can’t be found.
+
+
+extension UIColor {
+    static func searchFrom(asset: String) -> UIColor {
+        UIColor(named: asset) ?? UIColor(.black)
+    }
+}
+
+
+UIColor.searchFrom(asset: "BGColor")
+UIColor.searchFrom(asset: "FGColor")
+
+struct DiapoColors {
+    var foregroundName: String?
+    var backgroundName: String?
+    var foreground: UIColor
+    var background: UIColor
+    
+    init(foregroundName: String, backgroundName: String) {
+        foreground = UIColor(named: foregroundName) ?? UIColor.black
+        background = UIColor(named: backgroundName) ?? UIColor.systemGray3
+    }
+}
+
+let basicColors = DiapoColors(foregroundName: "Black", backgroundName: "BGColor")
