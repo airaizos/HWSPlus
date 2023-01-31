@@ -72,6 +72,8 @@
 /* Begin PBXFileReference section */
 		3A03D018295C8B7100A4A48C /* PruebasVarias.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PruebasVarias.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A04815529547A9300E97D4A /* DataStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DataStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A0AB182298924C400561553 /* Assertions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Assertions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A0AB184298935EB00561553 /* VersioningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = VersioningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0CC5E229673B2600DCCD00 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		3A0CC5E429673B5100DCCD00 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		3A0CC5E6296749E700DCCD00 /* FloodFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodFillView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0AB181298924A500561553 /* Assertions */ = {
+			isa = PBXGroup;
+			children = (
+				3A0AB182298924C400561553 /* Assertions.playground */,
+			);
+			path = Assertions;
+			sourceTree = "<group>";
+		};
+		3A0AB183298935D400561553 /* VersioningCodableData */ = {
+			isa = PBXGroup;
+			children = (
+				3A0AB184298935EB00561553 /* VersioningCodable.playground */,
+			);
+			path = VersioningCodableData;
+			sourceTree = "<group>";
+		};
 		3A0CC5E129673AEC00DCCD00 /* FloodFill */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +360,8 @@
 		3A18AD7B29716B3F0049390A /* IntermediateSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3A0AB183298935D400561553 /* VersioningCodableData */,
+				3A0AB181298924A500561553 /* Assertions */,
 				3A3B6F9B297598CF00E494BF /* Optionals */,
 				3A51C833297490A300B2ABCE /* Box */,
 				3A18AD7F297179090049390A /* Generics */,

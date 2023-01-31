@@ -27,11 +27,11 @@ struct ShapeBezierView: View {
         VStack {
             
             ShapeView(bezier: UIBezierPath.ppsLogo)
-                .trim(from: 0, to: 1)
-                .stroke(Color.blue, lineWidth: 4)
+                .trim(from: 0, to: endAmount)
+                .stroke(Color(red: 0.220, green: 0.149, blue: 0.373, opacity: 1.000), lineWidth: 4)
                 .frame(width: 400, height: 400)
             
-       /*     ShapeView(bezier: UIBezierPath.unwrapLogo)
+            ShapeView(bezier: UIBezierPath.unwrapLogo)
                 .trim(from: 0, to: endAmount)
                 .stroke(Color.blue, lineWidth: 4)
                 .frame(width: 200, height: 200)
@@ -53,10 +53,10 @@ struct ShapeBezierView: View {
                             
                         
                 }
-            }*/
+            }
         }
         
-     
+        .background(Color(red: 0.988, green: 0.949, blue: 0.933, opacity: 1.000))
     }
 }
 
