@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */; };
 		3A0CC5E329673B2600DCCD00 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CC5E229673B2600DCCD00 /* Grid.swift */; };
 		3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CC5E429673B5100DCCD00 /* Square.swift */; };
 		3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CC5E6296749E700DCCD00 /* FloodFillView.swift */; };
@@ -74,6 +75,7 @@
 		3A04815529547A9300E97D4A /* DataStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DataStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0AB182298924C400561553 /* Assertions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Assertions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0AB184298935EB00561553 /* VersioningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = VersioningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPropertyWrapperWithDynamicProperty.swift; sourceTree = "<group>"; };
 		3A0CC5E229673B2600DCCD00 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		3A0CC5E429673B5100DCCD00 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		3A0CC5E6296749E700DCCD00 /* FloodFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodFillView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 				3A0AB184298935EB00561553 /* VersioningCodable.playground */,
 			);
 			path = VersioningCodableData;
+			sourceTree = "<group>";
+		};
+		3A0AB18529895D8400561553 /* IntermediateSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */,
+			);
+			path = IntermediateSwiftUI;
 			sourceTree = "<group>";
 		};
 		3A0CC5E129673AEC00DCCD00 /* FloodFill */ = {
@@ -287,6 +297,7 @@
 		3A132C8C294BCF1400D19D75 /* HWSPlus */ = {
 			isa = PBXGroup;
 			children = (
+				3A0AB18529895D8400561553 /* IntermediateSwiftUI */,
 				3A18AD7B29716B3F0049390A /* IntermediateSwift */,
 				3A12E835296B42C700E17C1E /* SwiftUIComponents */,
 				3A12E834296B42BD00E17C1E /* Algoritms */,
@@ -612,6 +623,7 @@
 				3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */,
 				3A12E833296B35A300E17C1E /* FilteringListUsersView.swift in Sources */,
 				3A215B2C296D877A004F7CA6 /* StretchingHeaderView.swift in Sources */,
+				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
 				3A12E831296B304200E17C1E /* BindingExtension.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,

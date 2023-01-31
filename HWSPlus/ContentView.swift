@@ -24,7 +24,8 @@ struct ContentView: View {
         /// StretchingHeaderView()
         ///  StretchingMarginView()
        /// RadialMenuView()
-        RemoteImageView()
+      ///  RemoteImageView()
+        CustomPropertyWrapperWithDynamicProperty()
     }
 }
 
