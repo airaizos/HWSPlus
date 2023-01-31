@@ -5,8 +5,8 @@ func sum(of numbers: [Int]) -> Int {
     return numbers.reduce(0, +)
 }
 
-//let case1 = sum(of: [Int]())
-//print(case1)
+let case1 = sum(of: [Int]())
+print(case1)
 
 let case2 = sum(of: [-1,2])
 print(case2)

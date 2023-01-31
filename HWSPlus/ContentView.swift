@@ -25,7 +25,8 @@ struct ContentView: View {
         ///  StretchingMarginView()
        /// RadialMenuView()
       ///  RemoteImageView()
-        CustomPropertyWrapperWithDynamicProperty()
+      ///  CustomPropertyWrapperWithDynamicProperty()
+        ButtonCustomizationButtonStyle()
     }
 }
 
