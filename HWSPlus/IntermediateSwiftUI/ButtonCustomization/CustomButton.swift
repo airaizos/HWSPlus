@@ -94,14 +94,31 @@ struct PushButtonStyle: ButtonStyle {
             .clipShape(Circle())
             .scaleEffect(configuration.isPressed ? 0.9 : 1)
             .shadow(color: Color.pps6.opacity(configuration.isPressed ? 0 : 0.4), radius: 10, x: 10, y: 10)
-       //     .animation(.linear, value: 0)
-    
+        //     .animation(.linear, value: 0)
+        
     }
 }
 
 
 struct GlassButtonStyle: ButtonStyle {
     let color: Color
+    let onGradient = [
+        Gradient.Stop(color: Color.white.opacity(0.6), location: 0),
+        Gradient.Stop(color: Color.white.opacity(0.15), location: 0.499),
+        Gradient.Stop(color: Color.white.opacity(0), location: 0.5),
+        Gradient.Stop(color: Color.white.opacity(0), location: 0.8),
+        Gradient.Stop(color: Color.white.opacity(0.2), location: 1)
+    ]
+    let offGradient =
+        [
+            Gradient.Stop(color: Color.white.opacity(0.9), location: 0),
+            Gradient.Stop(color: Color.white.opacity(0.6), location: 0.499),
+            Gradient.Stop(color: Color.white.opacity(0.15), location: 0.5),
+            Gradient.Stop(color: Color.white.opacity(0.45), location: 0.8),
+            Gradient.Stop(color: Color.white.opacity(0.9), location: 1)
+        ]
+
+    
     
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
@@ -119,19 +136,16 @@ struct GlassButtonStyle: ButtonStyle {
         .background(
             color
                 .overlay(
-                    LinearGradient(gradient: Gradient(stops: [
-                        Gradient.Stop(color: Color.white.opacity(0.6), location: 0),
-                        Gradient.Stop(color: Color.white.opacity(0.15), location: 0.499),
-                        Gradient.Stop(color: Color.white.opacity(0), location: 0.5),
-                        Gradient.Stop(color: Color.white.opacity(0), location: 0.8),
-                        Gradient.Stop(color: Color.white.opacity(0.2), location: 1)
-                    ]), startPoint: .top, endPoint: .bottom)
-        )
+                    LinearGradient(gradient: Gradient(stops: configuration.isPressed ? offGradient : onGradient ), startPoint: .top, endPoint: .bottom)
+                )
+            
                 .overlay(
                     RoundedRectangle(cornerRadius: 15)
                         .strokeBorder(Color.white.opacity(0.4), lineWidth: 1)
-                    )
-            )
+                )
+        )
+        
         .clipShape(RoundedRectangle(cornerRadius: 15))
     }
+    
 }

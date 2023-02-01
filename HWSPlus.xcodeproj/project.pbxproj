@@ -26,6 +26,8 @@
 		3A12E833296B35A300E17C1E /* FilteringListUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E832296B35A300E17C1E /* FilteringListUsersView.swift */; };
 		3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E837296B430E00E17C1E /* UIBezierPath_Extension.swift */; };
 		3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12E839296B43DC00E17C1E /* ShapeBezierView.swift */; };
+		3A12F0B0298A91BF00A02897 /* NeumorphismStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12F0AF298A91BF00A02897 /* NeumorphismStyle.swift */; };
+		3A12F0B2298A922400A02897 /* NeunorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12F0B1298A922400A02897 /* NeunorphismView.swift */; };
 		3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */; };
 		3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132C8F294BCF1400D19D75 /* ContentView.swift */; };
 		3A132C92294BCF1500D19D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A132C91294BCF1500D19D75 /* Assets.xcassets */; };
@@ -98,6 +100,8 @@
 		3A12E832296B35A300E17C1E /* FilteringListUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringListUsersView.swift; sourceTree = "<group>"; };
 		3A12E837296B430E00E17C1E /* UIBezierPath_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPath_Extension.swift; sourceTree = "<group>"; };
 		3A12E839296B43DC00E17C1E /* ShapeBezierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeBezierView.swift; sourceTree = "<group>"; };
+		3A12F0AF298A91BF00A02897 /* NeumorphismStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismStyle.swift; sourceTree = "<group>"; };
+		3A12F0B1298A922400A02897 /* NeunorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeunorphismView.swift; sourceTree = "<group>"; };
 		3A132C8A294BCF1400D19D75 /* HWSPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A132C8D294BCF1400D19D75 /* HWSPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSPlusApp.swift; sourceTree = "<group>"; };
 		3A132C8F294BCF1400D19D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 			children = (
 				3A0AB18A29896AEA00561553 /* ButtonCustomizationButonStyle.swift */,
 				3A0AB18C29896B2900561553 /* CustomButton.swift */,
+				3A12F0AF298A91BF00A02897 /* NeumorphismStyle.swift */,
+				3A12F0B1298A922400A02897 /* NeunorphismView.swift */,
 			);
 			path = ButtonCustomization;
 			sourceTree = "<group>";
@@ -621,12 +627,14 @@
 				3A132CF6296ED30A00E28CB8 /* StretchingMargin.swift in Sources */,
 				3A12E82B296B2BF900E17C1E /* User.swift in Sources */,
 				3A336F212951D73900B4333A /* Main.swift in Sources */,
+				3A12F0B0298A91BF00A02897 /* NeumorphismStyle.swift in Sources */,
 				3A3B6F9E29759A5800E494BF /* StringExtension.swift in Sources */,
 				3A0AB18D29896B2900561553 /* CustomButton.swift in Sources */,
 				3A215B29296D78D1004F7CA6 /* AccesibleStack.swift in Sources */,
 				3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */,
 				3A0D57932968C75800A397BE /* BoidsView.swift in Sources */,
 				3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */,
+				3A12F0B2298A922400A02897 /* NeunorphismView.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
 				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
