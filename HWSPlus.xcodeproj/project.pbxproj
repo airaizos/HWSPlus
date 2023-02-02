@@ -63,6 +63,8 @@
 		3AF1A44C298BDA7700600D7E /* AnimatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A44B298BDA7700600D7E /* AnimatingButtonView.swift */; };
 		3AF1A44E298BDC0600600D7E /* PulsingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A44D298BDC0600600D7E /* PulsingButtonStyle.swift */; };
 		3AF1A450298C009D00600D7E /* SpinningArcButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A44F298C009D00600D7E /* SpinningArcButtonStyle.swift */; };
+		3AF1A453298C138400600D7E /* PrimitiveButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A452298C138400600D7E /* PrimitiveButtonView.swift */; };
+		3AF1A455298C141E00600D7E /* PrimitiveButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A454298C141E00600D7E /* PrimitiveButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		3AF1A44B298BDA7700600D7E /* AnimatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingButtonView.swift; sourceTree = "<group>"; };
 		3AF1A44D298BDC0600600D7E /* PulsingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingButtonStyle.swift; sourceTree = "<group>"; };
 		3AF1A44F298C009D00600D7E /* SpinningArcButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinningArcButtonStyle.swift; sourceTree = "<group>"; };
+		3AF1A452298C138400600D7E /* PrimitiveButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveButtonView.swift; sourceTree = "<group>"; };
+		3AF1A454298C141E00600D7E /* PrimitiveButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 		3A0AB18929896AC900561553 /* ButtonCustomization */ = {
 			isa = PBXGroup;
 			children = (
+				3AF1A451298C136900600D7E /* PrimitiveButtonStyle */,
 				3AF1A44A298BDA2D00600D7E /* AnimatingButtonStyle */,
 				3A12F0B5298AD2AC00A02897 /* AdvancedCustomButtons */,
 				3A12F0B3298AD27F00A02897 /* CustomButton */,
@@ -546,6 +551,15 @@
 			path = AnimatingButtonStyle;
 			sourceTree = "<group>";
 		};
+		3AF1A451298C136900600D7E /* PrimitiveButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				3AF1A452298C138400600D7E /* PrimitiveButtonView.swift */,
+				3AF1A454298C141E00600D7E /* PrimitiveButtonStyle.swift */,
+			);
+			path = PrimitiveButtonStyle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -687,6 +701,7 @@
 				3A215B29296D78D1004F7CA6 /* AccesibleStack.swift in Sources */,
 				3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */,
 				3A0D57932968C75800A397BE /* BoidsView.swift in Sources */,
+				3AF1A453298C138400600D7E /* PrimitiveButtonView.swift in Sources */,
 				3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */,
 				3A12F0B2298A922400A02897 /* NeunorphismView.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
@@ -703,6 +718,7 @@
 				3A132CF4296ED2FE00E28CB8 /* StretchingMarginView.swift in Sources */,
 				3A0D578F2968BF9B00A397BE /* CGPoint-Helpers.swift in Sources */,
 				3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */,
+				3AF1A455298C141E00600D7E /* PrimitiveButtonStyle.swift in Sources */,
 				3A0AB18F2989704A00561553 /* ColorExtension.swift in Sources */,
 				3A12E833296B35A300E17C1E /* FilteringListUsersView.swift in Sources */,
 				3A215B2C296D877A004F7CA6 /* StretchingHeaderView.swift in Sources */,

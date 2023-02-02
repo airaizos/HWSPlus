@@ -29,7 +29,8 @@ struct ContentView: View {
   ///      ButtonCustomizationButtonStyle()
     ///    NeumorphismView()
     ///    AdvancedButtonsView()
-        AnimatingButtonView()
+    ///    AnimatingButtonView()
+        PrimitiveButtonView()
     }
 }
 
