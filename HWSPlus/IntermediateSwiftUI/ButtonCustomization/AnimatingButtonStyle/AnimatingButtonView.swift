@@ -47,36 +47,47 @@ struct AnimatingButtonView: View {
                     }
                 }
             }
-      
+            
             HStack {
                 AnimatedProtocolButton(animationSpeed: 1, buttonStyle: PulsingProtocolButtonStyle.self) {
                     print("Protocol")
                 } label: {
-                  
+                    
                     Image(systemName: "livephoto")
                         .clipShape(Ellipse())
                         .frame(width: 200)
                 }
                 
             }
-            HStack {
+            VStack {
                 AnimatedProtocolButton(animationSpeed: 10, buttonStyle: SpinningArcButtonStyle.self) {
                     print("Spinning")
                 } label: {
                     Image(systemName: "arrow.triangle.2.circlepath.circle")
                         .font(.largeTitle)
                 }
-    
+                
                 AnimatedProtocolButtonV2(buttonStyle: SpinningArcButtonStyle.self, animationType: .spring(dampingFraction: 0.5).repeatForever(autoreverses: true)) {
                     print("Challenge")
                 } label: {
                     Image(systemName: "arrow.triangle.2.circlepath.circle")
                 }
-
+            }
+            HStack {
+                Button {
+                    print("V2")
+                } label: {
+                    Image(systemName: "f.cursive.circle")
+                }
+                .buttonStyle(PulsingButtonStyleV2(animation: 2))
+                
+                AnimatedProtocolButton(animationSpeed: 2, buttonStyle: PulsingProtocolButtonStyleV2.self) {
+                    print("Challenge 2")
+                } label: {
+                    Image(systemName: "f.cursive.circle")
+                }
             }
         }
-
-   
     }
 }
 
