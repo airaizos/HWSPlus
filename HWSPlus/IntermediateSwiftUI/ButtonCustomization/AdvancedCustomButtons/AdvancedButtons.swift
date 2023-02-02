@@ -43,10 +43,11 @@ struct AquaButtonStyle: ButtonStyle {
                         .overlay(
                             Capsule()
                                 .strokeBorder(Color.black.opacity(0.25), lineWidth: 1)
-                            )
+                        )
                     
                     if configuration.isPressed {
-                        Color.blue.opacity(0.2)
+                         Color.blue.opacity(0.2)
+
                     }
                     
                 }
@@ -75,7 +76,7 @@ struct AquaButtonStylePPS: ButtonStyle {
                         )
                         .scaleEffect(x: 0.95, y: 0.7, anchor: .top)
                     
-                      
+                    
                     
                     
                     if configuration.isPressed {
@@ -96,6 +97,7 @@ struct AquaButtonStyleV2: ButtonStyle {
         configuration.label
             .padding()
             .padding(.horizontal, 20)
+            .foregroundColor(configuration.isPressed ? Color.pps1 : Color.pps8)
             .background(
                 ZStack {
                     Color.pps4
@@ -114,7 +116,7 @@ struct AquaButtonStyleV2: ButtonStyle {
                         .offset(y: 8)
                         .fill (
                             LinearGradient(gradient: Gradient(colors: [Color.pps4.opacity(0), Color.pps4]), startPoint: .top, endPoint: .init(x: 0.5, y: 0.8)
-                             )
+                                          )
                         )
                         .scaleEffect(y: 0.7, anchor: .bottom)
                         .blur(radius: 10)
@@ -122,10 +124,37 @@ struct AquaButtonStyleV2: ButtonStyle {
                         .overlay(
                             Capsule()
                                 .strokeBorder(Color.pps8.opacity(0.25), lineWidth: 1)
-                            )
+                        )
                     
                     if configuration.isPressed {
-                        Color.blue.opacity(0.2)
+                       
+                        Color.pps6
+                        
+                        Capsule()
+                            .inset(by: 8)
+                            .offset(y: 8)
+                            .fill (
+                                LinearGradient(gradient: Gradient(colors: [Color.pps6.opacity(0), Color.pps6]), startPoint: .top, endPoint: .init(x: 0.5, y: 0.8)
+                                              )
+                            )
+                           
+                            .scaleEffect(x: 0.95, y: 0.7, anchor: .top)
+                        
+                        Capsule()
+                            .inset(by: 8)
+                            
+                            .fill (
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color.pps4, Color.pps4.opacity(0)]), startPoint: .top, endPoint: UnitPoint(x: 1, y: 0.8)
+                                )
+                            )
+                            .scaleEffect(y: 0.7, anchor: .bottom)
+                            .blur(radius: 10)
+                        
+                            .overlay(
+                                Capsule()
+                                    .strokeBorder(Color.pps1.opacity(0.25), lineWidth: 1)
+                            )
                     }
                     
                 }
