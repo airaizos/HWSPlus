@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AdvancedButtonsView: View {
+
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -34,6 +36,18 @@ struct AdvancedButtonsView: View {
                     }
                     .buttonStyle(AquaButtonStyleV2())
                 }
+                HStack {
+                    Button {
+                        print("AEII")
+                    } label: {
+                        Text("Campaings")
+                      
+                    }
+                    .buttonStyle(FantasyButtonStyle())
+                    .frame(width: 300)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+         //       .background(Color(red: 0.45, green: 0.375, blue: 0.30))
             }
             .navigationTitle("Advanced Customization")
         }
@@ -43,5 +57,15 @@ struct AdvancedButtonsView: View {
 struct AdvancedButtonsView_Previews: PreviewProvider {
     static var previews: some View {
         AdvancedButtonsView()
+    }
+}
+
+
+extension View {
+    /// Foreground text: Gradient fill and a light shadow behind it
+    public func foregroundMask<Content: View>(_ overlay: Content) -> some View {
+        self
+            .overlay(overlay)
+            .mask(self)
     }
 }
