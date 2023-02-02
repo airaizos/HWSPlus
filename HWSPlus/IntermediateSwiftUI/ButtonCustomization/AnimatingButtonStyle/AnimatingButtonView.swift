@@ -40,6 +40,12 @@ struct AnimatingButtonView: View {
                         .scaleEffect(CGFloat(1 + animation))
                         .opacity(1 - animation)
                 )
+                .onAppear {
+                    withAnimation(Animation.easeOut(duration: 1).repeatForever(autoreverses: false)) {
+                        animation = 1
+                        
+                    }
+                }
             }
       
             HStack {
@@ -60,15 +66,16 @@ struct AnimatingButtonView: View {
                     Image(systemName: "arrow.triangle.2.circlepath.circle")
                         .font(.largeTitle)
                 }
+    
+                AnimatedProtocolButtonV2(buttonStyle: SpinningArcButtonStyle.self, animationType: .spring(dampingFraction: 0.5).repeatForever(autoreverses: true)) {
+                    print("Challenge")
+                } label: {
+                    Image(systemName: "arrow.triangle.2.circlepath.circle")
+                }
 
             }
         }
-        .onAppear { 
-            withAnimation(Animation.easeOut(duration: 1).repeatForever(autoreverses: false)) {
-                animation = 1
-                
-            }
-        }
+
    
     }
 }

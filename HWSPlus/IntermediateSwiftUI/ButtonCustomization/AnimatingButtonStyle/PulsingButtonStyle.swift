@@ -102,3 +102,24 @@ struct AnimatedProtocolButton<ButtonStyle: AnimatingButtonStyleProtocol, Content
             }
     }
 }
+
+struct AnimatedProtocolButtonV2<ButtonStyle: AnimatingButtonStyleProtocol, Content: View>: View {
+    /// 2. Conformamos el boton como AnimatingButtonStyle. Así aceptará cualquier botón que se conforme con  AnimatingButtonStyleProtocol
+    var animationSpeed: Double = 2.0
+    let buttonStyle: ButtonStyle.Type
+    let animationType: Animation
+    let action: () -> Void
+    let label: () -> Content
+
+    @State private var animation = 0.0
+    
+    var body: some View {
+        Button(action: action, label: label)
+            .buttonStyle(buttonStyle.init(animation: animation))
+            .onAppear {
+                withAnimation(animationType) {
+                    animation = 1
+                }
+            }
+    }
+}
