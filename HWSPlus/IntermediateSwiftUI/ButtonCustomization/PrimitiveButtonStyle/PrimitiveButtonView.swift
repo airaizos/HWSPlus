@@ -10,8 +10,6 @@ import SwiftUI
 
 struct PrimitiveButtonView: View {
     
-   
-    
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
