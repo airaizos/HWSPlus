@@ -59,6 +59,7 @@
 		3A3B6F9E29759A5800E494BF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B6F9D29759A5800E494BF /* StringExtension.swift */; };
 		3A51CEE1296C01AF00ACC2A4 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A51CEE0296C01AF00ACC2A4 /* Wave.swift */; };
 		3AF1A447298BB49500600D7E /* FantasyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A446298BB49500600D7E /* FantasyButtonStyle.swift */; };
+		3AF1A449298BBC7A00600D7E /* TargetButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A448298BBC7A00600D7E /* TargetButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		3A51C834297490B100B2ABCE /* Box.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Box.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A51CEE0296C01AF00ACC2A4 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		3AF1A446298BB49500600D7E /* FantasyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyButtonStyle.swift; sourceTree = "<group>"; };
+		3AF1A448298BBC7A00600D7E /* TargetButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 				3A12F0B8298AD2F800A02897 /* AdvancedButtons.swift */,
 				3A20091A298BAC500085CCA9 /* AdvancedButtonsView.swift */,
 				3AF1A446298BB49500600D7E /* FantasyButtonStyle.swift */,
+				3AF1A448298BBC7A00600D7E /* TargetButtonStyle.swift */,
 			);
 			path = AdvancedCustomButtons;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
 				3AF1A447298BB49500600D7E /* FantasyButtonStyle.swift in Sources */,
+				3AF1A449298BBC7A00600D7E /* TargetButtonStyle.swift in Sources */,
 				3A12E831296B304200E17C1E /* BindingExtension.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,

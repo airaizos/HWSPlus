@@ -45,9 +45,21 @@ struct AdvancedButtonsView: View {
                     }
                     .buttonStyle(FantasyButtonStyle())
                     .frame(width: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-         //       .background(Color(red: 0.45, green: 0.375, blue: 0.30))
+                HStack {
+                    ZStack {
+                        Button {
+                            print("Target button")
+                        } label: {
+                            Image(systemName: "star")
+                        }
+                        .buttonStyle(TargetButtonStyle())
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.black)
+                    .frame(height: 200)
+                }
             }
             .navigationTitle("Advanced Customization")
         }
