@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NeunorphismView: View {
+struct NeumorphismView: View {
     @State private var isToggle = false
     
     var body: some View {
@@ -109,8 +109,7 @@ struct NeunorphismView: View {
     
 }
 
-struct NeunorphismView_Previews: PreviewProvider {
+struct NeumorphismView_Previews: PreviewProvider {
     static var previews: some View {
-        NeunorphismView()
-    }
+        NeumorphismView()    }
 }

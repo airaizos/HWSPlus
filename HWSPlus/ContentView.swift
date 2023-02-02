@@ -27,8 +27,9 @@ struct ContentView: View {
       ///  RemoteImageView()
       ///  CustomPropertyWrapperWithDynamicProperty()
   ///      ButtonCustomizationButtonStyle()
-    //    NeunorphismView()
-        AdvancedButtonsView()
+    ///    NeumorphismView()
+    ///    AdvancedButtonsView()
+        AnimatingButtonView()
     }
 }
 
