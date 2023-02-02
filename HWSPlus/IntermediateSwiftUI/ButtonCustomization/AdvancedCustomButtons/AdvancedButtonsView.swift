@@ -54,7 +54,7 @@ struct AdvancedButtonsView: View {
                         } label: {
                             Image(systemName: "star")
                         }
-                        .buttonStyle(TargetButtonStyle())
+                        .buttonStyle(TargetButtonStyle(color: Color.red, strokeColor: .yellow, glowStrength: .medium))
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.black)
