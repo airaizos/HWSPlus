@@ -48,25 +48,19 @@ struct TargetButtonStyle: ButtonStyle {
     
     
     func circle(with configuration: Configuration) -> some View {
-        Circle()
-            .trim(from: 0.05, to: 0.2)
-            .stroke(strokeColor, lineWidth: 5)
-        
-            .shadow(color: color, radius: 5)
-            .shadow(color: color, radius: 5)
-            .shadow(color: color, radius: 5)
+        circleStrength
             .scaleEffect(configuration.isPressed ? 0.8 : 1)
     }
     
     func tick(with configuration: Configuration) -> some View {
         
-        strenght
+        trimStrength
             .scaleEffect(configuration.isPressed ? 0.8 : 1)
         
     }
     
     
-    @ViewBuilder var strenght: some View {
+    @ViewBuilder var trimStrength: some View {
         switch glowStrength {
         case .low:
             Circle()
@@ -92,10 +86,40 @@ struct TargetButtonStyle: ButtonStyle {
                 .shadow(color: color, radius: 5)
                 .shadow(color: color, radius: 5)
                 .shadow(color: color, radius: 5)
-                .shadow(color: color, radius: 5)
+
         }
+        
     }
     
+    @ViewBuilder var circleStrength: some View {
+        switch glowStrength {
+        case .low:
+            Circle()
+                .trim(from: 0.05, to: 0.2)
+                .stroke(strokeColor, lineWidth: 5)
+                .shadow(color: color, radius: 5)
+            
+        case .medium:
+            Circle()
+                .trim(from: 0.05, to: 0.2)
+                .stroke(strokeColor, lineWidth: 5)
+                .shadow(color: color, radius: 5)
+                .shadow(color: color, radius: 5)
+                .shadow(color: color, radius: 5)
+            
+        case .high:
+            Circle()
+                .trim(from: 0.05, to: 0.2)
+                .stroke(strokeColor, lineWidth: 5)
+            
+                .shadow(color: color, radius: 5)
+                .shadow(color: color, radius: 5)
+                .shadow(color: color, radius: 5)
+                .shadow(color: color, radius: 5)
+                .shadow(color: color, radius: 5)
+        }
+        
+    }
 }
 
 
