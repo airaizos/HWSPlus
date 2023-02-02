@@ -9,7 +9,34 @@ import SwiftUI
 
 struct AdvancedButtonsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                HStack {
+                    Button {
+                        print("Aqua")
+                    } label: {
+                        Text("Aqua")
+                    }
+                    .buttonStyle(AquaButtonStyle())
+                    Button {
+                        print("Aqua Style")
+                    } label: {
+                        Text("PPS")
+                         
+                    }
+                    .buttonStyle(AquaButtonStylePPS())
+                    
+                    Button {
+                        print("Aqua v2")
+                    } label: {
+                        Text("AquaV2")
+                        
+                    }
+                    .buttonStyle(AquaButtonStyleV2())
+                }
+            }
+            .navigationTitle("Advanced Customization")
+        }
     }
 }
 
