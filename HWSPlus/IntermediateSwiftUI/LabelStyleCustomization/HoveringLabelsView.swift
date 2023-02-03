@@ -9,7 +9,37 @@ import SwiftUI
 
 struct HoveringLabelsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.pps3
+            VStack {
+                ShowingLabel(labelStyle: ShowingLabelStyle.self) {
+                    Text("Basketball")
+                } icon: {
+                    Image(systemName: "basketball")
+                }
+                
+                ShowingLabel(labelStyle: ShowingInvertedLabelStyle.self) {
+                    Text("Tennis")
+                } icon: {
+                    Image(systemName: "tennisball")
+                }
+                
+                ShowingLabel(labelStyle: ShowingVerticalLabelStyle.self) {
+                    Text("Football")
+                } icon: {
+                    Image(systemName: "football")
+                }
+                
+                ShowingLabel(labelStyle: ShowingVerticalInvertedLabelStyle.self) {
+                    Text("Soccer")
+                } icon: {
+                    Image(systemName: "soccerball")
+                }
+               
+            }
+         
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
