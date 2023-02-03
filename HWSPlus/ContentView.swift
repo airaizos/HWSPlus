@@ -30,7 +30,8 @@ struct ContentView: View {
     ///    NeumorphismView()
     ///    AdvancedButtonsView()
     ///    AnimatingButtonView()
-        PrimitiveButtonView()
+     ///   PrimitiveButtonView()
+        CheckToggleView()
     }
 }
 
