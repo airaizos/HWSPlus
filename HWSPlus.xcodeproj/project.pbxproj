@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */; };
 		3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */; };
+		3A0A346B298D54EB00ADF14D /* LabelStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */; };
+		3A0A346D298D54F700ADF14D /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A346C298D54F700ADF14D /* LabelStyle.swift */; };
 		3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */; };
 		3A0AB18B29896AEA00561553 /* ButtonCustomizationButonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB18A29896AEA00561553 /* ButtonCustomizationButonStyle.swift */; };
 		3A0AB18D29896B2900561553 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB18C29896B2900561553 /* CustomButton.swift */; };
@@ -93,6 +95,8 @@
 		3A04815529547A9300E97D4A /* DataStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DataStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyleView.swift; sourceTree = "<group>"; };
 		3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
+		3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyleView.swift; sourceTree = "<group>"; };
+		3A0A346C298D54F700ADF14D /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
 		3A0AB182298924C400561553 /* Assertions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Assertions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0AB184298935EB00561553 /* VersioningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = VersioningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPropertyWrapperWithDynamicProperty.swift; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 			path = ProgressViewCustomization;
 			sourceTree = "<group>";
 		};
+		3A0A3469298D54D400ADF14D /* LabelStyleCustomization */ = {
+			isa = PBXGroup;
+			children = (
+				3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */,
+				3A0A346C298D54F700ADF14D /* LabelStyle.swift */,
+			);
+			path = LabelStyleCustomization;
+			sourceTree = "<group>";
+		};
 		3A0AB181298924A500561553 /* Assertions */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +238,7 @@
 		3A0AB18529895D8400561553 /* IntermediateSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3A0A3469298D54D400ADF14D /* LabelStyleCustomization */,
 				3A0A3464298D232400ADF14D /* ProgressViewCustomization */,
 				3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */,
 				3A0AB18929896AC900561553 /* ButtonCustomization */,
@@ -752,6 +766,7 @@
 				3A0AB18F2989704A00561553 /* ColorExtension.swift in Sources */,
 				3A12E833296B35A300E17C1E /* FilteringListUsersView.swift in Sources */,
 				3AF1A45A298C22B800600D7E /* CheckToggleView.swift in Sources */,
+				3A0A346B298D54EB00ADF14D /* LabelStyleView.swift in Sources */,
 				3A215B2C296D877A004F7CA6 /* StretchingHeaderView.swift in Sources */,
 				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
@@ -764,6 +779,7 @@
 				3AF1A44E298BDC0600600D7E /* PulsingButtonStyle.swift in Sources */,
 				3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */,
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
+				3A0A346D298D54F700ADF14D /* LabelStyle.swift in Sources */,
 				3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */,
 				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
 				3A215B2E296D8788004F7CA6 /* StretchingHeader.swift in Sources */,
