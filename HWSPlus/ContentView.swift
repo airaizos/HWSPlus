@@ -31,7 +31,8 @@ struct ContentView: View {
     ///    AdvancedButtonsView()
     ///    AnimatingButtonView()
      ///   PrimitiveButtonView()
-        CheckToggleView()
+        ///CheckToggleView()
+        ProgressViewStyleView()
     }
 }
 

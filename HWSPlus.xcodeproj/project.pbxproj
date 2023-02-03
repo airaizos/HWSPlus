@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */; };
+		3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */; };
 		3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */; };
 		3A0AB18B29896AEA00561553 /* ButtonCustomizationButonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB18A29896AEA00561553 /* ButtonCustomizationButonStyle.swift */; };
 		3A0AB18D29896B2900561553 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB18C29896B2900561553 /* CustomButton.swift */; };
@@ -89,6 +91,8 @@
 /* Begin PBXFileReference section */
 		3A03D018295C8B7100A4A48C /* PruebasVarias.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PruebasVarias.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A04815529547A9300E97D4A /* DataStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DataStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyleView.swift; sourceTree = "<group>"; };
+		3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
 		3A0AB182298924C400561553 /* Assertions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Assertions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0AB184298935EB00561553 /* VersioningCodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = VersioningCodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPropertyWrapperWithDynamicProperty.swift; sourceTree = "<group>"; };
@@ -193,6 +197,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0A3464298D232400ADF14D /* ProgressViewCustomization */ = {
+			isa = PBXGroup;
+			children = (
+				3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */,
+				3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */,
+			);
+			path = ProgressViewCustomization;
+			sourceTree = "<group>";
+		};
 		3A0AB181298924A500561553 /* Assertions */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +225,7 @@
 		3A0AB18529895D8400561553 /* IntermediateSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3A0A3464298D232400ADF14D /* ProgressViewCustomization */,
 				3A0AB18629895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift */,
 				3A0AB18929896AC900561553 /* ButtonCustomization */,
 				3AF1A456298C228B00600D7E /* ToggleCustomization */,
@@ -725,6 +739,7 @@
 				3A12E82F296B2DDE00E17C1E /* FilteringListGeneric.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */,
+				3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */,
 				3A1F5F5429701405008019D2 /* RemoteImageView.swift in Sources */,
 				3A12F0B9298AD2F800A02897 /* AdvancedButtons.swift in Sources */,
 				3AF1A450298C009D00600D7E /* SpinningArcButtonStyle.swift in Sources */,
@@ -741,6 +756,7 @@
 				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
 				3AF1A447298BB49500600D7E /* FantasyButtonStyle.swift in Sources */,
+				3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */,
 				3AF1A449298BBC7A00600D7E /* TargetButtonStyle.swift in Sources */,
 				3A12E831296B304200E17C1E /* BindingExtension.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,
