@@ -62,6 +62,7 @@
 		3A336F212951D73900B4333A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A336F202951D73900B4333A /* Main.swift */; };
 		3A3B6F9E29759A5800E494BF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B6F9D29759A5800E494BF /* StringExtension.swift */; };
 		3A51CEE1296C01AF00ACC2A4 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A51CEE0296C01AF00ACC2A4 /* Wave.swift */; };
+		3A880C78298D66B00077FD59 /* HoveringLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A880C77298D66B00077FD59 /* HoveringLabelsView.swift */; };
 		3AF1A447298BB49500600D7E /* FantasyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A446298BB49500600D7E /* FantasyButtonStyle.swift */; };
 		3AF1A449298BBC7A00600D7E /* TargetButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A448298BBC7A00600D7E /* TargetButtonStyle.swift */; };
 		3AF1A44C298BDA7700600D7E /* AnimatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A44B298BDA7700600D7E /* AnimatingButtonView.swift */; };
@@ -165,6 +166,7 @@
 		3A3B6F9D29759A5800E494BF /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		3A51C834297490B100B2ABCE /* Box.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Box.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A51CEE0296C01AF00ACC2A4 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		3A880C77298D66B00077FD59 /* HoveringLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoveringLabelsView.swift; sourceTree = "<group>"; };
 		3AF1A446298BB49500600D7E /* FantasyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyButtonStyle.swift; sourceTree = "<group>"; };
 		3AF1A448298BBC7A00600D7E /* TargetButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetButtonStyle.swift; sourceTree = "<group>"; };
 		3AF1A44B298BDA7700600D7E /* AnimatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingButtonView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */,
 				3A0A346C298D54F700ADF14D /* LabelStyle.swift */,
+				3A880C77298D66B00077FD59 /* HoveringLabelsView.swift */,
 			);
 			path = LabelStyleCustomization;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				3A0D57932968C75800A397BE /* BoidsView.swift in Sources */,
 				3AF1A453298C138400600D7E /* PrimitiveButtonView.swift in Sources */,
 				3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */,
+				3A880C78298D66B00077FD59 /* HoveringLabelsView.swift in Sources */,
 				3A12F0B2298A922400A02897 /* NeunorphismView.swift in Sources */,
 				3AF1A458298C22AD00600D7E /* CheckToggleStyle.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
