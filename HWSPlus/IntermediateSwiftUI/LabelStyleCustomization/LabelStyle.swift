@@ -124,6 +124,7 @@ struct ShowingInvertedLabelStyle: ShowingLabelStyleProtocol {
                 .foregroundColor(Color.pps8.opacity(showing ? 1 : 0))
             configuration.icon
                 .foregroundColor(showing ? Color.pps2 : Color.pps6 )
+                .scaleEffect(showing ? 1 : 2)
         }
         .foregroundColor(.accentColor)
         .font(.largeTitle)
