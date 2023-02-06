@@ -38,7 +38,11 @@ struct ContentView: View {
      ///   ProgressViewStyleView()
         ///LabelStyleView()
     ///    TabViewOrSideBarView()
-        ParticlesView()
+    ///   ParticlesView()
+        
+        ///#Accelerometer#
+        AccelerometerView()
+        
     }
 }
 

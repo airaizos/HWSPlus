@@ -61,6 +61,9 @@
 		3A2838BC2990F6DA00AB6847 /* JsonTidy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838BB2990F6DA00AB6847 /* JsonTidy.swift */; };
 		3A2838C22990FE7500AB6847 /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C12990FE7500AB6847 /* EmitterView.swift */; };
 		3A2838C42991000C00AB6847 /* ParticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C32991000C00AB6847 /* ParticlesView.swift */; };
+		3A2838C72991630100AB6847 /* AccelerometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C62991630100AB6847 /* AccelerometerView.swift */; };
+		3A2838C92991683400AB6847 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C82991683400AB6847 /* MotionManager.swift */; };
+		3A2838CB2991686A00AB6847 /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838CA2991686A00AB6847 /* CirclesView.swift */; };
 		3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74BD2964CF8F00C1188E /* Monograms.swift */; };
 		3A336F212951D73900B4333A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A336F202951D73900B4333A /* Main.swift */; };
 		3A3B6F9E29759A5800E494BF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B6F9D29759A5800E494BF /* StringExtension.swift */; };
@@ -164,6 +167,9 @@
 		3A2838BB2990F6DA00AB6847 /* JsonTidy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTidy.swift; sourceTree = "<group>"; };
 		3A2838C12990FE7500AB6847 /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		3A2838C32991000C00AB6847 /* ParticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesView.swift; sourceTree = "<group>"; };
+		3A2838C62991630100AB6847 /* AccelerometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerView.swift; sourceTree = "<group>"; };
+		3A2838C82991683400AB6847 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		3A2838CA2991686A00AB6847 /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
 		3A2F74BA2964968500C1188E /* StoringPreferencesEfficiently.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StoringPreferencesEfficiently.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSPlus.entitlements; sourceTree = "<group>"; };
 		3A2F74BC2964C8F900C1188E /* Handlingnamescorrectly.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Handlingnamescorrectly.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -576,6 +582,7 @@
 		3A2838BF2990FDA600AB6847 /* SpecialEffects */ = {
 			isa = PBXGroup;
 			children = (
+				3A2838C529915F2700AB6847 /* Accelerometer */,
 				3A2838C02990FE6200AB6847 /* Emiter */,
 			);
 			path = SpecialEffects;
@@ -588,6 +595,16 @@
 				3A2838C32991000C00AB6847 /* ParticlesView.swift */,
 			);
 			path = Emiter;
+			sourceTree = "<group>";
+		};
+		3A2838C529915F2700AB6847 /* Accelerometer */ = {
+			isa = PBXGroup;
+			children = (
+				3A2838C62991630100AB6847 /* AccelerometerView.swift */,
+				3A2838C82991683400AB6847 /* MotionManager.swift */,
+				3A2838CA2991686A00AB6847 /* CirclesView.swift */,
+			);
+			path = Accelerometer;
 			sourceTree = "<group>";
 		};
 		3A2F74BF2964D4C300C1188E /* Parsing */ = {
@@ -798,10 +815,12 @@
 				3A68B27C2990243C0097D9D2 /* TabViewOrSideBarView.swift in Sources */,
 				3A880C78298D66B00077FD59 /* HoveringLabelsView.swift in Sources */,
 				3A12F0B2298A922400A02897 /* NeunorphismView.swift in Sources */,
+				3A2838CB2991686A00AB6847 /* CirclesView.swift in Sources */,
 				3AF1A458298C22AD00600D7E /* CheckToggleStyle.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
 				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
+				3A2838C72991630100AB6847 /* AccelerometerView.swift in Sources */,
 				3A12E82F296B2DDE00E17C1E /* FilteringListGeneric.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */,
@@ -831,6 +850,7 @@
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
 				3AF1A44E298BDC0600600D7E /* PulsingButtonStyle.swift in Sources */,
 				3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */,
+				3A2838C92991683400AB6847 /* MotionManager.swift in Sources */,
 				3A2838C42991000C00AB6847 /* ParticlesView.swift in Sources */,
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
 				3A0A346D298D54F700ADF14D /* LabelStyle.swift in Sources */,

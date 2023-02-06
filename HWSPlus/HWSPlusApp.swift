@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct HWSPlusApp: App {
+    let motionManager = MotionManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(motionManager)
         }
     }
 }
