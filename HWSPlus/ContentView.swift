@@ -16,6 +16,7 @@ struct ContentView: View {
         /// FloodFillView()
         ///BoidsView()
         ///FilteringListView()
+        
         ///#Swift Components
         ///ShapeBezierView()
         /// LongPressButtonView()
@@ -25,6 +26,8 @@ struct ContentView: View {
         ///  StretchingMarginView()
        /// RadialMenuView()
       ///  RemoteImageView()
+        
+        ///#IntermediateSwiftUI
       ///  CustomPropertyWrapperWithDynamicProperty()
   ///      ButtonCustomizationButtonStyle()
     ///    NeumorphismView()
@@ -34,7 +37,8 @@ struct ContentView: View {
         ///CheckToggleView()
      ///   ProgressViewStyleView()
         ///LabelStyleView()
-        TabViewOrSideBarView()
+    ///    TabViewOrSideBarView()
+        ParticlesView()
     }
 }
 

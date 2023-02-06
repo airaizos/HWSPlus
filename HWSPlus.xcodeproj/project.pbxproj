@@ -59,6 +59,8 @@
 		3A215B2E296D8788004F7CA6 /* StretchingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B2D296D8788004F7CA6 /* StretchingHeader.swift */; };
 		3A216932295B3C5B007011CB /* ds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A216931295B3C5B007011CB /* ds.swift */; };
 		3A2838BC2990F6DA00AB6847 /* JsonTidy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838BB2990F6DA00AB6847 /* JsonTidy.swift */; };
+		3A2838C22990FE7500AB6847 /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C12990FE7500AB6847 /* EmitterView.swift */; };
+		3A2838C42991000C00AB6847 /* ParticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C32991000C00AB6847 /* ParticlesView.swift */; };
 		3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74BD2964CF8F00C1188E /* Monograms.swift */; };
 		3A336F212951D73900B4333A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A336F202951D73900B4333A /* Main.swift */; };
 		3A3B6F9E29759A5800E494BF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B6F9D29759A5800E494BF /* StringExtension.swift */; };
@@ -160,6 +162,8 @@
 		3A215B2D296D8788004F7CA6 /* StretchingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingHeader.swift; sourceTree = "<group>"; };
 		3A216931295B3C5B007011CB /* ds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ds.swift; sourceTree = "<group>"; };
 		3A2838BB2990F6DA00AB6847 /* JsonTidy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTidy.swift; sourceTree = "<group>"; };
+		3A2838C12990FE7500AB6847 /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
+		3A2838C32991000C00AB6847 /* ParticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesView.swift; sourceTree = "<group>"; };
 		3A2F74BA2964968500C1188E /* StoringPreferencesEfficiently.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StoringPreferencesEfficiently.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSPlus.entitlements; sourceTree = "<group>"; };
 		3A2F74BC2964C8F900C1188E /* Handlingnamescorrectly.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Handlingnamescorrectly.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -247,6 +251,7 @@
 		3A0AB18529895D8400561553 /* IntermediateSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3A2838BF2990FDA600AB6847 /* SpecialEffects */,
 				3A68B278299020430097D9D2 /* TabViewOrSideBarView */,
 				3A0A3469298D54D400ADF14D /* LabelStyleCustomization */,
 				3A0A3464298D232400ADF14D /* ProgressViewCustomization */,
@@ -568,6 +573,23 @@
 			path = CommandLine;
 			sourceTree = "<group>";
 		};
+		3A2838BF2990FDA600AB6847 /* SpecialEffects */ = {
+			isa = PBXGroup;
+			children = (
+				3A2838C02990FE6200AB6847 /* Emiter */,
+			);
+			path = SpecialEffects;
+			sourceTree = "<group>";
+		};
+		3A2838C02990FE6200AB6847 /* Emiter */ = {
+			isa = PBXGroup;
+			children = (
+				3A2838C12990FE7500AB6847 /* EmitterView.swift */,
+				3A2838C32991000C00AB6847 /* ParticlesView.swift */,
+			);
+			path = Emiter;
+			sourceTree = "<group>";
+		};
 		3A2F74BF2964D4C300C1188E /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -790,6 +812,7 @@
 				3A12E82D296B2D3F00E17C1E /* FilteringListView.swift in Sources */,
 				3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */,
 				3A132CF4296ED2FE00E28CB8 /* StretchingMarginView.swift in Sources */,
+				3A2838C22990FE7500AB6847 /* EmitterView.swift in Sources */,
 				3A0D578F2968BF9B00A397BE /* CGPoint-Helpers.swift in Sources */,
 				3A0CC5E529673B5100DCCD00 /* Square.swift in Sources */,
 				3AF1A455298C141E00600D7E /* PrimitiveButtonStyle.swift in Sources */,
@@ -808,6 +831,7 @@
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
 				3AF1A44E298BDC0600600D7E /* PulsingButtonStyle.swift in Sources */,
 				3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */,
+				3A2838C42991000C00AB6847 /* ParticlesView.swift in Sources */,
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
 				3A0A346D298D54F700ADF14D /* LabelStyle.swift in Sources */,
 				3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */,
