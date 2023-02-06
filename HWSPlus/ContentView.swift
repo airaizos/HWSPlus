@@ -33,7 +33,8 @@ struct ContentView: View {
      ///   PrimitiveButtonView()
         ///CheckToggleView()
      ///   ProgressViewStyleView()
-        LabelStyleView()
+        ///LabelStyleView()
+        TabViewOrSideBarView()
     }
 }
 
