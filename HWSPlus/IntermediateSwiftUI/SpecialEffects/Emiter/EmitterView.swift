@@ -46,20 +46,20 @@ struct EmitterView: View {
         }
     }
     
-    var images: [String]
-    var particleCount: Int
+    var image: String //✅
+    var particleCount: Int //✅
     
-    var creationPoint = UnitPoint.center
-    var creationRange = CGSize.zero
+    var creationPoint = UnitPoint.center //✅
+    var creationRange = CGSize.zero //✅
     
-    var colors = [Color.pps1]
+    var colors = [Color.pps1] //✅
   
     var alpha: Double = 1
-    var alphaRange: Double = 0
+    var alphaRange: Double = 0 
     var alphaSpeed: Double  = 0
     
     var angle = Angle.zero
-    var angleRange = Angle.zero
+    var angleRange = Angle.zero //✅
     
     var opacity = 1.0
     var opacityRange = 0.0
@@ -89,7 +89,7 @@ struct EmitterView: View {
             ZStack {
                 ForEach(0..<self.particleCount, id: \.self) { _ in
                     ParticleView(
-                        image: Image(self.images.randomElement()!),
+                        image: Image("\(self.image)"),
                         position: self.position(in: geo),
                         opacity: self.makeOpacity(),
                         scale: self.makeScale(),
