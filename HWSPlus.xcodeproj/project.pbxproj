@@ -49,6 +49,11 @@
 		3A1F5F5429701405008019D2 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F5329701405008019D2 /* RemoteImageView.swift */; };
 		3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F5529701410008019D2 /* RemoteImage.swift */; };
 		3A20091B298BAC500085CCA9 /* AdvancedButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20091A298BAC500085CCA9 /* AdvancedButtonsView.swift */; };
+		3A20B329299245CB008C0D6E /* ScalingMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B328299245CB008C0D6E /* ScalingMaskView.swift */; };
+		3A20B32B299249AF008C0D6E /* TextMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B32A299249AF008C0D6E /* TextMaskView.swift */; };
+		3A20B32D29924CC8008C0D6E /* StraightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B32C29924CC8008C0D6E /* StraightImageView.swift */; };
+		3A20B32F29924FEF008C0D6E /* ImageView3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B32E29924FEF008C0D6E /* ImageView3D.swift */; };
+		3A20B331299251FB008C0D6E /* ShapeBezier2DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B330299251FB008C0D6E /* ShapeBezier2DView.swift */; };
 		3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */; };
 		3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */; };
 		3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B21296D6B70004F7CA6 /* FlipCardView.swift */; };
@@ -155,6 +160,11 @@
 		3A1F5F5329701405008019D2 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		3A1F5F5529701410008019D2 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		3A20091A298BAC500085CCA9 /* AdvancedButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedButtonsView.swift; sourceTree = "<group>"; };
+		3A20B328299245CB008C0D6E /* ScalingMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalingMaskView.swift; sourceTree = "<group>"; };
+		3A20B32A299249AF008C0D6E /* TextMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMaskView.swift; sourceTree = "<group>"; };
+		3A20B32C29924CC8008C0D6E /* StraightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraightImageView.swift; sourceTree = "<group>"; };
+		3A20B32E29924FEF008C0D6E /* ImageView3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView3D.swift; sourceTree = "<group>"; };
+		3A20B330299251FB008C0D6E /* ShapeBezier2DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeBezier2DView.swift; sourceTree = "<group>"; };
 		3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButtonView.swift; sourceTree = "<group>"; };
 		3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButton.swift; sourceTree = "<group>"; };
 		3A215B21296D6B70004F7CA6 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
@@ -601,8 +611,13 @@
 			isa = PBXGroup;
 			children = (
 				3A2838C62991630100AB6847 /* AccelerometerView.swift */,
+				3A20B32C29924CC8008C0D6E /* StraightImageView.swift */,
+				3A20B32E29924FEF008C0D6E /* ImageView3D.swift */,
+				3A20B330299251FB008C0D6E /* ShapeBezier2DView.swift */,
 				3A2838C82991683400AB6847 /* MotionManager.swift */,
 				3A2838CA2991686A00AB6847 /* CirclesView.swift */,
+				3A20B328299245CB008C0D6E /* ScalingMaskView.swift */,
+				3A20B32A299249AF008C0D6E /* TextMaskView.swift */,
 			);
 			path = Accelerometer;
 			sourceTree = "<group>";
@@ -818,14 +833,18 @@
 				3A2838CB2991686A00AB6847 /* CirclesView.swift in Sources */,
 				3AF1A458298C22AD00600D7E /* CheckToggleStyle.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
+				3A20B32D29924CC8008C0D6E /* StraightImageView.swift in Sources */,
 				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
+				3A20B329299245CB008C0D6E /* ScalingMaskView.swift in Sources */,
+				3A20B32B299249AF008C0D6E /* TextMaskView.swift in Sources */,
 				3A2838C72991630100AB6847 /* AccelerometerView.swift in Sources */,
 				3A12E82F296B2DDE00E17C1E /* FilteringListGeneric.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */,
 				3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */,
 				3A1F5F5429701405008019D2 /* RemoteImageView.swift in Sources */,
+				3A20B331299251FB008C0D6E /* ShapeBezier2DView.swift in Sources */,
 				3A12F0B9298AD2F800A02897 /* AdvancedButtons.swift in Sources */,
 				3AF1A450298C009D00600D7E /* SpinningArcButtonStyle.swift in Sources */,
 				3A12E82D296B2D3F00E17C1E /* FilteringListView.swift in Sources */,
@@ -852,6 +871,7 @@
 				3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */,
 				3A2838C92991683400AB6847 /* MotionManager.swift in Sources */,
 				3A2838C42991000C00AB6847 /* ParticlesView.swift in Sources */,
+				3A20B32F29924FEF008C0D6E /* ImageView3D.swift in Sources */,
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
 				3A0A346D298D54F700ADF14D /* LabelStyle.swift in Sources */,
 				3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */,

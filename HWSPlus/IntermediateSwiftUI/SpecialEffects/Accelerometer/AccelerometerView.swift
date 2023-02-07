@@ -15,8 +15,13 @@ struct AccelerometerView: View {
         ZStack {
             switch viewType {
          
-                
-            default: CirclesView()
+            case 0: CirclesView()
+            case 1: ScalingMaskView()
+            case 2: TextMaskView()
+            case 3: StraightImageView()
+            case 4: ImageView3D()
+            case 5: ShapeBezier2DView()
+            default: ScalingMaskView()
             }
         }
         .onTapGesture {

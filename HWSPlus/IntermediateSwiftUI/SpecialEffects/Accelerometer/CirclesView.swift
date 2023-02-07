@@ -23,15 +23,15 @@ struct CirclesView: View {
                 .fill(Color.pps7)
                 .frame(width: 300,height: 300)
                 .offset(x: motion.fy * 200, y: motion.fy * -200)
-                .blendMode(.colorBurn)
+                .blendMode(.screen)
             
             Circle()
                 .fill(Color.pps4)
                 .frame(width: 300, height: 300)
                 .offset(x: motion.fy * -200, y: motion.fy * -200)
-                .blendMode(.difference)
-
+                .blendMode(.screen)
         }
+        .animation(.linear, value: 1)
     }
 }
 
