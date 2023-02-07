@@ -56,6 +56,30 @@ struct LayeringShadowsView: View {
                             .innerShadow(using: Polygon(sides: 6))
                     }
                 }
+                HStack(spacing: 50) {
+                    Polygon(sides: 6)
+                        .fill(Color.yellow)
+                        .frame(width: size, height: size)
+                        .innerGlow(using: Polygon(sides: 6))
+                    Polygon(sides: 6)
+                        .fill(Color.yellow)
+                        .frame(width: size, height: size)
+                        .innerGlow(using: Polygon(sides: 6),color: .yellow)
+                }
+                HStack(spacing: 50) {
+                    Polygon(sides: 6)
+                        .fill(Color.yellow)
+                        .frame(width: size, height: size)
+                        .innerGlow(using: Polygon(sides: 6),color: .yellow)
+                    Polygon(sides: 6)
+                        .fill(Color.yellow)
+                        .frame(width: size, height: size)
+                        .innerGlowIn(using: Polygon(sides: 6),color: .yellow)
+                    Polygon(sides: 6)
+                        .fill(Color.yellow)
+                        .frame(width: size, height: size)
+                        .innerGlow(using: Polygon(sides: 6),color: .yellow)
+                }
             }
         
         .frame(maxWidth: .infinity, maxHeight: .infinity)

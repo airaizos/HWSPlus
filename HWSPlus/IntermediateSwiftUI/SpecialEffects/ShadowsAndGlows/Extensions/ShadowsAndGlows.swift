@@ -45,9 +45,9 @@ extension View {
         .offset(y: -(size * 0.25))
     }
     
-}
 
-extension View {
+
+
     func innerShadow<S: Shape>(using shape: S, angle: Angle = .degrees(0), color: Color = .black, width: CGFloat = 6, blur: CGFloat = 7 ) -> some View {
         
         let finalX = CGFloat(cos(angle.radians - .pi / 2))
@@ -60,6 +60,55 @@ extension View {
                     .blur(radius: blur)
                     .mask(shape)
             )
-        
     }
+
+
+
+    func innerGlow<S: Shape>(using shape: S, angle: Angle = .degrees(0), color: Color = .white, width: CGFloat = 6, blur: CGFloat = 7, radius: CGFloat = 20) -> some View {
+        let finalX = CGFloat(cos(angle.radians - .pi / 2))
+        let finalY = CGFloat(sin(angle.radians - .pi / 2 ))
+        
+           return self
+            .overlay(
+                shape.stroke(style: .init(lineWidth: width, lineCap: .round, lineJoin: .round, dash: [0,1], dashPhase: 2))
+                    .offset(x: finalX * width * 0.6, y: finalY * width * 0.6)
+                    .blur(radius: blur)
+                    .mask(shape)
+                )
+                    
+
+                .shadow(color: color, radius: radius / 3)
+                .shadow(color: color, radius: radius / 3)
+                .shadow(color: color, radius: radius / 3)
+        }
+    
+    
+    func innerGlowIn<S: Shape>(using shape: S, angle: Angle = .degrees(0), color: Color = .white, width: CGFloat = 6, blur: CGFloat = 7, radius: CGFloat = 20) -> some View {
+        let finalX = CGFloat(cos(angle.radians - .pi / 2))
+        let finalY = CGFloat(sin(angle.radians - .pi / 2 ))
+        
+           return self
+            .overlay(
+                shape.stroke(.white, lineWidth: 15)
+                    .offset(x: finalX * width * 0.6, y: finalY * width * 0.6)
+                    .blur(radius: blur)
+                    .mask(shape)
+                )
+            .overlay(
+                shape.stroke(lineWidth: 2)
+                    .blur(radius: blur)
+                    .frame(width: width * 20)
+                    .mask(shape)
+                )
+            .overlay(
+                shape.stroke(lineWidth: 2)
+                    .blur(radius: blur)
+                    .frame(width: width * 23)
+                    .mask(shape)
+                )
+
+                .shadow(color: color, radius: radius / 3)
+                .shadow(color: color, radius: radius / 3)
+                .shadow(color: color, radius: radius / 3)
+        }
 }
