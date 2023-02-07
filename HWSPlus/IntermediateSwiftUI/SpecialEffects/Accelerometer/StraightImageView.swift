@@ -15,13 +15,18 @@ struct StraightImageView: View {
                 .stroke(Color.pps5, lineWidth: 8)
                 .offset(x: -40)
                 .frame(width: 500, height: 500)
+                .shadow(color: .pps1, radius: motion.fx * 100)
+   
+
                 .overlay(
                     Circle()
                         .stroke(Color.pps8, lineWidth: 12)
                 )
-                .rotationEffect(.radians(atan2(motion.dx, motion.dy) + .pi))
+                .rotationEffect(.init(radians: atan2(motion.dx, motion.dy) + .pi))
         }
+        
     }
+   
 }
 
 struct StraightImageView_Previews: PreviewProvider {

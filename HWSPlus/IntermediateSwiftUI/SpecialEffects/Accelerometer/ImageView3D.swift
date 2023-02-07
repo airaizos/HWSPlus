@@ -19,7 +19,8 @@ struct ImageView3D: View {
                     Circle()
                         .stroke( Color.pps1, lineWidth: 8)
                 )
-                .rotation3DEffect(.radians(.pi), axis: (motion.fx, motion.fy, motion.fz + 0.5))
+                .rotation3DEffect(.init(radians:.pi), axis: (motion.fx, motion.fy, motion.fz + 0.5))
+            
         }
         
     }

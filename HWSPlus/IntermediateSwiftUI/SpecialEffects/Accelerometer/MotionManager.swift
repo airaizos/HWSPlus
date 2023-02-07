@@ -30,6 +30,22 @@ class MotionManager: ObservableObject {
             self.fz = newData.z
             
             self.objectWillChange.send()
+            
+        }
+    }
+    
+    func start() {
+        monitorManager.startDeviceMotionUpdates(to: .main)  { data,_ in
+            guard let newData = data?.gravity else { return }
+            self.dx = newData.x
+            self.dy = newData.y
+            self.dz = newData.z
+            
+            self.fx = newData.x
+            self.fy = newData.y
+            self.fz = newData.z
+            
+            self.objectWillChange.send()
         }
     }
     
