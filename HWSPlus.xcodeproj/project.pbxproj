@@ -63,6 +63,7 @@
 		3A20B341299270F9008C0D6E /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B340299270F9008C0D6E /* BadgeSymbol.swift */; };
 		3A20B343299272DC008C0D6E /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B342299272DC008C0D6E /* RotatedBadgeSymbol.swift */; };
 		3A20B34529927499008C0D6E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B34429927499008C0D6E /* Badge.swift */; };
+		3A20B348299297B6008C0D6E /* ShadowsAndGlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B347299297B6008C0D6E /* ShadowsAndGlows.swift */; };
 		3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */; };
 		3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */; };
 		3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B21296D6B70004F7CA6 /* FlipCardView.swift */; };
@@ -183,6 +184,7 @@
 		3A20B340299270F9008C0D6E /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		3A20B342299272DC008C0D6E /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 		3A20B34429927499008C0D6E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		3A20B347299297B6008C0D6E /* ShadowsAndGlows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowsAndGlows.swift; sourceTree = "<group>"; };
 		3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButtonView.swift; sourceTree = "<group>"; };
 		3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButton.swift; sourceTree = "<group>"; };
 		3A215B21296D6B70004F7CA6 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 		3A20B33429925D64008C0D6E /* ShadowsAndGlows */ = {
 			isa = PBXGroup;
 			children = (
+				3A20B34629929791008C0D6E /* Extensions */,
 				3A20B33529925D81008C0D6E /* LayeringShadowsView.swift */,
 			);
 			path = ShadowsAndGlows;
@@ -585,6 +588,14 @@
 				3A20B34429927499008C0D6E /* Badge.swift */,
 			);
 			path = Hexagon;
+			sourceTree = "<group>";
+		};
+		3A20B34629929791008C0D6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A20B347299297B6008C0D6E /* ShadowsAndGlows.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3A215B1B296D5A80004F7CA6 /* LongPressButton */ = {
@@ -906,6 +917,7 @@
 				3A12E833296B35A300E17C1E /* FilteringListUsersView.swift in Sources */,
 				3AF1A45A298C22B800600D7E /* CheckToggleView.swift in Sources */,
 				3A0A346B298D54EB00ADF14D /* LabelStyleView.swift in Sources */,
+				3A20B348299297B6008C0D6E /* ShadowsAndGlows.swift in Sources */,
 				3A215B2C296D877A004F7CA6 /* StretchingHeaderView.swift in Sources */,
 				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
