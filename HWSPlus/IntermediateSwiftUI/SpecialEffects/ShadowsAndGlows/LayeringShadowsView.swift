@@ -11,8 +11,9 @@ struct LayeringShadowsView: View {
     var body: some View {
         ZStack{
             
-            Polygon(sides: 9)
-                .stroke(.white, lineWidth: 4)
+           
+          BadgeBackground()
+                
                 
         }
             .background(Color.black)
