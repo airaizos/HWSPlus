@@ -54,6 +54,9 @@
 		3A20B32D29924CC8008C0D6E /* StraightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B32C29924CC8008C0D6E /* StraightImageView.swift */; };
 		3A20B32F29924FEF008C0D6E /* ImageView3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B32E29924FEF008C0D6E /* ImageView3D.swift */; };
 		3A20B331299251FB008C0D6E /* ShapeBezier2DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B330299251FB008C0D6E /* ShapeBezier2DView.swift */; };
+		3A20B33329925B00008C0D6E /* PPSShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B33229925B00008C0D6E /* PPSShape.swift */; };
+		3A20B33629925D81008C0D6E /* LayeringShadowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B33529925D81008C0D6E /* LayeringShadowsView.swift */; };
+		3A20B33829925E86008C0D6E /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20B33729925E86008C0D6E /* Polygon.swift */; };
 		3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */; };
 		3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */; };
 		3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A215B21296D6B70004F7CA6 /* FlipCardView.swift */; };
@@ -165,6 +168,9 @@
 		3A20B32C29924CC8008C0D6E /* StraightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraightImageView.swift; sourceTree = "<group>"; };
 		3A20B32E29924FEF008C0D6E /* ImageView3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView3D.swift; sourceTree = "<group>"; };
 		3A20B330299251FB008C0D6E /* ShapeBezier2DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeBezier2DView.swift; sourceTree = "<group>"; };
+		3A20B33229925B00008C0D6E /* PPSShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPSShape.swift; sourceTree = "<group>"; };
+		3A20B33529925D81008C0D6E /* LayeringShadowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayeringShadowsView.swift; sourceTree = "<group>"; };
+		3A20B33729925E86008C0D6E /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		3A215B1C296D5A98004F7CA6 /* LongPressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButtonView.swift; sourceTree = "<group>"; };
 		3A215B1E296D5E4E004F7CA6 /* LongPressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressButton.swift; sourceTree = "<group>"; };
 		3A215B21296D6B70004F7CA6 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
@@ -454,6 +460,8 @@
 				3A132C94294BCF1500D19D75 /* Preview Assets.xcassets */,
 				3A3B6F9D29759A5800E494BF /* StringExtension.swift */,
 				3A0AB18E2989704A00561553 /* ColorExtension.swift */,
+				3A20B33229925B00008C0D6E /* PPSShape.swift */,
+				3A20B33729925E86008C0D6E /* Polygon.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -545,6 +553,14 @@
 			path = RemoteImage;
 			sourceTree = "<group>";
 		};
+		3A20B33429925D64008C0D6E /* ShadowsAndGlows */ = {
+			isa = PBXGroup;
+			children = (
+				3A20B33529925D81008C0D6E /* LayeringShadowsView.swift */,
+			);
+			path = ShadowsAndGlows;
+			sourceTree = "<group>";
+		};
 		3A215B1B296D5A80004F7CA6 /* LongPressButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +608,7 @@
 		3A2838BF2990FDA600AB6847 /* SpecialEffects */ = {
 			isa = PBXGroup;
 			children = (
+				3A20B33429925D64008C0D6E /* ShadowsAndGlows */,
 				3A2838C529915F2700AB6847 /* Accelerometer */,
 				3A2838C02990FE6200AB6847 /* Emiter */,
 			);
@@ -830,6 +847,7 @@
 				3A68B27C2990243C0097D9D2 /* TabViewOrSideBarView.swift in Sources */,
 				3A880C78298D66B00077FD59 /* HoveringLabelsView.swift in Sources */,
 				3A12F0B2298A922400A02897 /* NeunorphismView.swift in Sources */,
+				3A20B33629925D81008C0D6E /* LayeringShadowsView.swift in Sources */,
 				3A2838CB2991686A00AB6847 /* CirclesView.swift in Sources */,
 				3AF1A458298C22AD00600D7E /* CheckToggleStyle.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
@@ -840,6 +858,7 @@
 				3A20B32B299249AF008C0D6E /* TextMaskView.swift in Sources */,
 				3A2838C72991630100AB6847 /* AccelerometerView.swift in Sources */,
 				3A12E82F296B2DDE00E17C1E /* FilteringListGeneric.swift in Sources */,
+				3A20B33829925E86008C0D6E /* Polygon.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */,
 				3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */,
@@ -865,6 +884,7 @@
 				3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */,
 				3AF1A449298BBC7A00600D7E /* TargetButtonStyle.swift in Sources */,
 				3A12E831296B304200E17C1E /* BindingExtension.swift in Sources */,
+				3A20B33329925B00008C0D6E /* PPSShape.swift in Sources */,
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
 				3AF1A44E298BDC0600600D7E /* PulsingButtonStyle.swift in Sources */,
