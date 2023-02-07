@@ -10,13 +10,10 @@ import SwiftUI
 struct LayeringShadowsView: View {
     var body: some View {
         ZStack{
-            
-           
-          BadgeBackground()
-                
-                
+            Badge(symbolColor: .pps8, gradientStart: .pps3, gradientEnd: .pps5, angleDegrees: 270)
+                .shadow(radius: 10, x: 10, y: 10)
         }
-            .background(Color.black)
+            
     }
 }
 
