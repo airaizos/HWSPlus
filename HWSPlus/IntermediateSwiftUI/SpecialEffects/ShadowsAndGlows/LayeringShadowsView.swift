@@ -65,23 +65,30 @@ struct LayeringShadowsView: View {
                         .fill(Color.yellow)
                         .frame(width: size, height: size)
                         .innerGlow(using: Polygon(sides: 6),color: .yellow)
+                        
                 }
-                HStack(spacing: 50) {
+                HStack(spacing: 25) {
                     Polygon(sides: 6)
-                        .fill(Color.yellow)
+                        .fill(Color.orange)
                         .frame(width: size, height: size)
-                        .innerGlow(using: Polygon(sides: 6),color: .yellow)
+                        .multicolorGlow()
+                        .offset(y: 20)
                     Polygon(sides: 6)
                         .fill(Color.yellow)
                         .frame(width: size, height: size)
                         .innerGlowIn(using: Polygon(sides: 6),color: .yellow)
-                    Polygon(sides: 6)
-                        .fill(Color.yellow)
-                        .frame(width: size, height: size)
-                        .innerGlow(using: Polygon(sides: 6),color: .yellow)
+                    ZStack{
+                        Polygon(sides: 6)
+                            .fill(Color.offWhite)
+                            .frame(width: size, height: size)
+                          .innerGlowIn(using: Polygon(sides: 6), radius: 50)
+                        Polygon(sides: 6)
+                            .fill(Color.offWhite)
+                            .frame(width: size, height: size)
+                          .innerGlow(using: Polygon(sides: 6))
+                    }
                 }
             }
-        
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.offWhite)
             .ignoresSafeArea(.all)

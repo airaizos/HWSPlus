@@ -41,7 +41,8 @@ struct ContentView: View {
     ///   ParticlesView()
         
         ///#Accelerometer#
-        AccelerometerView()
+      ///  AccelerometerView()
+        LayeringShadowsView()
         
     }
 }
