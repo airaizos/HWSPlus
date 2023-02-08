@@ -49,6 +49,8 @@
 		3A1688502993E79B00A19552 /* post388.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A16884F2993E79B00A19552 /* post388.json */; };
 		3A1688522993EF3B00A19552 /* mac.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A1688512993EF3B00A19552 /* mac.json */; };
 		3A1688542993FB4400A19552 /* NetworkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1688532993FB4400A19552 /* NetworkListView.swift */; };
+		3A1688572994077F00A19552 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1688562994077F00A19552 /* NetworkMonitor.swift */; };
+		3A16885929940D9600A19552 /* NetworkMonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16885829940D9600A19552 /* NetworkMonitorView.swift */; };
 		3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4A29700052008019D2 /* RadialMenu.swift */; };
 		3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4C2970005A008019D2 /* RadialButton.swift */; };
 		3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4E29700069008019D2 /* RadialMenuView.swift */; };
@@ -173,6 +175,8 @@
 		3A16884F2993E79B00A19552 /* post388.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = post388.json; path = /Users/adrian/Desktop/xCode/HWSPlus/post388.json; sourceTree = "<absolute>"; };
 		3A1688512993EF3B00A19552 /* mac.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mac.json; sourceTree = SOURCE_ROOT; };
 		3A1688532993FB4400A19552 /* NetworkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListView.swift; sourceTree = "<group>"; };
+		3A1688562994077F00A19552 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		3A16885829940D9600A19552 /* NetworkMonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorView.swift; sourceTree = "<group>"; };
 		3A1749B2296357AE004AEFBF /* ConvertingMeasurementsSafely.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConvertingMeasurementsSafely.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1846902965EAAC00F21A22 /* ParsingJson.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingJson.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A18AD7E29716D620049390A /* SpaceshipOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SpaceshipOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -548,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				3A1688452993C76500A19552 /* CodableAndCombine */,
+				3A1688552994072F00A19552 /* Access */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -571,6 +576,15 @@
 				3A1688512993EF3B00A19552 /* mac.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A1688552994072F00A19552 /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				3A1688562994077F00A19552 /* NetworkMonitor.swift */,
+				3A16885829940D9600A19552 /* NetworkMonitorView.swift */,
+			);
+			path = Access;
 			sourceTree = "<group>";
 		};
 		3A18AD7B29716B3F0049390A /* IntermediateSwift */ = {
@@ -949,6 +963,7 @@
 				3A20B33829925E86008C0D6E /* Polygon.swift in Sources */,
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */,
+				3A1688572994077F00A19552 /* NetworkMonitor.swift in Sources */,
 				3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */,
 				3A1688472993C78C00A19552 /* Post.swift in Sources */,
 				3A1F5F5429701405008019D2 /* RemoteImageView.swift in Sources */,
@@ -971,6 +986,7 @@
 				3A20B348299297B6008C0D6E /* ShadowsAndGlows.swift in Sources */,
 				3A215B2C296D877A004F7CA6 /* StretchingHeaderView.swift in Sources */,
 				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
+				3A16885929940D9600A19552 /* NetworkMonitorView.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
 				3AF1A447298BB49500600D7E /* FantasyButtonStyle.swift in Sources */,
 				3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */,

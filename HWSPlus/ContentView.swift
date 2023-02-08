@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   
+    let monitor = NetworkMonitor()
     
     var body: some View {
         
@@ -24,28 +25,29 @@ struct ContentView: View {
         ///AccessibleStackView()
         /// StretchingHeaderView()
         ///  StretchingMarginView()
-       /// RadialMenuView()
-      ///  RemoteImageView()
+        /// RadialMenuView()
+        ///  RemoteImageView()
         
         ///#IntermediateSwiftUI
-      ///  CustomPropertyWrapperWithDynamicProperty()
-  ///      ButtonCustomizationButtonStyle()
-    ///    NeumorphismView()
-    ///    AdvancedButtonsView()
-    ///    AnimatingButtonView()
-     ///   PrimitiveButtonView()
+        ///  CustomPropertyWrapperWithDynamicProperty()
+        ///      ButtonCustomizationButtonStyle()
+        ///    NeumorphismView()
+        ///    AdvancedButtonsView()
+        ///    AnimatingButtonView()
+        ///   PrimitiveButtonView()
         ///CheckToggleView()
-     ///   ProgressViewStyleView()
+        ///   ProgressViewStyleView()
         ///LabelStyleView()
-    ///    TabViewOrSideBarView()
-    ///   ParticlesView()
+        ///    TabViewOrSideBarView()
+        ///   ParticlesView()
         
         ///#Accelerometer#
-      ///  AccelerometerView()
-       /// LayeringShadowsView()
+        ///  AccelerometerView()
+        /// LayeringShadowsView()
         
         ///#Networking
-        CodableAndCombineView()
+        /// CodableAndCombineView()
+            NetworkMonitorView().environmentObject(monitor)
     }
 }
 
