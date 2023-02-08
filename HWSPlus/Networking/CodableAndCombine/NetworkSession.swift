@@ -13,8 +13,10 @@ class NetworkSession {
     
    var requests = Set<AnyCancellable>()
     
+    var postFromDataTask: Post = Post.default
+    
     func fetchDataTask(_ url: URL) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { [self] data, response, error in
             if let error = error {
                 print("** NETWORK ** Error:\n  \(Post.default.title.rendered)")
                 print(error.localizedDescription)
@@ -23,6 +25,7 @@ class NetworkSession {
                 
                 do {
                     let post = try decoder.decode(Post.self, from: data)
+                    postFromDataTask = post
                     print("** NETWORK ** Decodificado:\n \(post.title.rendered)")
                 } catch {
                     print("** NETWORK ** Error:\n \(Post.default.title.rendered)")

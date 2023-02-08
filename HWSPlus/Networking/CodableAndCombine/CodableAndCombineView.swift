@@ -11,30 +11,40 @@ struct CodableAndCombineView: View {
     var networkSession = NetworkSession()
     var localSession = LocalSession()
     
-    @State private var title = ""
-    @State private var content = ""
+    @State private var posts: [String] = []
+    
     var body: some View {
-        Button("Fetch data") {
-            let url = URL(string: "https://proximaparadaswift.dev/wp-json/wp/v2/posts/388")!
-            
-            // Network Session
-            
-            networkSession.fetchDataTask(url)
-            
-            networkSession.fetchPublisher(url)
-            
-            networkSession.fetchPublisherGeneric(url, defaultValue: Post.default) {
-                print("** COMBINE & GENERIC:\n\($0.title.rendered)") }
-            
-            networkSession.fetchPublisherGeneric(url, defaultValue: Post.default, decodingStrategy: .useDefaultKeys, dispatchQueue: .main) {
-                print("** COMBINE, GENERIC & OPTIONS:\n\($0.title.rendered)")
+        VStack {
+            Button("Fetch data") {
+                
+                let url = URL(string: "https://proximaparadaswift.dev/wp-json/wp/v2/posts/388")!
+                
+                // Network Session
+                
+                networkSession.fetchDataTask(url)
+                
+                networkSession.fetchPublisher(url)
+                
+                networkSession.fetchPublisherGeneric(url, defaultValue: Post.default) {
+                    posts.append("Combine, Generic: \($0.title.rendered)")
+                    print("** COMBINE & GENERIC:\n\($0.title.rendered)") }
+                
+                networkSession.fetchPublisherGeneric(url, defaultValue: Post.default, decodingStrategy: .useDefaultKeys, dispatchQueue: .main) {
+                    posts.append("Combine, Generic, and Options: \($0.title.rendered)")
+                //    self.posts.append(post)
+                    print("** COMBINE, GENERIC & OPTIONS:\n\($0.title.rendered)")
+                }
+                
+                // Local Session
+                localSession.fetchFile("post388")
+                
+                localSession.fetchFile("mac", decodingStrategy: .convertFromSnakeCase)
+
             }
             
-            // Local Session
-            localSession.fetchFile("post388")
-            
-            localSession.fetchFile("mac", decodingStrategy: .convertFromSnakeCase)
-            
+            if !posts.isEmpty {
+                NetworkListView(posts: posts)
+            }
         }
     }
 }
