@@ -42,8 +42,10 @@ struct ContentView: View {
         
         ///#Accelerometer#
       ///  AccelerometerView()
-        LayeringShadowsView()
+       /// LayeringShadowsView()
         
+        ///#Networking
+        CodableAndCombineView()
     }
 }
 

@@ -42,6 +42,12 @@
 		3A132CAB294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CAA294BCF1600D19D75 /* HWSPlusUITestsLaunchTests.swift */; };
 		3A132CF4296ED2FE00E28CB8 /* StretchingMarginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CF3296ED2FE00E28CB8 /* StretchingMarginView.swift */; };
 		3A132CF6296ED30A00E28CB8 /* StretchingMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A132CF5296ED30A00E28CB8 /* StretchingMargin.swift */; };
+		3A1688472993C78C00A19552 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1688462993C78C00A19552 /* Post.swift */; };
+		3A1688492993CB5700A19552 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1688482993CB5700A19552 /* NetworkSession.swift */; };
+		3A16884B2993CE0000A19552 /* CodableAndCombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16884A2993CE0000A19552 /* CodableAndCombineView.swift */; };
+		3A16884D2993E56D00A19552 /* LocalSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16884C2993E56D00A19552 /* LocalSession.swift */; };
+		3A1688502993E79B00A19552 /* post388.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A16884F2993E79B00A19552 /* post388.json */; };
+		3A1688522993EF3B00A19552 /* mac.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A1688512993EF3B00A19552 /* mac.json */; };
 		3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4A29700052008019D2 /* RadialMenu.swift */; };
 		3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4C2970005A008019D2 /* RadialButton.swift */; };
 		3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F5F4E29700069008019D2 /* RadialMenuView.swift */; };
@@ -159,6 +165,12 @@
 		3A132CB9294BCF8300D19D75 /* BuildingPureFunctions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BuildingPureFunctions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A132CF3296ED2FE00E28CB8 /* StretchingMarginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingMarginView.swift; sourceTree = "<group>"; };
 		3A132CF5296ED30A00E28CB8 /* StretchingMargin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingMargin.swift; sourceTree = "<group>"; };
+		3A1688462993C78C00A19552 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3A1688482993CB5700A19552 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		3A16884A2993CE0000A19552 /* CodableAndCombineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableAndCombineView.swift; sourceTree = "<group>"; };
+		3A16884C2993E56D00A19552 /* LocalSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSession.swift; sourceTree = "<group>"; };
+		3A16884F2993E79B00A19552 /* post388.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = post388.json; path = /Users/adrian/Desktop/xCode/HWSPlus/post388.json; sourceTree = "<absolute>"; };
+		3A1688512993EF3B00A19552 /* mac.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mac.json; sourceTree = SOURCE_ROOT; };
 		3A1749B2296357AE004AEFBF /* ConvertingMeasurementsSafely.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConvertingMeasurementsSafely.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1846902965EAAC00F21A22 /* ParsingJson.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingJson.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A18AD7E29716D620049390A /* SpaceshipOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SpaceshipOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -430,6 +442,7 @@
 		3A132C81294BCF1400D19D75 = {
 			isa = PBXGroup;
 			children = (
+				3A16884E2993E77A00A19552 /* Resources */,
 				3A2838BA2990F6C100AB6847 /* CommandLine */,
 				3A132CB7294BCF4E00D19D75 /* Playgrounds */,
 				3A132C8C294BCF1400D19D75 /* HWSPlus */,
@@ -452,6 +465,7 @@
 		3A132C8C294BCF1400D19D75 /* HWSPlus */ = {
 			isa = PBXGroup;
 			children = (
+				3A1688442993C37A00A19552 /* Networking */,
 				3A0AB18529895D8400561553 /* IntermediateSwiftUI */,
 				3A18AD7B29716B3F0049390A /* IntermediateSwift */,
 				3A12E835296B42C700E17C1E /* SwiftUIComponents */,
@@ -526,6 +540,34 @@
 				3A132CF5296ED30A00E28CB8 /* StretchingMargin.swift */,
 			);
 			path = StretchingMargin;
+			sourceTree = "<group>";
+		};
+		3A1688442993C37A00A19552 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3A1688452993C76500A19552 /* CodableAndCombine */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3A1688452993C76500A19552 /* CodableAndCombine */ = {
+			isa = PBXGroup;
+			children = (
+				3A1688462993C78C00A19552 /* Post.swift */,
+				3A1688482993CB5700A19552 /* NetworkSession.swift */,
+				3A16884C2993E56D00A19552 /* LocalSession.swift */,
+				3A16884A2993CE0000A19552 /* CodableAndCombineView.swift */,
+			);
+			path = CodableAndCombine;
+			sourceTree = "<group>";
+		};
+		3A16884E2993E77A00A19552 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A16884F2993E79B00A19552 /* post388.json */,
+				3A1688512993EF3B00A19552 /* mac.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3A18AD7B29716B3F0049390A /* IntermediateSwift */ = {
@@ -843,7 +885,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A12E827296B29D000E17C1E /* users.json in Resources */,
+				3A1688502993E79B00A19552 /* post388.json in Resources */,
 				3A132C95294BCF1500D19D75 /* Preview Assets.xcassets in Resources */,
+				3A1688522993EF3B00A19552 /* mac.json in Resources */,
 				3A132C92294BCF1500D19D75 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,6 +923,7 @@
 				3A215B29296D78D1004F7CA6 /* AccesibleStack.swift in Sources */,
 				3A215B22296D6B70004F7CA6 /* FlipCardView.swift in Sources */,
 				3A0D57932968C75800A397BE /* BoidsView.swift in Sources */,
+				3A16884D2993E56D00A19552 /* LocalSession.swift in Sources */,
 				3AF1A453298C138400600D7E /* PrimitiveButtonView.swift in Sources */,
 				3A1F5F4F29700069008019D2 /* RadialMenuView.swift in Sources */,
 				3A68B27C2990243C0097D9D2 /* TabViewOrSideBarView.swift in Sources */,
@@ -890,6 +935,7 @@
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
 				3A20B32D29924CC8008C0D6E /* StraightImageView.swift in Sources */,
 				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
+				3A1688492993CB5700A19552 /* NetworkSession.swift in Sources */,
 				3A20B33A29926517008C0D6E /* StarShape.swift in Sources */,
 				3A20B33C29926832008C0D6E /* HexagonShape.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
@@ -901,6 +947,7 @@
 				3A216932295B3C5B007011CB /* ds.swift in Sources */,
 				3A1F5F4B29700052008019D2 /* RadialMenu.swift in Sources */,
 				3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */,
+				3A1688472993C78C00A19552 /* Post.swift in Sources */,
 				3A1F5F5429701405008019D2 /* RemoteImageView.swift in Sources */,
 				3A20B331299251FB008C0D6E /* ShapeBezier2DView.swift in Sources */,
 				3A20B34529927499008C0D6E /* Badge.swift in Sources */,
@@ -935,6 +982,7 @@
 				3A20B32F29924FEF008C0D6E /* ImageView3D.swift in Sources */,
 				3A215B1D296D5A98004F7CA6 /* LongPressButtonView.swift in Sources */,
 				3A20B343299272DC008C0D6E /* RotatedBadgeSymbol.swift in Sources */,
+				3A16884B2993CE0000A19552 /* CodableAndCombineView.swift in Sources */,
 				3A0A346D298D54F700ADF14D /* LabelStyle.swift in Sources */,
 				3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */,
 				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
