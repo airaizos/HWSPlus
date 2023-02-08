@@ -15,7 +15,7 @@ class NetworkSession {
     
     var postFromDataTask: Post = Post.default
     
-    func fetchDataTask(_ url: URL) {
+    func fetchDataTask(_ url: URL, _ completion: @escaping (Result<String,Error>) -> Void) {
         URLSession.shared.dataTask(with: url) { [self] data, response, error in
             if let error = error {
                 print("** NETWORK ** Error:\n  \(Post.default.title.rendered)")
@@ -27,6 +27,8 @@ class NetworkSession {
                     let post = try decoder.decode(Post.self, from: data)
                     postFromDataTask = post
                     print("** NETWORK ** Decodificado:\n \(post.title.rendered)")
+                    
+                    completion(.success("Data Task: \(post.title.rendered)"))
                 } catch {
                     print("** NETWORK ** Error:\n \(Post.default.title.rendered)")
                    

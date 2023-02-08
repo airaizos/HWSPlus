@@ -21,7 +21,16 @@ struct CodableAndCombineView: View {
                 
                 // Network Session
                 
-                networkSession.fetchDataTask(url)
+                networkSession.fetchDataTask(url) { result in
+                    
+                    switch result {
+                    case .success(let post):
+                        posts.append(post)
+                    default:
+                        ()
+                    }
+                    
+                }
                 
                 networkSession.fetchPublisher(url)
                 
@@ -31,15 +40,30 @@ struct CodableAndCombineView: View {
                 
                 networkSession.fetchPublisherGeneric(url, defaultValue: Post.default, decodingStrategy: .useDefaultKeys, dispatchQueue: .main) {
                     posts.append("Combine, Generic, and Options: \($0.title.rendered)")
-                //    self.posts.append(post)
+                    //    self.posts.append(post)
                     print("** COMBINE, GENERIC & OPTIONS:\n\($0.title.rendered)")
                 }
                 
                 // Local Session
-                localSession.fetchFile("post388")
+                localSession.fetchFile("post388") { result in
+                    switch result {
+                    case .success(let post):
+                        posts.append(post)
+                    default:
+                        ()
+                    }
+                }
                 
-                localSession.fetchFile("mac", decodingStrategy: .convertFromSnakeCase)
-
+                localSession.fetchFile("mac", decodingStrategy: .convertFromSnakeCase) { result in
+                    switch result {
+                    case .success(let post):
+                        posts.append(post)
+                    default:
+                        ()
+                    }
+                    
+                }
+                
             }
             
             if !posts.isEmpty {
