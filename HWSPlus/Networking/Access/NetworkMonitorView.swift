@@ -14,6 +14,7 @@ struct NetworkMonitorView: View {
     @State private var isPressed = false
     @State private var isMonitorActive = true
     
+    
     var body: some View {
         
         VStack {
@@ -25,15 +26,27 @@ struct NetworkMonitorView: View {
                     isPressed = finished
                 }
             }
-           
-            Text(verbatim: """
+            HStack {
+                Text(verbatim: """
                 Active: \(isMonitorActive ? "\(network.isActive)" : "")
                 Expensive: \(isMonitorActive ? "\(network.isExpensive)" : "")
                 Constrained: \(isMonitorActive ? "\(network.isConstrained)" : "")
                 """
-                 )
-            
-            if isPressed {
+                )
+                Spacer()
+                
+                Image(systemName: network.connectionType == .wifi ? "wifi" : "wifi.slash")
+                    .font(.title3)
+                    .hidden(!isMonitorActive)
+                Image(systemName: network.connectionType == .cellular ?  "antenna.radiowaves.left.and.right" : "antenna.radiowaves.left.and.right.slash")
+                    .hidden(!isMonitorActive)
+                Image(systemName: network.connectionType == .loopback ? "antenna.radiowaves.left.and.right.circle" : "")
+                
+                Image(systemName:  network.connectionType == .wiredEthernet ? "cable.connector" : "")
+                    .hidden(!isMonitorActive)
+                
+            }
+            if (isPressed && isMonitorActive) {
                 ProgressView()
                     .progressViewStyle(.circular)
                     .foregroundColor(.offWhite)

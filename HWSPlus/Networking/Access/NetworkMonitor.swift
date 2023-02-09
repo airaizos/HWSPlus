@@ -12,7 +12,7 @@ class NetworkMonitor: ObservableObject {
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "Monitor")
     var collectedData:(String,Bool) = ("",false)
-    var wiFiConnectionType: NWInterface.InterfaceType = .wifi
+
     
     /// ¿Tenemos acceso a internet?
     var isActive = false
@@ -24,8 +24,12 @@ class NetworkMonitor: ObservableObject {
     var isConstrained = false
     
     var connectionType = NWInterface.InterfaceType.other
+    
+    /// Stops monitoring
     var isMonitorActive = true
     
+    /// ¿Hay wifi?
+    var isWiFiAvailable = false
     
     init() {
     //    NWConnection(message: .default)
@@ -35,9 +39,12 @@ class NetworkMonitor: ObservableObject {
             self.isExpensive = newPath.isExpensive
             self.isConstrained = newPath.isConstrained
             
-            let connectionTypes: [NWInterface.InterfaceType] = [.cellular,.wifi, .wiredEthernet]
+            let connectionTypes: [NWInterface.InterfaceType] = [.cellular,.wifi, .wiredEthernet,.loopback]
             self.connectionType = connectionTypes.first(where: newPath.usesInterfaceType) ?? .other
             
+            //Solo entra una vez
+            self.isWiFiAvailable  = self.connectionType == .wifi ? true : false
+
             DispatchQueue.main.async {
                 self.objectWillChange.send()
             }
