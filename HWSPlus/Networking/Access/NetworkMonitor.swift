@@ -11,6 +11,7 @@ import Foundation
 class NetworkMonitor: ObservableObject {
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "Monitor")
+    var collectedData:(String,Bool) = ("",false)
     
     /// ¿Tenemos acceso a internet?
     var isActive = false
@@ -39,5 +40,24 @@ class NetworkMonitor: ObservableObject {
             }
         })   
         monitor.start(queue: queue)
+    }
+    
+    /// Waiting for access
+    func makeRequest(_ completion: @escaping ((String, Bool) -> Void)) {
+        let config = URLSessionConfiguration.default
+        config.allowsExpensiveNetworkAccess = false
+        config.allowsConstrainedNetworkAccess = false
+        config.waitsForConnectivity = true
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        
+        let session = URLSession(configuration: config)
+        let url = URL(string: "https://www.proximaparadaswift.dev")!
+        
+        session.dataTask(with: url) { data, _, _ in
+            
+            if let data = data {
+                completion(data.description, false)
+            }
+        }.resume()
     }
 }
