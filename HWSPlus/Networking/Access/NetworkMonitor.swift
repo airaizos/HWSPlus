@@ -12,17 +12,20 @@ class NetworkMonitor: ObservableObject {
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "Monitor")
     var collectedData:(String,Bool) = ("",false)
+    var wiFiConnectionType: NWInterface.InterfaceType = .wifi
     
     /// ¿Tenemos acceso a internet?
     var isActive = false
     
-    /// Es internet Móvil, Wifi o un punto de acceso personal?
+    /// Es internet móvil o un punto de acceso personal?
     var isExpensive = false
     
     /// Está en Modo de datos reducidos
     var isConstrained = false
     
     var connectionType = NWInterface.InterfaceType.other
+    var isMonitorActive = true
+    
     
     init() {
     //    NWConnection(message: .default)
@@ -59,5 +62,15 @@ class NetworkMonitor: ObservableObject {
                 completion(data.description, false)
             }
         }.resume()
+    }
+    
+    func stopMonitor(_ completion: @escaping ((Bool) -> Void)) {
+        monitor.cancel()
+        isMonitorActive = false
+        completion(isMonitorActive)
+        
+        DispatchQueue.main.async {
+            self.objectWillChange.send()
+        }
     }
 }

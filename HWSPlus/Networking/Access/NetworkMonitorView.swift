@@ -12,23 +12,27 @@ struct NetworkMonitorView: View {
     
     @State private var collectedData = ""
     @State private var isPressed = false
+    @State private var isMonitorActive = true
     
     var body: some View {
         
         VStack {
             Button("Fetch Data") {
                 isPressed = true
+                isMonitorActive = true
                 network.makeRequest { data,finished in
                     collectedData = data
                     isPressed = finished
                 }
             }
+           
             Text(verbatim: """
-                Active: \(network.isActive)
-                Expensive: \(network.isExpensive)
-                Constrained: \(network.isConstrained)
+                Active: \(isMonitorActive ? "\(network.isActive)" : "")
+                Expensive: \(isMonitorActive ? "\(network.isExpensive)" : "")
+                Constrained: \(isMonitorActive ? "\(network.isConstrained)" : "")
                 """
                  )
+            
             if isPressed {
                 ProgressView()
                     .progressViewStyle(.circular)
@@ -38,6 +42,12 @@ struct NetworkMonitorView: View {
                     .font(.title)
                     .bold()
             }
+            
+            Button("Stop Monitor") {
+                network.stopMonitor {
+                    isMonitorActive = $0
+                }
+            }.hidden(!isMonitorActive)
         }
     }
 }
@@ -45,5 +55,15 @@ struct NetworkMonitorView: View {
 struct NetworkMonitorView_Previews: PreviewProvider {
     static var previews: some View {
         NetworkMonitorView()
+    }
+}
+
+
+extension View {
+    @ViewBuilder func hidden(_ shouldHide: Bool) -> some View {
+        switch shouldHide {
+        case true: self.hidden()
+        case false: self
+        }
     }
 }
