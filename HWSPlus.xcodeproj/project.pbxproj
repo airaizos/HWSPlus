@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A07FDB8299A490C00C29BB7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDB7299A490C00C29BB7 /* Product.swift */; };
 		3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */; };
 		3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */; };
 		3A0A346B298D54EB00ADF14D /* LabelStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */; };
@@ -104,6 +105,9 @@
 		3AF1A455298C141E00600D7E /* PrimitiveButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A454298C141E00600D7E /* PrimitiveButtonStyle.swift */; };
 		3AF1A458298C22AD00600D7E /* CheckToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A457298C22AD00600D7E /* CheckToggleStyle.swift */; };
 		3AF1A45A298C22B800600D7E /* CheckToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1A459298C22B800600D7E /* CheckToggleView.swift */; };
+		3AFC4EA7299518C100B7F7C3 /* NetworkUploding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC4EA6299518C100B7F7C3 /* NetworkUploding.swift */; };
+		3AFC4EA9299518CE00B7F7C3 /* NetworkUploadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC4EA8299518CE00B7F7C3 /* NetworkUploadingView.swift */; };
+		3AFC4EAB2995193100B7F7C3 /* MovieStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC4EAA2995193100B7F7C3 /* MovieStar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,7 @@
 /* Begin PBXFileReference section */
 		3A03D018295C8B7100A4A48C /* PruebasVarias.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PruebasVarias.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A04815529547A9300E97D4A /* DataStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DataStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A07FDB7299A490C00C29BB7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyleView.swift; sourceTree = "<group>"; };
 		3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
 		3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyleView.swift; sourceTree = "<group>"; };
@@ -240,6 +245,9 @@
 		3AF1A454298C141E00600D7E /* PrimitiveButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveButtonStyle.swift; sourceTree = "<group>"; };
 		3AF1A457298C22AD00600D7E /* CheckToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToggleStyle.swift; sourceTree = "<group>"; };
 		3AF1A459298C22B800600D7E /* CheckToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToggleView.swift; sourceTree = "<group>"; };
+		3AFC4EA6299518C100B7F7C3 /* NetworkUploding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUploding.swift; sourceTree = "<group>"; };
+		3AFC4EA8299518CE00B7F7C3 /* NetworkUploadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUploadingView.swift; sourceTree = "<group>"; };
+		3AFC4EAA2995193100B7F7C3 /* MovieStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -551,6 +559,7 @@
 		3A1688442993C37A00A19552 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3AFC4EA5299518A400B7F7C3 /* UploadingCodableData */,
 				3A1688452993C76500A19552 /* CodableAndCombine */,
 				3A1688552994072F00A19552 /* Access */,
 			);
@@ -797,6 +806,17 @@
 			path = ToggleCustomization;
 			sourceTree = "<group>";
 		};
+		3AFC4EA5299518A400B7F7C3 /* UploadingCodableData */ = {
+			isa = PBXGroup;
+			children = (
+				3AFC4EA8299518CE00B7F7C3 /* NetworkUploadingView.swift */,
+				3AFC4EA6299518C100B7F7C3 /* NetworkUploding.swift */,
+				3AFC4EAA2995193100B7F7C3 /* MovieStar.swift */,
+				3A07FDB7299A490C00C29BB7 /* Product.swift */,
+			);
+			path = UploadingCodableData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -946,14 +966,17 @@
 				3A68B27C2990243C0097D9D2 /* TabViewOrSideBarView.swift in Sources */,
 				3A880C78298D66B00077FD59 /* HoveringLabelsView.swift in Sources */,
 				3A12F0B2298A922400A02897 /* NeunorphismView.swift in Sources */,
+				3AFC4EAB2995193100B7F7C3 /* MovieStar.swift in Sources */,
 				3A20B33629925D81008C0D6E /* LayeringShadowsView.swift in Sources */,
 				3A2838CB2991686A00AB6847 /* CirclesView.swift in Sources */,
 				3AF1A458298C22AD00600D7E /* CheckToggleStyle.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
 				3A20B32D29924CC8008C0D6E /* StraightImageView.swift in Sources */,
+				3AFC4EA9299518CE00B7F7C3 /* NetworkUploadingView.swift in Sources */,
 				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
 				3A1688492993CB5700A19552 /* NetworkSession.swift in Sources */,
 				3A20B33A29926517008C0D6E /* StarShape.swift in Sources */,
+				3A07FDB8299A490C00C29BB7 /* Product.swift in Sources */,
 				3A20B33C29926832008C0D6E /* HexagonShape.swift in Sources */,
 				3A132C90294BCF1400D19D75 /* ContentView.swift in Sources */,
 				3A20B329299245CB008C0D6E /* ScalingMaskView.swift in Sources */,
@@ -988,6 +1011,7 @@
 				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
 				3A16885929940D9600A19552 /* NetworkMonitorView.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
+				3AFC4EA7299518C100B7F7C3 /* NetworkUploding.swift in Sources */,
 				3AF1A447298BB49500600D7E /* FantasyButtonStyle.swift in Sources */,
 				3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */,
 				3AF1A449298BBC7A00600D7E /* TargetButtonStyle.swift in Sources */,
