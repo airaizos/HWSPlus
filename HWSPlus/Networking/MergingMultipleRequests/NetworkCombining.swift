@@ -54,15 +54,18 @@ final class NetworkCombining {
         .store(in: &requests)
     }
     
-    func combiningTask(_ completion: @escaping () -> Void) {
+    func combiningTask(_ completion: @escaping (Result<([Message],Set<Int>),Error>) -> Void) {
         let messageTask = fetch(messagesURL, defaultValue: [Message]())
         let favoritesTask = fetch(favoritesURL, defaultValue: Set<Int>())
         
         let combined = Publishers.Zip(messageTask,favoritesTask)
         
-        combined.sink { loadedMessages, loadedFavorites in
-            self.messages = loadedMessages
-            self.favorites = loadedFavorites
+        combined.sink { (result: ([Message],Set<Int>)) in
+            
+            do {
+                completion(.success(result))
+            }
+            
         }
         .store(in: &requests)
     }

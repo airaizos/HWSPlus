@@ -36,20 +36,19 @@ struct NetworkCombiningView: View {
             .navigationTitle("Messages")
         }
         .onAppear {
-            
-            let messagesURL = URL(string: "https://hackingwithswift.com/samples/user-messages.json")!
-            let favoritesURL = URL(string: "http://www.hackingwithswift.com/samples/user-favorites.json")!
-            
-            /*
-            network.combiningTask() {
-                DispatchQueue.main.async {
-                    self.messages = network.messages
-                    self.favorites = network.favorites
+            network.combiningTask { result in
+                switch result {
+                case .success(let datos):
+                    self.messages = datos.0
+                    self.favorites = datos.1
+                case .failure(_):
+                    break
                 }
-            }
-            */
-    // TODO: Cómo mover todo esto a la networkCombining class. No se actualiza
             
+            }
+            
+    // TODO: Cómo mover todo esto a la networkCombining class. No se actualiza
+            /*
             let messageTask = network.fetch(messagesURL, defaultValue: [Message]())
             let favoritesTask = network.fetch(favoritesURL, defaultValue: Set<Int>())
             
@@ -60,7 +59,7 @@ struct NetworkCombiningView: View {
                 self.favorites = loadedFavorites
             }
             .store(in: &requests)
-             
+             */
         }
             
     }

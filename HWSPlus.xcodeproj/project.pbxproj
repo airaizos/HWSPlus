@@ -11,6 +11,9 @@
 		3A07FDBD299A7D8100C29BB7 /* NetworkCombining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDBC299A7D8100C29BB7 /* NetworkCombining.swift */; };
 		3A07FDBF299A7D8E00C29BB7 /* NetworkCombiningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDBE299A7D8E00C29BB7 /* NetworkCombiningView.swift */; };
 		3A07FDC1299A7F2D00C29BB7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDC0299A7F2D00C29BB7 /* Message.swift */; };
+		3A07FDC4299A993100C29BB7 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDC3299A993100C29BB7 /* NewsItem.swift */; };
+		3A07FDC6299A99FA00C29BB7 /* ChainedNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDC5299A99FA00C29BB7 /* ChainedNetworkView.swift */; };
+		3A07FDC8299A9A1000C29BB7 /* ChainedNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDC7299A9A1000C29BB7 /* ChainedNetwork.swift */; };
 		3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */; };
 		3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */; };
 		3A0A346B298D54EB00ADF14D /* LabelStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */; };
@@ -137,6 +140,9 @@
 		3A07FDBC299A7D8100C29BB7 /* NetworkCombining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCombining.swift; sourceTree = "<group>"; };
 		3A07FDBE299A7D8E00C29BB7 /* NetworkCombiningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCombiningView.swift; sourceTree = "<group>"; };
 		3A07FDC0299A7F2D00C29BB7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3A07FDC3299A993100C29BB7 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		3A07FDC5299A99FA00C29BB7 /* ChainedNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainedNetworkView.swift; sourceTree = "<group>"; };
+		3A07FDC7299A9A1000C29BB7 /* ChainedNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainedNetwork.swift; sourceTree = "<group>"; };
 		3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyleView.swift; sourceTree = "<group>"; };
 		3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
 		3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyleView.swift; sourceTree = "<group>"; };
@@ -294,6 +300,9 @@
 		3A07FDC2299A98FB00C29BB7 /* ChainedNetworkRequest */ = {
 			isa = PBXGroup;
 			children = (
+				3A07FDC3299A993100C29BB7 /* NewsItem.swift */,
+				3A07FDC5299A99FA00C29BB7 /* ChainedNetworkView.swift */,
+				3A07FDC7299A9A1000C29BB7 /* ChainedNetwork.swift */,
 			);
 			path = ChainedNetworkRequest;
 			sourceTree = "<group>";
@@ -975,6 +984,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A07FDC8299A9A1000C29BB7 /* ChainedNetwork.swift in Sources */,
 				3A132CF6296ED30A00E28CB8 /* StretchingMargin.swift in Sources */,
 				3A12E82B296B2BF900E17C1E /* User.swift in Sources */,
 				3A336F212951D73900B4333A /* Main.swift in Sources */,
@@ -997,6 +1007,7 @@
 				3AF1A458298C22AD00600D7E /* CheckToggleStyle.swift in Sources */,
 				3A12E838296B430E00E17C1E /* UIBezierPath_Extension.swift in Sources */,
 				3A20B32D29924CC8008C0D6E /* StraightImageView.swift in Sources */,
+				3A07FDC6299A99FA00C29BB7 /* ChainedNetworkView.swift in Sources */,
 				3AFC4EA9299518CE00B7F7C3 /* NetworkUploadingView.swift in Sources */,
 				3A12E83A296B43DC00E17C1E /* ShapeBezierView.swift in Sources */,
 				3A1688492993CB5700A19552 /* NetworkSession.swift in Sources */,
@@ -1023,6 +1034,7 @@
 				3A07FDC1299A7F2D00C29BB7 /* Message.swift in Sources */,
 				3A12E82D296B2D3F00E17C1E /* FilteringListView.swift in Sources */,
 				3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */,
+				3A07FDC4299A993100C29BB7 /* NewsItem.swift in Sources */,
 				3A132CF4296ED2FE00E28CB8 /* StretchingMarginView.swift in Sources */,
 				3A2838C22990FE7500AB6847 /* EmitterView.swift in Sources */,
 				3A0D578F2968BF9B00A397BE /* CGPoint-Helpers.swift in Sources */,
