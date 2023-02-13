@@ -5,10 +5,12 @@
 //  Created by Adrian Iraizos Mendoza on 9/2/23.
 //
 
+import Combine
 import SwiftUI
 
-class NetworkUploading {
+final class NetworkUploading {
     
+    var requests = Set<AnyCancellable>()
     var movieStar: MovieStar?
     
     func upload(_ data: MovieStar, to url: URL) {
@@ -63,5 +65,32 @@ class NetworkUploading {
                     }
                 }
             }.resume()
+        }
+    
+    func uploadCombine<Input: Encodable, Output: Decodable>(
+        _ data: Input,
+        to url: URL,
+        httpMethod: String = "Post",
+        contentType: String = "application/json",
+        completion: @escaping(Result<Output, UploadError>) -> Void) {
+         
+            var request = URLRequest(url: url)
+            request.httpMethod = httpMethod
+            request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+            let encoder = JSONEncoder()
+            request.httpBody = try? encoder.encode(data)
+            
+            URLSession.shared.dataTaskPublisher(for: request)
+                .map(\.data)
+                .decode(type: Output.self, decoder: JSONDecoder())
+                .map(Result.success)
+                .catch { error -> Just<Result<Output, UploadError>> in
+                    error is DecodingError
+                    ? Just(.failure(.decodeFailed))
+                    : Just(.failure(.uploadFailed))
+                }
+                .receive(on: DispatchQueue.main)
+                .sink(receiveValue: completion)
+                .store(in: &requests)
         }
 }

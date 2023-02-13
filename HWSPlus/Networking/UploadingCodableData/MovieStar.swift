@@ -15,7 +15,6 @@ struct MovieStar: Codable {
     var createdAt: String?
 }
 
-
 enum UploadError: Error {
     case uploadFailed, decodeFailed
 }

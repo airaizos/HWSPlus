@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3A07FDB8299A490C00C29BB7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDB7299A490C00C29BB7 /* Product.swift */; };
+		3A07FDBD299A7D8100C29BB7 /* NetworkCombining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDBC299A7D8100C29BB7 /* NetworkCombining.swift */; };
+		3A07FDBF299A7D8E00C29BB7 /* NetworkCombiningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDBE299A7D8E00C29BB7 /* NetworkCombiningView.swift */; };
+		3A07FDC1299A7F2D00C29BB7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07FDC0299A7F2D00C29BB7 /* Message.swift */; };
 		3A0A3466298D233E00ADF14D /* ProgressViewStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */; };
 		3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */; };
 		3A0A346B298D54EB00ADF14D /* LabelStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */; };
@@ -131,6 +134,9 @@
 		3A03D018295C8B7100A4A48C /* PruebasVarias.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PruebasVarias.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A04815529547A9300E97D4A /* DataStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DataStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A07FDB7299A490C00C29BB7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		3A07FDBC299A7D8100C29BB7 /* NetworkCombining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCombining.swift; sourceTree = "<group>"; };
+		3A07FDBE299A7D8E00C29BB7 /* NetworkCombiningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCombiningView.swift; sourceTree = "<group>"; };
+		3A07FDC0299A7F2D00C29BB7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3A0A3465298D233E00ADF14D /* ProgressViewStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyleView.swift; sourceTree = "<group>"; };
 		3A0A3467298D234800ADF14D /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
 		3A0A346A298D54EB00ADF14D /* LabelStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyleView.swift; sourceTree = "<group>"; };
@@ -275,6 +281,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A07FDBB299A7D3E00C29BB7 /* MergingMultipleRequests */ = {
+			isa = PBXGroup;
+			children = (
+				3A07FDBE299A7D8E00C29BB7 /* NetworkCombiningView.swift */,
+				3A07FDBC299A7D8100C29BB7 /* NetworkCombining.swift */,
+				3A07FDC0299A7F2D00C29BB7 /* Message.swift */,
+			);
+			path = MergingMultipleRequests;
+			sourceTree = "<group>";
+		};
 		3A0A3464298D232400ADF14D /* ProgressViewCustomization */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +575,7 @@
 		3A1688442993C37A00A19552 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3A07FDBB299A7D3E00C29BB7 /* MergingMultipleRequests */,
 				3AFC4EA5299518A400B7F7C3 /* UploadingCodableData */,
 				3A1688452993C76500A19552 /* CodableAndCombine */,
 				3A1688552994072F00A19552 /* Access */,
@@ -995,6 +1012,7 @@
 				3A1688542993FB4400A19552 /* NetworkListView.swift in Sources */,
 				3A12F0B9298AD2F800A02897 /* AdvancedButtons.swift in Sources */,
 				3AF1A450298C009D00600D7E /* SpinningArcButtonStyle.swift in Sources */,
+				3A07FDC1299A7F2D00C29BB7 /* Message.swift in Sources */,
 				3A12E82D296B2D3F00E17C1E /* FilteringListView.swift in Sources */,
 				3A215B1F296D5E4E004F7CA6 /* LongPressButton.swift in Sources */,
 				3A132CF4296ED2FE00E28CB8 /* StretchingMarginView.swift in Sources */,
@@ -1011,6 +1029,7 @@
 				3A0AB18729895DAB00561553 /* CustomPropertyWrapperWithDynamicProperty.swift in Sources */,
 				3A16885929940D9600A19552 /* NetworkMonitorView.swift in Sources */,
 				3A1F5F5129700931008019D2 /* CustomButtonStyle.swift in Sources */,
+				3A07FDBD299A7D8100C29BB7 /* NetworkCombining.swift in Sources */,
 				3AFC4EA7299518C100B7F7C3 /* NetworkUploding.swift in Sources */,
 				3AF1A447298BB49500600D7E /* FantasyButtonStyle.swift in Sources */,
 				3A0A3468298D234800ADF14D /* ProgressViewStyle.swift in Sources */,
@@ -1037,6 +1056,7 @@
 				3A68B27A2990206B0097D9D2 /* TitledView.swift in Sources */,
 				3A0AB18B29896AEA00561553 /* ButtonCustomizationButonStyle.swift in Sources */,
 				3AF1A44C298BDA7700600D7E /* AnimatingButtonView.swift in Sources */,
+				3A07FDBF299A7D8E00C29BB7 /* NetworkCombiningView.swift in Sources */,
 				3A51CEE1296C01AF00ACC2A4 /* Wave.swift in Sources */,
 				3A20B33F29926A0B008C0D6E /* BadgeBackground.swift in Sources */,
 				3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */,
