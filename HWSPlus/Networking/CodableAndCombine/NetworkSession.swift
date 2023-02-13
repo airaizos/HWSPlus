@@ -72,7 +72,7 @@ class NetworkSession {
 
 
 
-
+//TODO: ¿Cómo formatear un html?
 /// #Intentando formatear html
 extension String {
     init?(htmlEncodingString: String) {

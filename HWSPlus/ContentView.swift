@@ -48,7 +48,8 @@ struct ContentView: View {
         ///#Networking
         /// CodableAndCombineView()
         ///   NetworkMonitorView().environmentObject(monitor)
-        NetworkUploadingView()
+        ///NetworkUploadingView()
+        NetworkCombiningView()
     }
 }
 
