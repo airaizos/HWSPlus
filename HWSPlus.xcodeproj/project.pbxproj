@@ -291,6 +291,13 @@
 			path = MergingMultipleRequests;
 			sourceTree = "<group>";
 		};
+		3A07FDC2299A98FB00C29BB7 /* ChainedNetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChainedNetworkRequest;
+			sourceTree = "<group>";
+		};
 		3A0A3464298D232400ADF14D /* ProgressViewCustomization */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,6 +582,7 @@
 		3A1688442993C37A00A19552 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3A07FDC2299A98FB00C29BB7 /* ChainedNetworkRequest */,
 				3A07FDBB299A7D3E00C29BB7 /* MergingMultipleRequests */,
 				3AFC4EA5299518A400B7F7C3 /* UploadingCodableData */,
 				3A1688452993C76500A19552 /* CodableAndCombine */,

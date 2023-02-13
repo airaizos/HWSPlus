@@ -68,3 +68,11 @@ final class NetworkCombining {
     }
     
 }
+
+/*:
+///# Challenges
+
+///  Try extending our new fetch() method so it’s possible to customize how the JSON is decoded, such as configuring the date decoding strategy.
+/// Try updating our user interface so that it shows some sort of activity indicator before the network operations complete. You could do this with a state enum that moves between loading and loaded depending on what’s happening.
+
+*/

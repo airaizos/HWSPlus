@@ -16,18 +16,20 @@ struct NetworkCombiningView: View {
     
     var body: some View {
         NavigationView {
-            List(messages) { message in
-                HStack {
-                    VStack(alignment: .leading){
-                        Text(message.from)
-                            .font(.headline)
-                        Text(message.message)
-                            .foregroundColor(.secondary)
-                    }
-                    if favorites.contains(message.id) {
-                        Spacer()
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
+            VStack{
+                List(messages) { message in
+                    HStack {
+                        VStack(alignment: .leading){
+                            Text(message.from)
+                                .font(.headline)
+                            Text(message.message)
+                                .foregroundColor(.secondary)
+                        }
+                        if favorites.contains(message.id) {
+                            Spacer()
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                        }
                     }
                 }
             }
@@ -40,9 +42,10 @@ struct NetworkCombiningView: View {
             
             /*
             network.combiningTask() {
-                self.messages = network.messages
-                self.favorites = network.favorites
-                
+                DispatchQueue.main.async {
+                    self.messages = network.messages
+                    self.favorites = network.favorites
+                }
             }
             */
     // TODO: Cómo mover todo esto a la networkCombining class. No se actualiza
