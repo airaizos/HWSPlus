@@ -44,10 +44,8 @@ struct NetworkCombiningView: View {
                 case .failure(_):
                     break
                 }
-            
             }
-            
-    // TODO: Cómo mover todo esto a la networkCombining class. No se actualiza
+    
             /*
             let messageTask = network.fetch(messagesURL, defaultValue: [Message]())
             let favoritesTask = network.fetch(favoritesURL, defaultValue: Set<Int>())
