@@ -50,7 +50,10 @@ struct ContentView: View {
         ///   NetworkMonitorView().environmentObject(monitor)
         ///NetworkUploadingView()
         /// NetworkCombiningView()
-        ChainedNetworkView()
+        /// ChainedNetworkView()
+        
+    /// #Advanced Swift
+        StringInterpolationView()
     }
 }
 

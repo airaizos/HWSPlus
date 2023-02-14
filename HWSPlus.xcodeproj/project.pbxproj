@@ -95,6 +95,8 @@
 		3A2838C72991630100AB6847 /* AccelerometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C62991630100AB6847 /* AccelerometerView.swift */; };
 		3A2838C92991683400AB6847 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838C82991683400AB6847 /* MotionManager.swift */; };
 		3A2838CB2991686A00AB6847 /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2838CA2991686A00AB6847 /* CirclesView.swift */; };
+		3A2F470E299BBBFC00E0296A /* StringInterpolationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F470D299BBBFC00E0296A /* StringInterpolationExtension.swift */; };
+		3A2F4710299BBC9800E0296A /* StringInterpolationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F470F299BBC9800E0296A /* StringInterpolationView.swift */; };
 		3A2F74BE2964CF8F00C1188E /* Monograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74BD2964CF8F00C1188E /* Monograms.swift */; };
 		3A336F212951D73900B4333A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A336F202951D73900B4333A /* Main.swift */; };
 		3A3B6F9E29759A5800E494BF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B6F9D29759A5800E494BF /* StringExtension.swift */; };
@@ -235,6 +237,8 @@
 		3A2838C62991630100AB6847 /* AccelerometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerView.swift; sourceTree = "<group>"; };
 		3A2838C82991683400AB6847 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		3A2838CA2991686A00AB6847 /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
+		3A2F470D299BBBFC00E0296A /* StringInterpolationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringInterpolationExtension.swift; sourceTree = "<group>"; };
+		3A2F470F299BBC9800E0296A /* StringInterpolationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringInterpolationView.swift; sourceTree = "<group>"; };
 		3A2F74BA2964968500C1188E /* StoringPreferencesEfficiently.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StoringPreferencesEfficiently.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2F74BB2964BA2A00C1188E /* HWSPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSPlus.entitlements; sourceTree = "<group>"; };
 		3A2F74BC2964C8F900C1188E /* Handlingnamescorrectly.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Handlingnamescorrectly.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -511,6 +515,7 @@
 		3A132C8C294BCF1400D19D75 /* HWSPlus */ = {
 			isa = PBXGroup;
 			children = (
+				3A2F470B299BBBB800E0296A /* AdvancedSwift */,
 				3A1688442993C37A00A19552 /* Networking */,
 				3A0AB18529895D8400561553 /* IntermediateSwiftUI */,
 				3A18AD7B29716B3F0049390A /* IntermediateSwift */,
@@ -776,6 +781,23 @@
 				3A20B32A299249AF008C0D6E /* TextMaskView.swift */,
 			);
 			path = Accelerometer;
+			sourceTree = "<group>";
+		};
+		3A2F470B299BBBB800E0296A /* AdvancedSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3A2F470C299BBBCD00E0296A /* StringInterpolation */,
+			);
+			path = AdvancedSwift;
+			sourceTree = "<group>";
+		};
+		3A2F470C299BBBCD00E0296A /* StringInterpolation */ = {
+			isa = PBXGroup;
+			children = (
+				3A2F470D299BBBFC00E0296A /* StringInterpolationExtension.swift */,
+				3A2F470F299BBC9800E0296A /* StringInterpolationView.swift */,
+			);
+			path = StringInterpolation;
 			sourceTree = "<group>";
 		};
 		3A2F74BF2964D4C300C1188E /* Parsing */ = {
@@ -1059,6 +1081,7 @@
 				3A0CC5E7296749E700DCCD00 /* FloodFillView.swift in Sources */,
 				3A132C8E294BCF1400D19D75 /* HWSPlusApp.swift in Sources */,
 				3AF1A44E298BDC0600600D7E /* PulsingButtonStyle.swift in Sources */,
+				3A2F4710299BBC9800E0296A /* StringInterpolationView.swift in Sources */,
 				3A1F5F4D2970005A008019D2 /* RadialButton.swift in Sources */,
 				3A2838C92991683400AB6847 /* MotionManager.swift in Sources */,
 				3A2838C42991000C00AB6847 /* ParticlesView.swift in Sources */,
@@ -1069,6 +1092,7 @@
 				3A0A346D298D54F700ADF14D /* LabelStyle.swift in Sources */,
 				3A1F5F5629701410008019D2 /* RemoteImage.swift in Sources */,
 				3A0D57912968C52800A397BE /* Triangle.swift in Sources */,
+				3A2F470E299BBBFC00E0296A /* StringInterpolationExtension.swift in Sources */,
 				3A215B2E296D8788004F7CA6 /* StretchingHeader.swift in Sources */,
 				3A215B27296D78C3004F7CA6 /* AccessibleStackView.swift in Sources */,
 				3A2838BC2990F6DA00AB6847 /* JsonTidy.swift in Sources */,
