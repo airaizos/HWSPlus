@@ -52,8 +52,12 @@ struct ContentView: View {
         /// NetworkCombiningView()
         /// ChainedNetworkView()
         
-    /// #Advanced Swift
-        StringInterpolationView()
+        /// #Advanced Swift
+        ///   StringInterpolationView()
+        
+        ///     Page29View()
+        /// Page30View()
+        AsyncPropertyView()
     }
 }
 

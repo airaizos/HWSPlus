@@ -15,6 +15,3 @@ extension String {
     }
 }
     
-
-
-[Int](repeating: 1, count: 5)
