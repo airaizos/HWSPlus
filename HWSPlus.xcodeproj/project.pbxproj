@@ -200,6 +200,7 @@
 		3A1846902965EAAC00F21A22 /* ParsingJson.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParsingJson.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A18AD7E29716D620049390A /* SpaceshipOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SpaceshipOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A18AD80297179F20049390A /* Generics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Generics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A1CAD6629ACBE9A008E014B /* Page19.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Page19.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1F5F4A29700052008019D2 /* RadialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenu.swift; sourceTree = "<group>"; };
 		3A1F5F4C2970005A008019D2 /* RadialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialButton.swift; sourceTree = "<group>"; };
 		3A1F5F4E29700069008019D2 /* RadialMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuView.swift; sourceTree = "<group>"; };
@@ -492,6 +493,7 @@
 		3A132C81294BCF1400D19D75 = {
 			isa = PBXGroup;
 			children = (
+				3A1CAD6529ACBE1E008E014B /* Concurrency */,
 				3A16884E2993E77A00A19552 /* Resources */,
 				3A2838BA2990F6C100AB6847 /* CommandLine */,
 				3A132CB7294BCF4E00D19D75 /* Playgrounds */,
@@ -654,6 +656,14 @@
 				3A18AD80297179F20049390A /* Generics.playground */,
 			);
 			path = Generics;
+			sourceTree = "<group>";
+		};
+		3A1CAD6529ACBE1E008E014B /* Concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				3A1CAD6629ACBE9A008E014B /* Page19.playground */,
+			);
+			path = Concurrency;
 			sourceTree = "<group>";
 		};
 		3A1F5F492970003C008019D2 /* RadialMenu */ = {
