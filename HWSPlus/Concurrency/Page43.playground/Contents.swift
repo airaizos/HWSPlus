@@ -34,3 +34,28 @@ func fetchMessages() async -> [MessageC] {
 
 let messages = await fetchMessages()
 print("Downloaded \(messages.count) messages.")
+
+
+enum FetchError: Error {
+    case noMessages
+}
+
+func fetchMessagesThrowing() async -> [MessageC] {
+    do {
+        return try await withCheckedThrowingContinuation{ continuation  in
+            fetchMessages { messages in
+                if messages.isEmpty {
+                    continuation.resume(throwing: FetchError.noMessages)
+                } else {
+                    continuation.resume(returning: messages)
+                }
+            }
+        }
+    } catch {
+        return [MessageC(id: 1, from: "Tom", message: "Welcome to my Space")]
+    }
+    
+}
+    
+    let messagesThrowing = await fetchMessagesThrowing()
+    print("Descargados \(messagesThrowing.count) mensajes")
