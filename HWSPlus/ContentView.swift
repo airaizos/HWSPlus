@@ -57,12 +57,13 @@ struct ContentView: View {
         
         ///     Page29View()
         /// Page30View()
-    ///    AsyncPropertyView()
-     ///   ContinuationsReanudadosView()
-      ///  URLWatcherView()
-        SendingReceivingView()
-        
-
+        ///    AsyncPropertyView()
+        ///   ContinuationsReanudadosView()
+        ///URLWatcherView()
+        ///   SendingReceivingView()
+        ///   TasksView()
+           DetachedTaskView()
+     
     }
 }
 

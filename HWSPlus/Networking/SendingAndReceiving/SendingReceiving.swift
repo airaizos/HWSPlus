@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 private enum ErroresItunes {
     case invalidURL, invalidData
 }

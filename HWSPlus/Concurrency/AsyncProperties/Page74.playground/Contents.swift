@@ -71,6 +71,7 @@ struct URLWatcherView: View {
     
     func fetchUsers() async {
         let url = URL(fileURLWithPath: "Usuarios.json")
+        print(url)
         let urlWatcher = URLWatcher(url: url, delay: 3)
         
         do {
@@ -85,3 +86,4 @@ struct URLWatcherView: View {
         }
     }
 }
+
